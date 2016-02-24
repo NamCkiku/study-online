@@ -1,0 +1,17 @@
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.Tests.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.Tests.pdb
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.pdb
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\obj\Debug\StudyOnline.Tests.csprojResolveAssemblyReference.cache
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\obj\Debug\StudyOnline.Tests.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\obj\Debug\StudyOnline.Tests.pdb
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Mvc.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Razor.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Mvc.xml
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Razor.xml
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.xml
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
