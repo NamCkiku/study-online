@@ -1,0 +1,10 @@
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\StudyOnline.Entities.dll.config
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\StudyOnline.Entities.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\StudyOnline.Entities.pdb
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.SqlServer.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.xml
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.SqlServer.xml
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.csprojResolveAssemblyReference.cache
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.pdb

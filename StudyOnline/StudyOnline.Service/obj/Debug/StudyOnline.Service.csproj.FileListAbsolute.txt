@@ -1,0 +1,4 @@
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\bin\Debug\StudyOnline.Service.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\bin\Debug\StudyOnline.Service.pdb
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\obj\Debug\StudyOnline.Service.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\obj\Debug\StudyOnline.Service.pdb
