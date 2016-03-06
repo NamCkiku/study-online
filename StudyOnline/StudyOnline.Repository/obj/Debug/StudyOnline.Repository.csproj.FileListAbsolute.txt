@@ -1,0 +1,5 @@
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\StudyOnline.Repository.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\StudyOnline.Repository.pdb
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.csprojResolveAssemblyReference.cache
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.dll
+E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.pdb
