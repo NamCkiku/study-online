@@ -15,3 +15,20 @@ E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.xml
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.Tests.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.Tests.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Mvc.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Razor.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\StudyOnline.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Mvc.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.Razor.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\obj\Debug\StudyOnline.Tests.csprojResolveAssemblyReference.cache
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\obj\Debug\StudyOnline.Tests.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Tests\obj\Debug\StudyOnline.Tests.pdb
