@@ -1,9 +1,0 @@
-E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Common\bin\Debug\StudyOnline.Common.dll
-E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Common\bin\Debug\StudyOnline.Common.pdb
-E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Common\obj\Debug\StudyOnline.Common.csprojResolveAssemblyReference.cache
-E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Common\obj\Debug\StudyOnline.Common.dll
-E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Common\obj\Debug\StudyOnline.Common.pdb
-D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Common\bin\Debug\StudyOnline.Common.dll
-D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Common\bin\Debug\StudyOnline.Common.pdb
-D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Common\obj\Debug\StudyOnline.Common.dll
-D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Common\obj\Debug\StudyOnline.Common.pdb
