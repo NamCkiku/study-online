@@ -1,1 +1,6 @@
 StudyOnline/StudyOnline/obj/
+StudyOnline/StudyOnline.Common/obj/
+StudyOnline/StudyOnline.Entities/obj/
+StudyOnline/StudyOnline.Repository/obj/
+StudyOnline/StudyOnline.Service/obj/
+StudyOnline/StudyOnline.Tests/obj/

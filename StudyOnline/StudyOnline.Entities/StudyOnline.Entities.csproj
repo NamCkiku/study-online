@@ -48,14 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\AttachMent.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\CourseCategory.cs" />
     <Compile Include="Models\FriendUser.cs" />
     <Compile Include="Models\GroupUser.cs" />
     <Compile Include="Models\Lesson.cs" />
-    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\PayMent.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\StudyOnline.cs" />
     <Compile Include="Models\Test.cs" />

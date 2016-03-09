@@ -12,9 +12,9 @@ namespace StudyOnline.Entities.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Lesson()
         {
-            Attachments = new HashSet<Attachment>();
-            Comments = new HashSet<Comment>();
-            Videos = new HashSet<Video>();
+            AttachMent = new HashSet<AttachMent>();
+            Comment = new HashSet<Comment>();
+            Video = new HashSet<Video>();
         }
 
         public long ID { get; set; }
@@ -32,14 +32,14 @@ namespace StudyOnline.Entities.Models
         public long? SectionID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Attachment> Attachments { get; set; }
+        public virtual ICollection<AttachMent> AttachMent { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Comment> Comment { get; set; }
 
         public virtual Section Section { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Video> Videos { get; set; }
+        public virtual ICollection<Video> Video { get; set; }
     }
 }

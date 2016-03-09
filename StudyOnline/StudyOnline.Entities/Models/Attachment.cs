@@ -6,8 +6,8 @@ namespace StudyOnline.Entities.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Attachment")]
-    public partial class Attachment
+    [Table("AttachMent")]
+    public partial class AttachMent
     {
         public long ID { get; set; }
 

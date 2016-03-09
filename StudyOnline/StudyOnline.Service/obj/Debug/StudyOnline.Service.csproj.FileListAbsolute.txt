@@ -2,3 +2,7 @@ E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\b
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\bin\Debug\StudyOnline.Service.pdb
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\obj\Debug\StudyOnline.Service.dll
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Service\obj\Debug\StudyOnline.Service.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Service\bin\Debug\StudyOnline.Service.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Service\bin\Debug\StudyOnline.Service.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Service\obj\Debug\StudyOnline.Service.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Service\obj\Debug\StudyOnline.Service.pdb

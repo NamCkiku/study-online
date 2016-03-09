@@ -1,4 +1,4 @@
-namespace StudyOnline.Entities.Models
+﻿namespace StudyOnline.Entities.Models
 {
     using System;
     using System.Data.Entity;
@@ -12,22 +12,22 @@ namespace StudyOnline.Entities.Models
         {
         }
 
-        public virtual DbSet<Attachment> Attachments { get; set; }
-        public virtual DbSet<Comment> Comments { get; set; }
-        public virtual DbSet<Course> Courses { get; set; }
-        public virtual DbSet<CourseCategory> CourseCategories { get; set; }
-        public virtual DbSet<FriendUser> FriendUsers { get; set; }
-        public virtual DbSet<GroupUser> GroupUsers { get; set; }
-        public virtual DbSet<Lesson> Lessons { get; set; }
-        public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<Section> Sections { get; set; }
-        public virtual DbSet<Test> Tests { get; set; }
-        public virtual DbSet<TestAnswer> TestAnswers { get; set; }
-        public virtual DbSet<TestQuestion> TestQuestions { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<AttachMent> AttachMent { get; set; }
+        public virtual DbSet<Comment> Comment { get; set; }
+        public virtual DbSet<Course> Course { get; set; }
+        public virtual DbSet<CourseCategory> CourseCategory { get; set; }
+        public virtual DbSet<FriendUser> FriendUser { get; set; }
+        public virtual DbSet<GroupUser> GroupUser { get; set; }
+        public virtual DbSet<Lesson> Lesson { get; set; }
+        public virtual DbSet<PayMent> PayMent { get; set; }
+        public virtual DbSet<Section> Section { get; set; }
+        public virtual DbSet<Test> Test { get; set; }
+        public virtual DbSet<TestAnswer> TestAnswer { get; set; }
+        public virtual DbSet<TestQuestion> TestQuestion { get; set; }
+        public virtual DbSet<User> User { get; set; }
         public virtual DbSet<User_Study_Course> User_Study_Course { get; set; }
         public virtual DbSet<User_Teacher_Course> User_Teacher_Course { get; set; }
-        public virtual DbSet<Video> Videos { get; set; }
+        public virtual DbSet<Video> Video { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,8 +37,8 @@ namespace StudyOnline.Entities.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Course>()
-                .HasMany(e => e.Users)
-                .WithMany(e => e.Courses)
+                .HasMany(e => e.User)
+                .WithMany(e => e.Course)
                 .Map(m => m.ToTable("User_Course").MapLeftKey("CourseID").MapRightKey("UserID"));
 
             modelBuilder.Entity<GroupUser>()
@@ -58,7 +58,7 @@ namespace StudyOnline.Entities.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .HasMany(e => e.FriendUsers)
+                .HasMany(e => e.FriendUser)
                 .WithRequired(e => e.User)
                 .WillCascadeOnDelete(false);
 

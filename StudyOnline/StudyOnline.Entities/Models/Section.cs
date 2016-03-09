@@ -12,8 +12,8 @@ namespace StudyOnline.Entities.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Section()
         {
-            Lessons = new HashSet<Lesson>();
-            Tests = new HashSet<Test>();
+            Lesson = new HashSet<Lesson>();
+            Test = new HashSet<Test>();
         }
 
         public long ID { get; set; }
@@ -36,9 +36,9 @@ namespace StudyOnline.Entities.Models
         public virtual Course Course { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lesson> Lessons { get; set; }
+        public virtual ICollection<Lesson> Lesson { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Test> Tests { get; set; }
+        public virtual ICollection<Test> Test { get; set; }
     }
 }

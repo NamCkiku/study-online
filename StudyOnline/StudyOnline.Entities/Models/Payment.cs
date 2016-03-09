@@ -6,8 +6,8 @@ namespace StudyOnline.Entities.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Payment")]
-    public partial class Payment
+    [Table("PayMent")]
+    public partial class PayMent
     {
         public int ID { get; set; }
 

@@ -12,7 +12,7 @@ namespace StudyOnline.Entities.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TestQuestion()
         {
-            TestAnswers = new HashSet<TestAnswer>();
+            TestAnswer = new HashSet<TestAnswer>();
         }
 
         public long ID { get; set; }
@@ -28,6 +28,6 @@ namespace StudyOnline.Entities.Models
         public virtual Test Test { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TestAnswer> TestAnswers { get; set; }
+        public virtual ICollection<TestAnswer> TestAnswer { get; set; }
     }
 }

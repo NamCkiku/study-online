@@ -12,10 +12,10 @@ namespace StudyOnline.Entities.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            FriendUsers = new HashSet<FriendUser>();
-            Payments = new HashSet<Payment>();
+            FriendUser = new HashSet<FriendUser>();
+            PayMent = new HashSet<PayMent>();
             User_Teacher_Course = new HashSet<User_Teacher_Course>();
-            Courses = new HashSet<Course>();
+            Course = new HashSet<Course>();
         }
 
         public long ID { get; set; }
@@ -59,12 +59,12 @@ namespace StudyOnline.Entities.Models
         public int? PayID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FriendUser> FriendUsers { get; set; }
+        public virtual ICollection<FriendUser> FriendUser { get; set; }
 
         public virtual GroupUser GroupUser { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payment> Payments { get; set; }
+        public virtual ICollection<PayMent> PayMent { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User_Teacher_Course> User_Teacher_Course { get; set; }
@@ -72,6 +72,6 @@ namespace StudyOnline.Entities.Models
         public virtual User_Study_Course User_Study_Course { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Course> Course { get; set; }
     }
 }

@@ -8,3 +8,12 @@ E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.csprojResolveAssemblyReference.cache
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.dll
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\StudyOnline.Entities.dll.config
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\StudyOnline.Entities.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\StudyOnline.Entities.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Entities\obj\Debug\StudyOnline.Entities.pdb

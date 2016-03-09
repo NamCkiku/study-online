@@ -12,10 +12,10 @@ namespace StudyOnline.Entities.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Course()
         {
-            Sections = new HashSet<Section>();
+            Section = new HashSet<Section>();
             User_Study_Course = new HashSet<User_Study_Course>();
             User_Teacher_Course = new HashSet<User_Teacher_Course>();
-            Users = new HashSet<User>();
+            User = new HashSet<User>();
         }
 
         public long ID { get; set; }
@@ -57,7 +57,7 @@ namespace StudyOnline.Entities.Models
         public virtual CourseCategory CourseCategory { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Section> Sections { get; set; }
+        public virtual ICollection<Section> Section { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User_Study_Course> User_Study_Course { get; set; }
@@ -66,6 +66,6 @@ namespace StudyOnline.Entities.Models
         public virtual ICollection<User_Teacher_Course> User_Teacher_Course { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<User> User { get; set; }
     }
 }

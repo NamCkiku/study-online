@@ -3,3 +3,12 @@ E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repositor
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.csprojResolveAssemblyReference.cache
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.dll
 E:\_Study\_SourceCode\_SharePoint\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.csprojResolveAssemblyReference.cache
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\obj\Debug\StudyOnline.Repository.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\StudyOnline.Repository.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\StudyOnline.Repository.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\EntityFramework.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\StudyOnline.Entities.dll
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\StudyOnline.Entities.pdb
+D:\ĐỒ ÁN 4\study-online\StudyOnline\study-online\StudyOnline\StudyOnline.Repository\bin\Debug\EntityFramework.xml
