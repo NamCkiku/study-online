@@ -1,0 +1,296 @@
+﻿.course-header {
+    border-bottom: 5px solid rgba(0,0,0,0.2);
+    height: 65px;
+    position: relative;
+}
+
+.course-header-content {
+    background: #545454;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.course-name {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 10px 0;
+    line-height: 2.4;
+}
+
+.course-container {
+    padding-top: 10px;
+}
+
+.list-lesstion {
+}
+
+    .list-lesstion .lesstion-header {
+        border-radius: 3px;
+        background-color: #727272;
+    }
+
+        .list-lesstion .lesstion-header ul {
+            padding-left: 10px;
+            height:80px;
+        }
+
+            .list-lesstion .lesstion-header ul li {
+                list-style: none;
+                margin-bottom: 10px;
+            }
+
+            .list-lesstion .lesstion-header ul .icon-player {
+                float: left;
+            }
+
+        .list-lesstion .lesstion-header .fa-play-circle {
+            color: #ffffff;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            font-size: 40px;
+            text-indent: 4px;
+            margin: 20px;
+        }
+
+        .list-lesstion .lesstion-header .first-lesstion {
+        }
+
+            .list-lesstion .lesstion-header .first-lesstion .lesstion-header-content p {
+                color: white;
+                font-size: 14px;
+            }
+
+    .list-lesstion .lesstion-progress {
+    }
+
+        .list-lesstion .lesstion-progress .trophy {
+            text-align: right;
+            margin: 2px 0px;
+            font-size: 20px;
+            color: #b6b6b6;
+        }
+
+            .list-lesstion .lesstion-progress .trophy .progress-title {
+                float: left;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+                .list-lesstion .lesstion-progress .trophy .progress-title .progress-title-content {
+                    list-style: none;
+                    padding: 0px;
+                    font-size: 14px;
+                    color: #212121;
+                    float: left;
+                }
+
+                    .list-lesstion .lesstion-progress .trophy .progress-title .progress-title-content .progress-title-item {
+                        float: left;
+                        margin-right: 4px;
+                    }
+
+.bold {
+    font-weight: bold;
+}
+
+.progress-container .progress {
+    width: 94.7%;
+    background-color: #b6b6b6;
+    height: 7px;
+}
+
+    .progress-container .progress .progress-bar {
+        background-color: #810C15;
+    }
+
+.progress-container .progress-finish {
+    width: 5.3%;
+    background-color: #fff;
+}
+
+    .progress-container .progress-finish .finish {
+        width: 83.33%;
+        height: 100%;
+        float: right;
+        background-color: #b6b6b6;
+    }
+
+
+.list-lesstion-container .chap-title {
+    background-color: #ededed;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px 9px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #212121;
+}
+
+.list-lesstion-container .chap-item {
+    margin: 0px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+    .list-lesstion-container .chap-item:hover {
+        background: #ededed;
+    }
+
+    .list-lesstion-container .chap-item .item-container {
+        margin-left: 18px;
+    }
+
+        .list-lesstion-container .chap-item .item-container .chap-item-status {
+            float: left;
+            height: 100%;
+            width: 19px;
+        }
+
+            .list-lesstion-container .chap-item .item-container .chap-item-status .none {
+                background-color: #fff;
+                border: 1px solid #bfbfbf;
+            }
+
+            .list-lesstion-container .chap-item .item-container .chap-item-status .status-container {
+                min-width: 1px;
+                width: 20px;
+                height: 20px;
+                padding: 0px;
+                margin: 0px;
+                border-radius: 20px;
+                text-align: center;
+                color: #ffffff;
+                font-size: 11px;
+                line-height: 20px;
+                margin-top: 6px;
+                margin-left: -10px;
+            }
+
+        .list-lesstion-container .chap-item .item-container .chap-item-content {
+            width: calc(100% - 25px);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 14px;
+        }
+
+            .list-lesstion-container .chap-item .item-container .chap-item-content .chap-item-title {
+                color: #333;
+                font-size: 14px;
+            }
+
+            .list-lesstion-container .chap-item .item-container .chap-item-content ul {
+                color: #212121;
+            }
+
+                .list-lesstion-container .chap-item .item-container .chap-item-content ul li {
+                    float: left;
+                    margin-right: 10px;
+                    color: #212121;
+                    list-style: none;
+                }
+
+.learning_tab {
+    text-align: center;
+}
+
+    .learning_tab a {
+        text-decoration: none;
+    }
+
+    .learning_tab i {
+        font-size: 15px;
+    }
+
+.course-navigation li a {
+    padding: 0px;
+}
+
+.discussion .search {
+    margin-top: 20px;
+    min-width: auto !important;
+    position: relative;
+}
+
+    .discussion .search .fa-search {
+        position: absolute;
+        top: 7px;
+        right: 20px;
+        font-size: 20px;
+    }
+
+.discussion .choice-text {
+    padding-top: 15px;
+    padding-right: 0px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.discussion .add-comment {
+    margin-top: 20px;
+    padding-right: 12px;
+}
+
+.list-discussion i {
+    color: #810C15;
+    font-size: 40px;
+}
+
+.list-discussion .discussion-item-main {
+    margin-top: 10px;
+    border-bottom: 1px solid #727272;
+}
+
+    .list-discussion .discussion-item-main .discussion-item-title {
+        float: left;
+        padding: 0px;
+        font-size: 14px;
+    }
+
+        .list-discussion .discussion-item-main .discussion-item-title li {
+            float: left;
+            margin-right: 5px;
+            list-style: none;
+        }
+
+    .list-discussion .discussion-item-main .discussion-item-subject {
+        float: left;
+        width: 100%;
+        font-size: 16px;
+        color: #727272;
+        font-weight: 500;
+    }
+
+    .list-discussion .discussion-item-main .discussion-item-content {
+        float: left;
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .list-discussion .discussion-item-main .discussion-item-content .cleanslate p {
+            color:#333;
+            font-size:14px;
+            padding-top:10px;
+            font-weight:bold;
+        }
+
+@media (max-width: 800px) {
+    .no-paddingxs {
+        padding: 0px;
+    }
+
+    .course-name {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .ellipsis {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
