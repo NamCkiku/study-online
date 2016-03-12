@@ -50,6 +50,7 @@
     <Compile Include="LessonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecctionRepository.cs" />
+    <Compile Include="TeacherRepository.cs" />
     <Compile Include="TestAnswerRepository.cs" />
     <Compile Include="TestQuestionRepository.cs" />
     <Compile Include="TestRepository.cs" />
