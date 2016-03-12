@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contents\css\bootstrap.min.css" />
+    <Content Include="Contents\css\coursedetail.css" />
     <Content Include="Contents\css\dashboard.css" />
     <Content Include="Contents\css\popuo-box.css" />
     <Content Include="Contents\css\style.css" />
