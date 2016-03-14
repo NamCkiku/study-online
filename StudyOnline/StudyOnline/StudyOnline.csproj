@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -273,6 +274,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudyOnline.Entities\StudyOnline.Entities.csproj">
+      <Project>{e50afb03-52a8-49d6-98b4-17b7b35c4689}</Project>
+      <Name>StudyOnline.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudyOnline.Service\StudyOnline.Service.csproj">
+      <Project>{a3b1b5a4-8e53-41e0-af44-a32a3fd6c786}</Project>
+      <Name>StudyOnline.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

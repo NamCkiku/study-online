@@ -51,7 +51,7 @@ namespace StudyOnline.Repository
                 {
                     _db.Course.Add(cs);
                     _db.SaveChanges();
-                    return course.ID;
+                    return cs.ID;
                 }
                 catch(Exception)
                 {
