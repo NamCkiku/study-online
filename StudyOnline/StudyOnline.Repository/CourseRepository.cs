@@ -7,7 +7,7 @@ using StudyOnline.Entities.Models;
 
 namespace StudyOnline.Repository
 {
-    public class CourseRepository
+    public class CourseRepository:CourseRepositoryInterface
     {
         private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
 
@@ -17,7 +17,7 @@ namespace StudyOnline.Repository
         }
 
         // Lấy danh sách khóa học
-        public List<StudyOnline.Entities.Models.Course> ListAllCourse()
+        public List<StudyOnline.Entities.Models.Course> getListCourse()
         {
             return _db.Course.ToList();
         }
@@ -29,7 +29,7 @@ namespace StudyOnline.Repository
         }
 
         //Tạo khóa học
-        public long CreateCourse(StudyOnline.Entities.Models.Course course)
+        public long addCourse(StudyOnline.Entities.Models.Course course)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace StudyOnline.Repository
         /// </summary>
         /// <param name="course">Khóa Học</param>
         /// <returns></returns>
-        public bool UpdateCourse(StudyOnline.Entities.Models.Course course)
+        public bool editCourse(StudyOnline.Entities.Models.Course course)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace StudyOnline.Repository
         }
 
         //Xóa khóa học
-        public bool DeleteCourse(long id)
+        public bool deleteCourse(long id)
         {
             try
             {
