@@ -8,54 +8,74 @@ namespace StudyOnline.Repository
 {
     public class FriendUserRepository
     {
-        private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
-
-        public FriendUserRepository()
-        {
-            _db = new Entities.Models.StudyOnline();
-        }
-
-        // Lấy danh sách bạn bè
+        /// <summary>
+        /// Lấy danh sách bạn bè
+        /// </summary>
+        /// <returns>List</returns>
         public List<StudyOnline.Entities.Models.FriendUser> ListAllFriendUser()
         {
-            return _db.FriendUser.ToList();
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.FriendUser.ToList();
+            }
         }
 
-        //Lấy thông tin 1 bạn bè
+        /// <summary>
+        /// Lấy thông tin 1 bạn
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>FriendUser</returns>
         public StudyOnline.Entities.Models.FriendUser ViewDetail(long id)
         {
-            return _db.FriendUser.Find(id);
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.FriendUser.Find(id);
+            }
         }
 
-        //Add bạn bè
+        /// <summary>
+        /// Thêm bạn bè
+        /// </summary>
+        /// <param name="friend">FriendUser</param>
+        /// <returns>long</returns>
         public long InsertFriendUser(StudyOnline.Entities.Models.FriendUser friend)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                _db.FriendUser.Add(friend);
-                _db.SaveChanges();
-                return friend.FriendID;
-            }
-            catch (Exception)
-            {
-                return -1;
+                try
+                {
+                    _db.FriendUser.Add(friend);
+                    _db.SaveChanges();
+                    return friend.FriendID;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
 
 
-        //Xóa bạn bè
+        /// <summary>
+        /// Xóa bạn bè
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>bool</returns>
         public bool DeleteFriendUser(long id)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var result = _db.FriendUser.Find(id);
-                _db.FriendUser.Remove(result);
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try
+                {
+                    var result = _db.FriendUser.Find(id);
+                    _db.FriendUser.Remove(result);
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 

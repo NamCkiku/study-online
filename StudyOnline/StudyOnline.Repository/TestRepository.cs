@@ -8,72 +8,100 @@ namespace StudyOnline.Repository
 {
     public class TestRepository
     {
-        private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
-
-        public TestRepository()
-        {
-            _db = new Entities.Models.StudyOnline();
-        }
-
-        // Lấy danh sách bài học
+        /// <summary>
+        /// Lấy danh sách bài kiểm tra
+        /// </summary>
+        /// <returns>List</returns>
         public List<StudyOnline.Entities.Models.Test> ListAllTest()
         {
-            return _db.Test.ToList();
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.Test.ToList();
+            }
         }
 
-        //Lấy thông tin 1 khóa học
+        /// <summary>
+        /// Xem chi tiết 1 bài kiểm tra
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>Test</returns>
         public StudyOnline.Entities.Models.Test ViewDetail(long id)
         {
-            return _db.Test.Find(id);
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.Test.Find(id);
+            }
         }
 
-        //Tạo bài học
+        /// <summary>
+        /// Tạo bài kiểm tra
+        /// </summary>
+        /// <param name="tes">Test</param>
+        /// <returns>long</returns>
         public long CreateTest(StudyOnline.Entities.Models.Test tes)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                _db.Test.Add(tes);
-                _db.SaveChanges();
-                return tes.ID;
-            }
-            catch (Exception)
-            {
-                return -1;
+                try
+                {
+                    _db.Test.Add(tes);
+                    _db.SaveChanges();
+                    return tes.ID;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
 
-        //Cập nhật bài học
+        /// <summary>
+        /// Cập nhật bài kiểm tra
+        /// </summary>
+        /// <param name="tes">Test</param>
+        /// <returns>bool</returns>
         public bool UpdateTest(StudyOnline.Entities.Models.Test tes)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var c = _db.Test.Find(tes.ID);
-                c.Name = tes.Name;
-                c.TimeTest = tes.TimeTest;
-                c.SectionID = tes.SectionID;
-                c.Point = tes.Point;
-                c.Rank = tes.Rank;
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception) {
-                return false;
+                try
+                {
+                    var c = _db.Test.Find(tes.ID);
+                    c.Name = tes.Name;
+                    c.TimeTest = tes.TimeTest;
+                    c.SectionID = tes.SectionID;
+                    c.Point = tes.Point;
+                    c.Rank = tes.Rank;
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
-        //Xóa bài học
+        /// <summary>
+        /// Xóa bài kiểm tra
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>bool</returns>
         public bool DeleteTest(long id)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var result = _db.Test.Find(id);
-                _db.Test.Remove(result);
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try
+                {
+                    var result = _db.Test.Find(id);
+                    _db.Test.Remove(result);
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
     }
