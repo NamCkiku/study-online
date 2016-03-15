@@ -7,7 +7,7 @@ using StudyOnline.Entities.Models;
 
 namespace StudyOnline.Repository
 {
-    public class CourseRepository:CourseRepositoryInterface
+    public class CourseRepository:ICourseRepository
     {
         private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
 
