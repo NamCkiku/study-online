@@ -7,18 +7,14 @@ using StudyOnline.Entities.Models;
 
 namespace StudyOnline.Repository
 {
-<<<<<<< HEAD
-    public class CourseRepository
-=======
-    public class CourseRepository:ICourseRepository
->>>>>>> 8f4ab628460d09a1ac779b047f3f474dbe588ce3
+    public class CourseRepository : ICourseRepository
     {
 
         /// <summary>
         /// Lấy danh sách khóa học
         /// </summary>
         /// <returns>List</returns>
-        public List<StudyOnline.Entities.Models.Course> ListAllCourse()
+        public List<StudyOnline.Entities.Models.Course> getListCourse()
         {
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
@@ -44,7 +40,7 @@ namespace StudyOnline.Repository
         /// </summary>
         /// <param name="course">Course</param>
         /// <returns>long</returns>
-        public long CreateCourse(StudyOnline.Entities.Models.Course course)
+        public long addCourse(StudyOnline.Entities.Models.Course course)
         {
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
@@ -67,7 +63,7 @@ namespace StudyOnline.Repository
         /// </summary>
         /// <param name="course">Course</param>
         /// <returns>bool</returns>
-        public bool UpdateCourse(StudyOnline.Entities.Models.Course course)
+        public bool editCourse(StudyOnline.Entities.Models.Course course)
         {
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
@@ -103,7 +99,7 @@ namespace StudyOnline.Repository
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>bool</returns>
-        public bool DeleteCourse(long id)
+        public bool deleteCourse(long id)
         {
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
