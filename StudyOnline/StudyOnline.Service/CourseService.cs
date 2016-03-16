@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Service
 {
-    public class CourseService : CourseServiceInterface
+    public class CourseService : ICourseService
     {
         CourseRepository rpCourse = new CourseRepository();
         public List<Course> getListCourse()
@@ -17,7 +17,7 @@ namespace StudyOnline.Service
         }
         public long addCourse(Course course)
         {
-           return rpCourse.addCourse(course);
+            return rpCourse.addCourse(course);
         }
         public bool editCourse(Course course)
         {
@@ -26,6 +26,10 @@ namespace StudyOnline.Service
         public bool deleteCourse(long courseID)
         {
             return rpCourse.deleteCourse(courseID);
+        }
+        public Course ViewDetail(long id)
+        {
+            return rpCourse.ViewDetail(id);
         }
     }
 }

@@ -264,6 +264,8 @@
     <Content Include="Views\Shared\_MenuLeft.cshtml" />
     <Content Include="Views\Home\Detail.cshtml" />
     <Content Include="Views\Home\ContentCourse.cshtml" />
+    <Content Include="Views\Home\ViewVideo.cshtml" />
+    <Content Include="Views\Home\CourseManager.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

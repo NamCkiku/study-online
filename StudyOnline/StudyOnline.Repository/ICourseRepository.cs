@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public interface CourseRepositoryInterface
+    public interface ICourseRepository
     {
 
         List<Course> getListCourse();
         long addCourse(Course course);
         bool editCourse(Course course);
         bool deleteCourse(long courseID);
+        Course ViewDetail(long id);
     }
 }

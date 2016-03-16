@@ -7,7 +7,11 @@ using StudyOnline.Entities.Models;
 
 namespace StudyOnline.Repository
 {
+<<<<<<< HEAD
     public class CourseRepository
+=======
+    public class CourseRepository:ICourseRepository
+>>>>>>> 8f4ab628460d09a1ac779b047f3f474dbe588ce3
     {
 
         /// <summary>

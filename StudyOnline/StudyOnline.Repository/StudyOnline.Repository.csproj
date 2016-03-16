@@ -48,7 +48,7 @@
     <Compile Include="AttachMentRepository.cs" />
     <Compile Include="CommentRepository.cs" />
     <Compile Include="CourseCategoryRepository.cs" />
-    <Compile Include="CourseRepositoryInterface.cs" />
+    <Compile Include="ICourseRepository.cs" />
     <Compile Include="CourseRepository.cs" />
     <Compile Include="FriendUserRepository.cs" />
     <Compile Include="LessonRepository.cs" />
