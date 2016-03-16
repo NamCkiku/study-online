@@ -34,7 +34,7 @@
 
         .list-lesstion .lesstion-header ul {
             padding-left: 10px;
-            height:80px;
+            height: 80px;
         }
 
             .list-lesstion .lesstion-header ul li {
@@ -271,10 +271,10 @@
     }
 
         .list-discussion .discussion-item-main .discussion-item-content .cleanslate p {
-            color:#333;
-            font-size:14px;
-            padding-top:10px;
-            font-weight:bold;
+            color: #333;
+            font-size: 14px;
+            padding-top: 10px;
+            font-weight: bold;
         }
 
 @media (max-width: 800px) {
@@ -293,4 +293,40 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+}
+
+
+
+
+/*MyCourse*/
+.mycourse .mycourse-header {
+    height: 50px;
+    border-bottom: 3px solid black;
+}
+
+    .mycourse .mycourse-header .mycourse-tab {
+        background: transparent;
+        border: none;
+    }
+
+        .mycourse .mycourse-header .mycourse-tab #mycourse-tab {
+            vertical-align: top;
+            background: none;
+        }
+
+            .mycourse .mycourse-header .mycourse-tab #mycourse-tab a {
+                border: none;
+                background: none;
+                color: #810C15 !important;
+                font-size:16px;
+            }
+
+.myCourse-label {
+    line-height: 32px;
+    text-indent: 6px;
+    font-size: 32px;
+    padding-left: 50px;
+}
+.list-mycourse{
+    padding-left:15px;
 }

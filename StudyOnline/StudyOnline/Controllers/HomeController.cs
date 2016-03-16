@@ -14,8 +14,9 @@ namespace StudyOnline.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
-            var listCourse = svCourse.getListCourse();
-            return View(listCourse);
+            //var listCourse = svCourse.getListCourse();
+            //return View(listCourse);
+            return View();
         }
         public ActionResult Detail()
         {
@@ -25,5 +26,13 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
-	}
+        public ActionResult ViewVideo()
+        {
+            return View();
+        }
+        public ActionResult CourseManager()
+        {
+            return View();
+        }
+    }
 }
