@@ -8,72 +8,100 @@ namespace StudyOnline.Repository
 {
     class LessonRepository
     {
-         private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
-
-         public LessonRepository()
-        {
-            _db = new Entities.Models.StudyOnline();
-        }
-
-        // Lấy danh sách bài học
+        /// <summary>
+        /// Lấy danh sách các bài học
+        /// </summary>
+        /// <returns>List</returns>
         public List<StudyOnline.Entities.Models.Lesson> ListAllLesson()
         {
-            return _db.Lesson.ToList();
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.Lesson.ToList();
+            }
         }
 
-        //Lấy thông tin 1 khóa học
+        /// <summary>
+        /// Xem chi tiết 1 bài học
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>Lesson</returns>
         public StudyOnline.Entities.Models.Lesson ViewDetail(long id)
         {
-            return _db.Lesson.Find(id);
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.Lesson.Find(id);
+            }
         }
 
-        //Tạo bài học
+        /// <summary>
+        /// Tạo 1 bài học
+        /// </summary>
+        /// <param name="less">Lesson</param>
+        /// <returns>long</returns>
         public long CreateLesson(StudyOnline.Entities.Models.Lesson less)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                _db.Lesson.Add(less);
-                _db.SaveChanges();
-                return less.ID;
-            }
-            catch (Exception)
-            {
-                return -1;
+                try
+                {
+                    _db.Lesson.Add(less);
+                    _db.SaveChanges();
+                    return less.ID;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
 
-        //Cập nhật bài học
+        /// <summary>
+        /// Cập nhật 1 khóa học
+        /// </summary>
+        /// <param name="less">Lesson</param>
+        /// <returns>bool</returns>
         public bool UpdateLesson(StudyOnline.Entities.Models.Lesson less)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var c = _db.Lesson.Find(less.ID);
-                c.LessonName = less.LessonName;
-                c.Description = less.Description;
-                c.CreateDate = less.CreateDate;
-                c.Status = less.Status;
-                c.SectionID = less.SectionID;
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception) {
-                return false;
+                try
+                {
+                    var c = _db.Lesson.Find(less.ID);
+                    c.LessonName = less.LessonName;
+                    c.Description = less.Description;
+                    c.CreateDate = less.CreateDate;
+                    c.Status = less.Status;
+                    c.SectionID = less.SectionID;
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
-        //Xóa bài học
+        /// <summary>
+        /// Xóa 1 bài học
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>bool</returns>
         public bool DeleteLesson(long id)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var result = _db.Lesson.Find(id);
-                _db.Lesson.Remove(result);
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try
+                {
+                    var result = _db.Lesson.Find(id);
+                    _db.Lesson.Remove(result);
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 

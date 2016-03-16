@@ -8,71 +8,99 @@ namespace StudyOnline.Repository
 {
     public class TestAnswerRepository
     {
-         private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
-
-         public TestAnswerRepository()
-        {
-            _db = new Entities.Models.StudyOnline();
-        }
-
-      
+        /// <summary>
+        /// Lấy danh sách các câu hỏi
+        /// </summary>
+        /// <returns>List</returns>
         public List<StudyOnline.Entities.Models.TestAnswer> ListAllTestAnswer()
         {
-            return _db.TestAnswer.ToList();
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.TestAnswer.ToList();
+            }
         }
 
-     
+        /// <summary>
+        /// Lấy chi tiết 1 câu hỏi
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>TestAnswer</returns>
         public StudyOnline.Entities.Models.TestAnswer ViewDetail(long id)
         {
-            return _db.TestAnswer.Find(id);
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.TestAnswer.Find(id);
+            }
         }
 
-     
+        /// <summary>
+        /// Tạo câu hỏi
+        /// </summary>
+        /// <param name="ta">TestAnswer</param>
+        /// <returns>long</returns>
         public long CreateTestAnswer(StudyOnline.Entities.Models.TestAnswer ta)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                _db.TestAnswer.Add(ta);
-                _db.SaveChanges();
-                return ta.ID;
-            }
-            catch (Exception)
-            {
-                return -1;
+                try
+                {
+                    _db.TestAnswer.Add(ta);
+                    _db.SaveChanges();
+                    return ta.ID;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
 
-       
+        /// <summary>
+        /// Cập nhật câu hỏi
+        /// </summary>
+        /// <param name="ta">TestAnswer</param>
+        /// <returns>bool</returns>
         public bool UpdateTestAnswer(StudyOnline.Entities.Models.TestAnswer ta)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var c = _db.TestAnswer.Find(ta.ID);
-                c.Name = ta.Name;
-                c.TestQuestion = ta.TestQuestion;
-                c.TittleAnswer = ta.TittleAnswer;
-                c.TestQuestionID = ta.TestQuestionID;
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception) {
-                return false;
+                try
+                {
+                    var c = _db.TestAnswer.Find(ta.ID);
+                    c.Name = ta.Name;
+                    c.TestQuestion = ta.TestQuestion;
+                    c.TittleAnswer = ta.TittleAnswer;
+                    c.TestQuestionID = ta.TestQuestionID;
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
-       
+        /// <summary>
+        /// Xóa câu hỏi
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>bool</returns>
         public bool DeleteTestAnswer(long id)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var result = _db.TestAnswer.Find(id);
-                _db.TestAnswer.Remove(result);
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try
+                {
+                    var result = _db.TestAnswer.Find(id);
+                    _db.TestAnswer.Remove(result);
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 

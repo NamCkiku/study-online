@@ -8,73 +8,101 @@ namespace StudyOnline.Repository
 {
     public class SecctionRepository
     {
-         private readonly StudyOnline.Entities.Models.StudyOnline _db = null;
-
-         public SecctionRepository()
-        {
-            _db = new Entities.Models.StudyOnline();
-        }
-
-        // Lấy danh sách bài học
+        /// <summary>
+        /// Lấy danh sách phần học
+        /// </summary>
+        /// <returns>List</returns>
         public List<StudyOnline.Entities.Models.Section> ListAllSection()
         {
-            return _db.Section.ToList();
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.Section.ToList();
+            }
         }
 
-        //Lấy thông tin 1 khóa học
+        /// <summary>
+        /// Lấy thông tin chi tiết 1 phần học
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>Section</returns>
         public StudyOnline.Entities.Models.Section ViewDetail(long id)
         {
-            return _db.Section.Find(id);
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.Section.Find(id);
+            }
         }
 
-        //Tạo bài học
+        /// <summary>
+        /// Tạo 1 phân học
+        /// </summary>
+        /// <param name="sec">Section</param>
+        /// <returns>long</returns>
         public long CreateSection(StudyOnline.Entities.Models.Section sec)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                _db.Section.Add(sec);
-                _db.SaveChanges();
-                return sec.ID;
-            }
-            catch (Exception)
-            {
-                return -1;
+                try
+                {
+                    _db.Section.Add(sec);
+                    _db.SaveChanges();
+                    return sec.ID;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
 
-        //Cập nhật bài học
+        /// <summary>
+        /// Cập nhập phân học
+        /// </summary>
+        /// <param name="sec">Section</param>
+        /// <returns>bool</returns>
         public bool UpdateSection(StudyOnline.Entities.Models.Section sec)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var c = _db.Section.Find(sec.ID);
-                c.SectionName = sec.SectionName;
-                c.Title = sec.Title;
-                c.Description = sec.Description;
-                c.CreateDate = sec.CreateDate;
-                c.Status = sec.Status;
-                c.CourseID = sec.CourseID;
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception) {
-                return false;
+                try
+                {
+                    var c = _db.Section.Find(sec.ID);
+                    c.SectionName = sec.SectionName;
+                    c.Title = sec.Title;
+                    c.Description = sec.Description;
+                    c.CreateDate = sec.CreateDate;
+                    c.Status = sec.Status;
+                    c.CourseID = sec.CourseID;
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
 
-        //Xóa bài học
+        /// <summary>
+        /// Xóa phần học
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <returns>bool</returns>
         public bool DeleteSection(long id)
         {
-            try
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                var result = _db.Section.Find(id);
-                _db.Section.Remove(result);
-                _db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
+                try
+                {
+                    var result = _db.Section.Find(id);
+                    _db.Section.Remove(result);
+                    _db.SaveChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
             }
         }
     }
