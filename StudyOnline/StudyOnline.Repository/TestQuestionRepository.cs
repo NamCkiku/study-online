@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class TestQuestionRepository
+    public class TestQuestionRepository:ITestQuestionRepository
     {
 
         /// <summary>
