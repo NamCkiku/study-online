@@ -9,6 +9,7 @@ namespace StudyOnline.Service
 {
     public interface ICourseService
     {
+
         List<Course> getListCourse();
         long addCourse(Course course);
         bool editCourse(Course course);
