@@ -318,7 +318,7 @@
                 border: none;
                 background: none;
                 color: #810C15 !important;
-                font-size:16px;
+                font-size: 16px;
             }
 
 .myCourse-label {
@@ -327,6 +327,429 @@
     font-size: 32px;
     padding-left: 50px;
 }
-.list-mycourse{
-    padding-left:15px;
+
+.list-mycourse {
+    padding-left: 15px;
 }
+
+
+
+
+/*CreateCourse*/
+.secondary-menu {
+    height: 40px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+    .secondary-menu h1 {
+        display: block;
+        float: left;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 0;
+        padding: 0 20px;
+        color: #333;
+        font-weight: bold;
+        width: 230px;
+        text-align: center;
+        width: 100%;
+    }
+
+/* Breadcrumb */
+.main-breadcrumb {
+    background: none;
+    padding: 8px 0;
+    margin-bottom: 10px;
+}
+
+    .main-breadcrumb > li {
+        font-size: 12px;
+    }
+
+        .main-breadcrumb > li.active {
+            color: #333333;
+        }
+
+        .zn-v3 .main-breadcrumb > li > a,
+        .main-breadcrumb > li > a {
+            color: #999999;
+        }
+
+            .main-breadcrumb > li > a:hover {
+                color: #0EB285;
+                text-decoration: underline;
+            }
+
+        .main-breadcrumb > li + li:before {
+        }
+
+.contained {
+    width: 100%;
+    background: #fff;
+    padding: 0;
+    border-radius: 2px;
+    padding: 30px;
+    float: left;
+    box-shadow: 0 1px 2px #ddd;
+    margin-bottom: 15px;
+}
+
+#zn-course-introduction {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+    #zn-course-introduction p {
+    }
+
+        #zn-course-support p.head,
+        #zn-course-introduction p.head {
+            font-size: 18px;
+            font-weight: bold;
+            color: #25ae6c;
+        }
+
+    #zn-course-introduction .reason {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        ;
+    }
+
+        #zn-course-introduction .reason .icon {
+            width: 50px;
+            font-size: 26px;
+            display: inline-block;
+            float: left;
+            text-align: center;
+            background: #f5f6f7;
+            height: 50px;
+            border-radius: 100%;
+            line-height: 50px;
+            color: #666667;
+        }
+
+        #zn-course-introduction .reason.r1 .icon {
+        }
+
+        #zn-course-introduction .reason.r2 .icon {
+        }
+
+        #zn-course-introduction .reason.r3 .icon {
+        }
+
+        #zn-course-introduction .reason .text {
+            margin-left: 70px;
+            font-size: 14px;
+            color: #25ae6c;
+            font-weight: bold;
+        }
+
+        #zn-course-introduction .reason p {
+            margin-left: 70px;
+            padding-top: 13px;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        #zn-course-introduction .reason b {
+            font-size: 16px;
+            color: #25ae6c;
+        }
+
+
+#zn-create-course-box {
+    position: relative;
+}
+
+    #zn-create-course-box:before {
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        border-left: 5px solid #27ae60;
+        width: 3px;
+        content: '';
+    }
+
+    #zn-create-course-box .overlay {
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: 4px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 0px;
+    }
+
+        #zn-create-course-box .overlay h5 {
+            color: #fff;
+        }
+
+        #zn-create-course-box .overlay p {
+            color: #f5f6f7;
+        }
+
+            #zn-create-course-box .overlay p a:not(.zn-btn) {
+                color: #2bb774;
+            }
+
+                #zn-create-course-box .overlay p a:not(.zn-btn):hover {
+                    text-decoration: underline;
+                }
+
+.box {
+    border-radius: 2px;
+    float: left;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px #ddd;
+}
+
+.bordered-box {
+    border-radius: 2px;
+    background: #fff;
+    padding: 0;
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+    box-shadow: 0px 1px 1px #ddd;
+    margin-top: 0px;
+}
+
+    .bordered-box > .content {
+        padding: 24px;
+    }
+
+    .bordered-box > .content {
+        padding: 15px;
+        margin: 0;
+        float: left;
+        width: 100%;
+    }
+
+.zn-tab-content {
+    float: left;
+    width: 100%;
+}
+
+    .zn-tab-content > div {
+        float: left;
+        width: 100%;
+    }
+
+.cm-h2 {
+    font-size: 14px;
+    color: #424242;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+    line-height: 24px;
+    border-bottom: 1px dashed #e7e7e7;
+    padding-bottom: 6px;
+    text-align: left;
+}
+
+    .cm-h2 > .fa {
+        color: #D6D6D6;
+        margin-right: 5px;
+        font-size: 18px;
+        margin-top: 2px;
+    }
+
+    .cm-h2.nmb {
+        margin-bottom: 0;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .cm-h2 > i,
+    .cm-h2 > span {
+        display: inline-block;
+        float: left;
+    }
+
+    .cm-h2 button {
+        margin-left: 5px;
+    }
+
+    .cm-h2 option {
+    }
+
+    .cm-h2 select {
+        font-size: 12px;
+        padding: 2px 10px;
+        border-color: #e7e7e7;
+        margin-left: 10px;
+        float: right;
+    }
+
+        .cm-h2 select:focus {
+            outline: none;
+        }
+
+#courseManager .form-horizontal .control-label {
+    font-weight: normal;
+    text-align: right;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.form-group .form-control {
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.cm-button-footer {
+    margin-top: 20px;
+    padding: 15px 0;
+    text-align: right;
+    border-top: 1px solid #e9e9e9;
+}
+
+    .cm-button-footer button {
+        float: right;
+        margin-right: 8px;
+    }
+
+#zn-course-support {
+    background: #fff;
+    padding: 20px 30px;
+}
+
+    #zn-course-support p.head {
+        font-size: 13px;
+        font-weight: normal;
+        margin-bottom: 0px;
+        color: #999;
+    }
+
+.zn-v3 .modal-body .empty-msg {
+    float: none;
+}
+
+#zn-course-support .support-avatar {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    display: inline-block;
+    background: none;
+    padding: 0;
+    border-radius: 100%;
+    min-height: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+}
+
+    #zn-course-support .support-avatar img {
+        width: 100%;
+        float: left;
+        display: inline-block;
+        height: 100%;
+        ;
+    }
+
+.zn-video-test {
+    z-index: 9999999999;
+}
+
+#zn-course-support .hotline {
+    width: 100%;
+    float: left;
+}
+
+    #zn-course-support .hotline .number {
+        font-size: 26px;
+        font-weight: bold;
+        color: #25ae6c;
+    }
+
+        #zn-course-support .hotline .number .fa {
+        }
+
+    #zn-course-support .hotline .text {
+        color: #999;
+        padding-left: 29px;
+    }
+
+#zn-course-support .socials {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+
+    #zn-course-support .socials a {
+        float: left;
+        color: #999;
+        width: 100%;
+        font-size: 14px;
+        position: relative;
+        padding-left: 29px;
+        margin: 10px 0;
+        line-height: 24px;
+        min-height: 24px;
+    }
+
+        #zn-course-support .socials a:hover {
+            color: #25ae6c;
+            text-decoration: underline;
+        }
+
+        #zn-course-support .socials a.email .fa {
+            color: #5D6676;
+        }
+
+
+    #zn-course-support .socials i {
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    #zn-course-support .socials a.facebook .fa {
+        color: #3b5998;
+    }
+
+    #zn-course-support .socials i.fa-skype {
+        color: #00aff0;
+    }
+
+.zn-left-support {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+    .zn-left-support #zn-course-support .hotline .number {
+        font-size: 20px;
+    }
+
+    .zn-left-support #zn-course-support .socials a {
+        font-size: 12px;
+        overflow: hidden;
+        line-height: 20px;
+        padding-left: 23px;
+        padding-top: 0;
+        margin: 5px 0;
+    }
+
+        .zn-left-support #zn-course-support .socials a .fa {
+            font-size: 18px;
+            width: 18px;
+        }
+
+    .zn-left-support #zn-course-support .socials {
+        margin-top: 10px;
+    }
+
+    .zn-left-support #zn-course-support {
+        padding: 20px;
+    }

@@ -266,6 +266,7 @@
     <Content Include="Views\Home\ContentCourse.cshtml" />
     <Content Include="Views\Home\ViewVideo.cshtml" />
     <Content Include="Views\Home\CourseManager.cshtml" />
+    <Content Include="Views\Home\CreateCourse.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

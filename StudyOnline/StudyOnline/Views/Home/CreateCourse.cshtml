@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "CreateCourse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+<div class="secondary-menu">
+    <h1>
+        Tạo khóa học
+    </h1>
+</div>
+
+<div class="" id="main-container">
+    <ol class="breadcrumb main-breadcrumb">
+        <li><a title="Trang Chủ" href="/">Zuni</a></li>
+        <li><a href="/khoa-hoc-cua-toi/dang-day">Quản lý khóa học</a></li>
+        <li class="active">Tạo khóa học</li>
+    </ol>
+
+    <div id="courseManager" class="zn-v3">
+        <div class="row nomargin">
+            <div class="col-md-6 no-paddingxs">
+                <div id="zn-create-course-box" class="body bordered-box box">
+                    <div class="content">
+                        <div class="zn-tab-content">
+                            <div id="myTabContent" class="tab-content">
+                                <form id="addNewCourse" class="form-horizontal zn-form ng-pristine ng-valid" method="POST" action="/tao-khoa-hoc" novalidate="novalidate">
+                                    <div class="cm-h2">
+                                        <i class="fa fa-plus-square"></i> Tạo khóa học mới
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="courseTitle" class="col-sm-3 control-label">Tên khóa học <font class="required" color="red">*</font></label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Tên khóa học" value="" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                   @*<div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">Mã xác nhận</label>
+                                        <div class="col-sm-9">
+                                            <div class="g-recaptcha" data-sitekey="6Lfq5vwSAAAAAG74F_jSVewvIVsPaThhukFtDAL0"><div><div style="width: 304px; height: 78px;"><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Lfq5vwSAAAAAG74F_jSVewvIVsPaThhukFtDAL0&amp;co=aHR0cDovL3p1bmkudm46ODA.&amp;hl=en&amp;v=r20160307141848&amp;size=normal&amp;cb=yuyrymr6rh7b" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+                                            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                                        </div>
+                                    </div>*@
+                                    <div class="cm-button-footer zn3-button-group">
+                                        <button type="submit" class="btn btn-success" id="newCourseSubmit">
+                                            Tạo khóa học
+                                        </button>
+                                        <!-- <button type="button" class="zn-btn">Hủy</button> -->
+                                        <div class="spinner" style="display: none;">
+                                            <div class="rect1"></div>
+                                            <div class="rect2"></div>
+                                            <div class="rect3"></div>
+                                            <div class="rect4"></div>
+                                            <div class="rect5"></div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="zn-course-support" class="contained">
+                    <p class="head">Bạn cần hỗ trợ?</p>
+                    <div class="hotline">
+                        <div class="number"><i class="fa fa-phone"></i> 0968.63.03.03</div>
+                    </div>
+                    <div class="socials">
+                        <a href="javascript:void(0)" class="zn-send-message" data-id="2" data-username="[BQT] Hỗ trợ giáo viên">
+                            <span class="support-avatar">
+                                <img src="http://img1.res.zuni.vn/avatar/2014/12/22/20141222171036-nen trag gv.jpg" onerror="Zuni.Layout.fixErrorImgs(this);" class="upAvatar" alt="">
+                            </span>
+                            Gửi tin nhắn cho Ban quản trị
+                        </a>
+                        <a class="email" href="mailto:teacher@zuni.vn"><i class="fa fa-envelope"></i> Liên hệ qua email</a>
+                        <a class="facebook" target="__blank" href="https://www.facebook.com/groups/zuniteacher/"><i class="fa fa-facebook-square"></i> Cộng đồng Giáo viên giảng dạy trực tuyến</a>
+                        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                        <a href="skype:zuni.vng?chat" class="skype">
+                            <i class="fa fa-skype"></i> Hỗ trợ trực tuyến
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 no-paddingxs">
+                <div id="zn-course-introduction" class="contained course-bg">
+                    <p class="head">3 lý do bạn nên tạo khóa học trên Zuni</p>
+
+                    <div class="reason r1">
+                        <div class="icon"><i class="fa fa-video-camera"></i></div>
+                        <p>Được hỗ trợ <b>miễn phí</b> các công cụ xây dựng bài giảng (mic, webcam, bút điện tử) và cung cấp các chức năng thuận tiện nhất giúp giáo viên dễ dàng tiếp cận với xu hướng giảng dạy trực tuyến 2015-2020.</p>
+                    </div>
+                    <div class="reason r2">
+                        <div class="icon"><i class="fa fa-users"></i></div>
+                        <p>Cùng Zuni đưa bài giảng của bạn đến <b>hàng triệu</b> học viên trên khắp cả nước.</p>
+                    </div>
+                    <div class="reason r3">
+                        <div class="icon"><i class="fa fa-dollar"></i></div>
+                        <p>Tạo bước đột phá về thu nhập.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // $('#main').addClass('create-course');
+    </script>
+</div>
