@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class SecctionRepository
+    public interface ISecctionRepository
+    {
+        List<StudyOnline.Entities.Models.Section> ListAllSection();
+        StudyOnline.Entities.Models.Section ViewDetail(long id);
+        long CreateSection(StudyOnline.Entities.Models.Section sec);
+        bool UpdateSection(StudyOnline.Entities.Models.Section sec);
+        bool DeleteSection(long id);
+    }
+    public class SecctionRepository : ISecctionRepository
     {
         /// <summary>
         /// Lấy danh sách phần học

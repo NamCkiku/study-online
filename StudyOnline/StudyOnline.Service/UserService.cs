@@ -30,6 +30,10 @@ namespace StudyOnline.Service
         {
             return usrepository.ViewDetail(id);
         }
+        public StudyOnline.Entities.Models.User GetById(string userName)
+        {
+            return usrepository.GetById(userName);
+        }
         public long CreateUser(StudyOnline.Entities.Models.User tq)
         {
             return usrepository.CreateUser(tq);
