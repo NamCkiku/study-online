@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class TestRepository
+    public class TestRepository:ITestRepository
     {
         /// <summary>
         /// Lấy danh sách bài kiểm tra

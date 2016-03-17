@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class CourseCategoryRepository
+    public class CourseCategoryRepository:ICourseCategoryRepository
     {
 
         /// <summary>

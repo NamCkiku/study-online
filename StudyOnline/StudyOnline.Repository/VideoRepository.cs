@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class VideoRepository
+    public class VideoRepository:IVideoRepository
     {
         /// <summary>
         /// Danh sách Video

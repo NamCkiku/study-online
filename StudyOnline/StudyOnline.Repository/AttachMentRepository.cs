@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class AttachMentRepository
+    public class AttachMentRepository:IAttachMentRepository
     {
         /// <summary>
         /// Lấy danh sách tài liệu

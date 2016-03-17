@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Repository
 {
-    public class CommentRepository
+    public class CommentRepository:ICommentRepository
     {
         /// <summary>
         /// Lấy danh sách comment

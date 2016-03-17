@@ -7,7 +7,7 @@ using StudyOnline.Entities.Models;
 
 namespace StudyOnline.Repository
 {
-    public class TeacherRepository
+    public class TeacherRepository:ITeacherRepository
     {
         /// <summary>
         /// Lấy danh sách khóa học của giáo viên

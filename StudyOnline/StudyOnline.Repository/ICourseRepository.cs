@@ -9,7 +9,6 @@ namespace StudyOnline.Repository
 {
     public interface ICourseRepository
     {
-
         List<Course> getListCourse();
         long addCourse(Course course);
         bool editCourse(Course course);
