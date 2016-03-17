@@ -18,6 +18,9 @@ namespace StudyOnline.Repository
         int Login(string userName, string password);
         bool Signup(User user);
         void Active(int id, bool status);
+        bool CheckUserName(string userName);
+        bool CheckEmail(string email);
+        StudyOnline.Entities.Models.User GetById(string userName);
     }
     public class UserRepository : IUserRepository
     {
@@ -45,7 +48,13 @@ namespace StudyOnline.Repository
                 return _db.User.Find(id);
             }
         }
-
+        public StudyOnline.Entities.Models.User GetById(string userName)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.User.SingleOrDefault(x => x.UserName == userName);
+            }
+        }
         /// <summary>
         /// Tạo người dùng
         /// </summary>
@@ -175,7 +184,20 @@ namespace StudyOnline.Repository
                 _db.SaveChanges();
             }
         }
-
+        public bool CheckUserName(string userName)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.User.Count(x => x.UserName == userName)>0;
+            }
+        }
+        public bool CheckEmail(string email)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.User.Count(x => x.Email == email) > 0;
+            }
+        }
         //public void Register(User models, HttpPostedFileBase file)
         //{
         //    var fileName = GetDateName() + "_" + Path.GetFileName(file.FileName);
