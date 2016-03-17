@@ -281,6 +281,10 @@
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">
+      <Project>{475b04e5-7aa6-406b-b350-bccff1defdb2}</Project>
+      <Name>StudyOnline.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StudyOnline.Entities\StudyOnline.Entities.csproj">
       <Project>{e50afb03-52a8-49d6-98b4-17b7b35c4689}</Project>
       <Name>StudyOnline.Entities</Name>
