@@ -38,5 +38,9 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
+        public ActionResult CreateCourseManager()
+        {
+            return View();
+        }
     }
 }

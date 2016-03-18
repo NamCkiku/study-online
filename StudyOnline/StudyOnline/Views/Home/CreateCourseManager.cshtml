@@ -1,0 +1,443 @@
+﻿
+@{
+    ViewBag.Title = "CreateCourseManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+<link href="~/Contents/Plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+<script src="~/Contents/Plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<div id="" class="main-container no-paddingxs">
+    <ol class="breadcrumb main-breadcrumb">
+        <li><a title="Trang Chủ" href="/">Zuni</a></li>
+        <li><a href="/khoa-hoc-cua-toi/dang-day">Quản lý khóa học</a></li>
+        <li class="active">Tạo khóa học</li>
+    </ol>
+    <div class="courseManage">
+
+    </div>
+    <div id="courseManager">
+        <div class="row nomargin">
+            <div class="col-md-12 nopading">
+                <div id="cm-header" class="box">
+                    <div class="course-metas col-md-7">
+                        <div class="course-img">
+                            <img class="ccAvatar" src="http://stc.zuni.vn/resource/module/default/layout/image/course_no_image.jpg" alt="" onerror="Zuni.Layout.fixErrorImgs(this);">
+                        </div>
+                        <div class="course-info">
+                            <div class="name">
+                                Học Lập Trình Asp.Net MVC5
+                                <div class="live-status">
+                                    <div class="status" data-toggle="tooltip" title="" data-original-title="Chưa phát hành"><i class="fa fa-circle"></i></div>
+                                </div>
+                            </div>
+                            <div class="teacher">
+                                <a class="teacher" href="/thong-tin-tai-khoan/namckiku/271225" data-toggle="profile" data-id="271225" data-original-title="" title="">
+                                    <span>Nam Ckiku</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-actions col-md-5">
+                        <div class="publish-status">
+                            <div class="edit-status">
+                                <div class="current-status">
+                                    Chưa yêu cầu phát hành
+                                </div>
+
+                                <a href="#" class="cm-request-publish-course-btn btn btn-success" data-type="3">Yêu cầu phát hành</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="cm-publish-course" tabindex="-1" role="dialog" aria-labelledby="cm-publish-course-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Đóng</span></button>
+                                <h4 class="modal-title" id="cm-publish-course-label">Phát hành khóa học</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có chắc chắn muốn phát hành khóa học này ?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btn-publish-course" type="button" class="zn-btn btn-success btn-save">Phát hành</button>
+                                <button type="button" class="zn-btn" data-dismiss="modal">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="cm-unpublish-course" tabindex="-1" role="dialog" aria-labelledby="cm-unpublish-course-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Đóng</span></button>
+                                <h4 class="modal-title" id="cm-unpublish-course-label">Phát hành khóa học</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có chắc chắn muốn ngưng phát hành khóa học này ?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btn-unpublish-course" type="button" class="zn-btn btn-danger btn-save">Ngưng phát hành</button>
+                                <button type="button" class="zn-btn" data-dismiss="modal">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="cm-request-publish-course" tabindex="-1" role="dialog" aria-labelledby="cm-request-publish-course-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Đóng</span></button>
+                                <h4 class="modal-title" id="cm-request-publish-course-label">Yêu cầu <span class="type">phát hành</span> khóa học</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có chắc chắn muốn yêu cầu <span class="type">phát hành</span> khóa học này ?</p>
+                                <p><strong>Lưu ý</strong>:</p>
+                                <p>- Để được phát hành, khóa học của bạn phải đáp ứng <a class="link" target="__blank" href="http://zuni.vn/blog/chi-tiet/danh-muc-phe-duyet-khoa-hoc/219">các tiêu chí phê duyệt khóa học <i class="fa fa-sign-out"></i></a> của Zuni.</p>
+                                <p>- Khóa học của bạn sẽ được phê duyệt trong vòng 3 - 14 ngày (kể từ khi yêu cầu <span class="type">phát hành</span>).</p>
+
+                                <div class="form-group">
+                                    <label for="cr-p-comment">Lời nhắn cho ban quản trị</label>
+                                    <textarea class="form-control" style="height: 100px;" id="cr-p-comment" rows="10" cols="40" name="cr-p-comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btn-request-publish-course" data-type="3" type="button" class="zn-btn btn-success btn-save">Yêu cầu <span class="type">phát hành</span></button>
+                                <button type="button" class="zn-btn" data-dismiss="modal">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="cm-push-courseware-to-live-confirm" tabindex="-1" role="dialog" aria-labelledby="cm-request-publish-course-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Đóng</span></button>
+                                <h4 class="modal-title" id="cm-request-publish-course-label">Cập nhật khóa học cho học sinh</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có chắc chắn muốn cập nhật nội dung cho khóa học này?</p>
+                                <p><strong>Lưu ý</strong>:</p>
+                                <p>- Sau khi đồng ý cập nhật khóa học, toàn bộ thay đổi bạn đã thực hiện cho khóa học sẽ được cập nhật cho học sinh.</p>
+                                <p>- Sau khi cập nhật thành công, bạn hãy gửi tin nhắn thông báo cho học sinh các thay đổi đó để học sinh có thể theo dõi tiến độ cập nhật của bạn một cách tốt nhất.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btn-push-courseware-to-live" type="button" class="zn-btn btn-success btn-save">Đồng ý</button>
+                                <button type="button" class="zn-btn" data-dismiss="modal">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="cm-auto-check-modal" tabindex="-1" role="dialog" aria-labelledby="cm-auto-check-fail-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Đóng</span></button>
+                                <h4 class="modal-title" id="cm-auto-check-fail-label">Yêu cầu <span class="type">phát hành</span> khóa học</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn cần kiểm tra những điều kiện còn thiếu sau để yêu cầu <span class="type">phát hành</span> khóa học này ?</p>
+                                <ul class="course-conds">
+                                    <li class="header course">Thông tin khóa học</li>
+                                    <li class="course" data-id="1">
+                                        Khóa học phải có <a target="__blank" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin">hình đại diện</a>.
+                                    </li>
+                                    <li class="course" data-id="9">
+                                        Khóa học phải có <a target="__blank" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin">giới thiệu về khóa học</a>.
+                                    </li>
+                                    <li class="course" data-id="2">
+                                        Khóa học phải có ít nhất một <a target="__blank" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin">mục tiêu</a>.
+                                    </li>
+                                    <li class="course" data-id="3">
+                                        Khóa học phải có ít nhất một <a target="__blank" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin">đối tượng học viên</a>.
+                                    </li>
+                                    <li class="course" data-id="4">
+                                        Khóa học phải có ít nhất một <a target="__blank" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin">điều kiện được học</a>.
+                                    </li>
+                                    <li class="course" data-id="5">
+                                        Khóa học phải có ít nhất một <a target="__blank" href="/quan-ly-khoa-hoc/2276/noi-dung">bài học có nội dung (bắt buộc có video)</a> để Zuni kiểm tra chất lượng trước khi phát hành.
+                                    </li>
+                                    <li class="header user">Thông tin cá nhân</li>
+                                    <li class="user" data-id="6">
+                                        Bạn phải cập nhật <a target="__blank" href="/thay-doi-thong-tin">Thông tin chung</a>, bao gồm: "Hình đại diện" và "Giới thiệu về bản thân".
+                                    </li>
+                                    <li class="user" data-id="7">
+                                        Bạn phải cập nhật đầy đủ <a target="__blank" href="/thay-doi-thong-tin/ca-nhan">Thông tin cá nhân</a>.
+                                    </li>
+                                    <li class="user" data-id="8">
+                                        Bạn phải cập nhật đầy đủ <a target="__blank" href="/thay-doi-thong-tin/giao-vien">Thông tin giáo viên</a>.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="zn-btn" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    (function () {
+                        var courseId = 2276;
+
+                        $(document).on('ready', function () {
+                            $(document)
+                            .on('click', '.cm-request-publish-course-btn', function () {
+                                var type = $(this).data('type');
+                                $.get('/coursemgt/course-manager/check-valid-course/id/' + courseId, function (resp) {
+                                    if (!resp.data[0]) {
+                                        for (var key in resp.data) {
+                                            if (key == 0) {
+                                                continue;
+                                            }
+
+                                            var val = resp.data[key];
+                                            var el = $('#cm-auto-check-modal .course-conds li[data-id="' + key + '"]');
+                                            if (val) {
+                                                el.hide();
+                                            } else {
+                                                el.show();
+                                            }
+                                        }
+
+                                        $('#cm-auto-check-modal').modal('show');
+                                        $('#cm-auto-check-modal').off('bs.modal.shown').on('shown.bs.modal', function () {
+                                            if ($('#cm-auto-check-modal .course-conds li.user:not(.header):visible').length) {
+                                                $('#cm-auto-check-modal .course-conds li.user.header').show();
+                                            } else {
+                                                $('#cm-auto-check-modal .course-conds li.user.header').hide();
+                                            }
+
+                                            if ($('#cm-auto-check-modal .course-conds li.course:not(.header):visible').length) {
+                                                $('#cm-auto-check-modal .course-conds li.course.header').show();
+                                            } else {
+                                                $('#cm-auto-check-modal .course-conds li.course.header').hide();
+                                            }
+                                        });
+
+                                        return false;
+                                    }
+
+                                    // show publish box
+                                    $('#btn-request-publish-course').data('type', type);
+
+                                    var text = type == 3 ? 'phát hành' : 'cập nhật';
+
+                                    // console.log(type, text);
+                                    $('#cm-request-publish-course span.type').html(text);
+                                    $('#cm-request-publish-course').modal('show');
+                                });
+                            })
+                            // .on('click', '#btn-publish-course', function () {
+                            //     var data = {
+                            //         courseId: courseId,
+                            //         data: {
+                            //             status: 1        //         }
+                            //     };
+
+                            //     data.data = JSON.stringify(data.data);
+
+                            //     $.post('/course/course-manager/update/', data, function () {
+                            //         location.reload();
+                            //     });
+                            // })
+                            // .on('click', '#btn-unpublish-course', function () {
+                            //     var data = {
+                            //         courseId: courseId,
+                            //         data: {
+                            //             status: 7        //         }
+                            //     };
+
+                            //     data.data = JSON.stringify(data.data);
+
+                            //     $.post('/course/course-manager/update/', data, function () {
+                            //         location.reload();
+                            //     });
+                            // })
+                            .on('click', '#btn-request-publish-course', function () {
+                                var data = {
+                                    courseId: courseId,
+                                    data: {
+                                        status: $(this).data('type')
+                                    },
+                                    comment: $('#cr-p-comment').val()
+                                };
+
+                                data.data = JSON.stringify(data.data);
+
+                                $.post('/coursemgt/course-manager/update/', data, function () {
+                                    location.reload();
+                                });
+                            })
+                            .on('click', '.cm-push-courseware-to-live-btn', function () {
+                                $('#cm-push-courseware-to-live-confirm').modal('show');
+                            })
+                            .on('click', '#btn-push-courseware-to-live', function () {
+                                $('#cm-push-courseware-to-live-confirm').modal('hide');
+                                $.post('/coursemgt/course-manager/push-courseware-to-live', { id: "2276" }, function (resp) {
+                                    if (resp) {
+                                        alert('Cập nhật thành công! Bạn hãy gửi tin nhắn thông báo cập nhật cho học sinh nhé!');
+                                    }
+                                });
+                            });
+                        });
+                    })();
+
+                </script>
+            </div>
+        </div>
+        <div class="row nomargin">
+            <div class="col-md-3 nopading">
+                <div id="cm-sidebar" class="">
+                    <ul class="cm-menu">
+                        <li class="active">
+                            <a class=""><span class="fa fa-dashboard"></span> Tổng quan</a>
+                        </li>
+                        <li class="">
+                            <a class="" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin"><span class="fa fa-gear"></span> Cài đặt</a>
+                        </li>
+                        <li class="">
+                            <a class="" href="/quan-ly-khoa-hoc/2276/noi-dung"><span class="fa fa-tasks"></span> Nội dung</a>
+                        </li>
+                        <li class="">
+                            <a class="" href="/quan-ly-khoa-hoc/2276/danh-sach-hoc-vien"><span class="fa fa-bar-chart-o"></span> Thống kê</a>
+                        </li>
+                        <li class="">
+                            <a class="" href="/quan-ly-khoa-hoc/2276/thong-tin-phe-duyet"><span class="fa fa-location-arrow"></span> Thông tin phê duyệt</a>
+                        </li>
+                        <li class="">
+                            <a class="" href="/quan-ly-khoa-hoc/2276/ho-tro-truc-tuyen"><span class="fa fa-life-ring"></span> Hỗ trợ trực tuyến</a>
+                        </li>
+                    </ul>
+                </div>
+
+                @*<div id="cm-toolbox" class="box">
+                    <div class="content">
+                        <p class="head">Công cụ</p>
+                        <a class="btn-link" target="_blank" href="/quan-ly-khoa-hoc/2276/gui-thong-bao"> <i class="fa fa-bullhorn"></i> Gửi tin nhắn đến học viên</a>
+                        <a class="btn-link" target="_blank" href="/coursemgt/coupon/manage/course_id/2276"><i class="fa fa-shopping-cart"></i> Quản lý coupon</a>
+                    </div>
+                </div>
+
+                <div class="zn-left-support">
+                    <div id="zn-course-support" class="contained">
+                        <p class="head">Bạn cần hỗ trợ?</p>
+                        <div class="hotline">
+                            <div class="number"><i class="fa fa-phone"></i> 0968.63.03.03</div>
+                        </div>
+                        <div class="socials">
+                            <a href="javascript:void(0)" class="zn-send-message" data-id="2" data-username="[BQT] Hỗ trợ giáo viên">
+                                <span class="support-avatar">
+                                    <img src="http://img1.res.zuni.vn/avatar/2014/12/22/20141222171036-nen trag gv.jpg" onerror="Zuni.Layout.fixErrorImgs(this);" class="upAvatar" alt="">
+                                </span>
+                                Gửi tin nhắn cho Ban quản trị
+                            </a>
+                            <a class="email" href="mailto:teacher@zuni.vn"><i class="fa fa-envelope"></i> Liên hệ qua email</a>
+                            <a class="facebook" target="__blank" href="https://www.facebook.com/groups/zuniteacher/"><i class="fa fa-facebook-square"></i> Cộng đồng Giáo viên giảng dạy trực tuyến</a>
+                            <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                            <a href="skype:zuni.vng?chat" class="skype">
+                                <i class="fa fa-skype"></i> Hỗ trợ trực tuyến
+                            </a>
+                        </div>
+                    </div>
+                </div>*@
+
+                <script type="text/javascript">
+                    $('#btn-quick-review').on('click', function (e) {
+                        $.post('/coursemgt/course-manager/push-courseware-to-live', { id: "2276" }, function (resp) {
+                            if (resp) {
+                                alert('Phê duyệt thành công');
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+            <div class="col-md-9 no-paddingxs">
+                <div class="body bordered-box box">
+                    <div class="col-md-12 nopading">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#infomation" aria-controls="home" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-info-circle"></i> Thông tin</span></a></li>
+                            <li role="presentation"><a href="#teacher" aria-controls="profile" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-users"></i> Giảng viên/ Trợ giảng</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="content nopading-left">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="infomation">
+                                <div class="title-h2">
+                                    <i class="fa fa-info-circle"></i> Thông tin cơ bản
+                                    <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                                </div>
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Tên Khóa Học <font class="required" color="red">*</font></label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Tên khóa học" value="Học Lập Trình Asp.Net MVC5">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword3" class="col-sm-2 control-label">Thời Gian Từ <font class="required" color="red">*</font></label>
+                                        <div class="col-md-3">
+                                            <input  type="text" class="form-control datepicker">
+                                        </div>
+                                        <label  class="col-md-1 control-label">đến</label>
+                                        <div class="col-md-3">
+                                            <input type="text" class="form-control datepicker">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="checkbox">
+                                                <label  class="control-label">
+                                                    <input type="checkbox" value="true" checked="">
+                                                   Vô thời hạn
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Hình Đại Diện<font class="required" color="red">*</font></label>
+                                        <div class="col-sm-10">
+                                            <div id="course-cover-box" class="course-image-box">
+                                                <img src="http://stc.zuni.vn/resource/module/default/layout/image/course_no_image.jpg" class="courseCover ccAvatar img-polaroid" width="240">
+                                            </div>
+                                            <label for="courseCoverSelector" class="course-cover-label">
+                                                <button class="btn btn-sm btn-success" id="course-cover-btn">Thay đổi</button>
+                                            </label>
+                                            <p class="course-image-desc">Kích thước hình đại diện là 480 x 270 px.</p>
+                                            <input type="hidden" name="courseCoverBase64" id="courseCoverBase64">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail3" class="col-sm-2 control-label">Hình Nền<font class="required" color="red">*</font></label>
+                                        <div class="col-sm-10">
+                                            <div id="course-cover-box" class="course-image-box">
+                                                <img src="http://stc.zuni.vn/resource/module/default/layout/image/course_no_image.jpg" class="courseCover ccAvatar img-polaroid" width="240">
+                                            </div>
+                                            <label for="courseCoverSelector" class="course-cover-label">
+                                                <button class="btn btn-sm btn-success" id="course-cover-btn">Thay đổi</button>
+                                            </label>
+                                            <p class="course-image-desc">Lưu ý: Hình nền có dung lượng không quá 1024M.</p>
+                                            <input type="hidden" name="courseCoverBase64" id="courseCoverBase64">
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="teacher"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+</script>

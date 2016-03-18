@@ -254,6 +254,8 @@
     <Content Include="Contents\js\video.js" />
     <Content Include="Contents\office\layout.css" />
     <Content Include="Contents\office\Modal.css" />
+    <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="Contents\Plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
     <Content Include="Contents\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Contents\fonts\glyphicons-halflings-regular.eot" />
@@ -1825,6 +1827,7 @@
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Home\CreateCourseManager.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
