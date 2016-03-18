@@ -51,6 +51,7 @@
     <Compile Include="Interface\ISecctionService.cs" />
     <Compile Include="Interface\ITeacherService.cs" />
     <Compile Include="Interface\ITestAnswerService.cs" />
+    <Compile Include="Interface\ITestQuestionService.cs" />
     <Compile Include="Interface\ITestService.cs" />
     <Compile Include="Interface\IUserService.cs" />
     <Compile Include="Interface\IVideoService.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="SecctionService.cs" />
     <Compile Include="TeacherService.cs" />
     <Compile Include="TestAnswerService.cs" />
+    <Compile Include="TestQuestionService.cs" />
     <Compile Include="TestService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="VideoService.cs" />
