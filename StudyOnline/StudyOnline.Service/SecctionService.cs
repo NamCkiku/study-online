@@ -1,4 +1,5 @@
 ﻿using StudyOnline.Repository;
+using StudyOnline.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Service
 {
-    public interface ISecctionService
-    {
-        List<StudyOnline.Entities.Models.Section> ListAllSection();
-        StudyOnline.Entities.Models.Section ViewDetail(long id);
-        long CreateSection(StudyOnline.Entities.Models.Section sec);
-        bool UpdateSection(StudyOnline.Entities.Models.Section sec);
-        bool DeleteSection(long id);
-    }
-    class SecctionService : ISecctionService
+    public class SecctionService : ISecctionService
     {
         SecctionRepository rpSecction = new SecctionRepository();
         public List<StudyOnline.Entities.Models.Section> ListAllSection()
