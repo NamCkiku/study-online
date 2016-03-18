@@ -18,6 +18,8 @@ namespace StudyOnline.Repository
         {
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
+                List<StudyOnline.Entities.Models.Course> lst = new List<Course>();
+                lst = _db.Course.ToList();
                 return _db.Course.ToList();
             }
         }

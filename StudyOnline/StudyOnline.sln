@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline", "StudyOnline\StudyOnline.csproj", "{0DE37853-8F37-418E-9905-939645B0C4EA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline.Tests", "StudyOnline.Tests\StudyOnline.Tests.csproj", "{F00B393A-8635-4CC1-8724-2A9349FA2198}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline.Common", "StudyOnline.Common\StudyOnline.Common.csproj", "{475B04E5-7AA6-406B-B350-BCCFF1DEFDB2}"
@@ -15,16 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline.Repository", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline.Service", "StudyOnline.Service\StudyOnline.Service.csproj", "{A3B1B5A4-8E53-41E0-AF44-A32A3FD6C786}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline", "StudyOnline\StudyOnline.csproj", "{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0DE37853-8F37-418E-9905-939645B0C4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DE37853-8F37-418E-9905-939645B0C4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DE37853-8F37-418E-9905-939645B0C4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DE37853-8F37-418E-9905-939645B0C4EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F00B393A-8635-4CC1-8724-2A9349FA2198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F00B393A-8635-4CC1-8724-2A9349FA2198}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F00B393A-8635-4CC1-8724-2A9349FA2198}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{A3B1B5A4-8E53-41E0-AF44-A32A3FD6C786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3B1B5A4-8E53-41E0-AF44-A32A3FD6C786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3B1B5A4-8E53-41E0-AF44-A32A3FD6C786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

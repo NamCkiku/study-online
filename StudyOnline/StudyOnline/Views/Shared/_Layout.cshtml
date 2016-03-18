@@ -1,32 +1,13 @@
 ﻿<!DOCTYPE html>
-
-<html ng-app="myApp">
+<html>
 <head>
-    <title>My Play a Entertainment Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-    <!-- bootstrap -->
-    <link href="~/Contents/css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
-    <!-- //bootstrap -->
-    <link href="~/Contents/css/dashboard.css" rel="stylesheet">
-    <!-- Custom Theme files -->
-    <link href="~/Contents/css/style.css" rel='stylesheet' type='text/css' media="all" />
-    <script src="~/Contents/js/jquery-1.11.1.min.js"></script>
-    <!--start-smoth-scrolling-->
-    <!-- fonts -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <!-- //fonts -->
-    <script type="text/javascript" src="~/Contents/js/modernizr.custom.min.js"></script>
-    <link href="~/Contents/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="~/Contents/js/jquery.magnific-popup.js" type="text/javascript"></script>
-    <script src="~/Contents/js/responsiveslides.min.js"></script>
-    <link href="~/Contents/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Content/Angular/Module.js"></script>
-    <script src="~/Content/Angular/Service.js"></script>
-    <script src="~/Content/Angular/Controller.js"></script>
+    @Styles.Render("~/Contents/css")
+        @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <!-- //Header -->
@@ -52,18 +33,16 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="~/Contents/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="~/Scripts/angular.min.js"></script>
+
+
     <script src="~/Contents/Angular/Module.js"></script>
     <script src="~/Contents/Angular/Service.js"></script>
-    <script src="/Contents/Angular/Controller.js"></script>
-    <script src="/Js/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/Js/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/Js/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <script src="/Js/dist/js/sb-admin-2.js"></script>
-    @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)*@
+    <script src="~/Contents/Angular/Controller.js"></script>
+
+
+    @System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap.js")
+    @System.Web.Optimization.Scripts.Render("~/Scripts/angular.js")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

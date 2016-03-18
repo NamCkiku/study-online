@@ -1,5 +1,4 @@
-﻿using StudyOnline.Service;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,23 +8,11 @@ namespace StudyOnline.Controllers
 {
     public class HomeController : Controller
     {
-        CourseService svCourse = new CourseService();
-        //
-        // GET: /Home/
         public ActionResult Index()
         {
-            //var listCourse = svCourse.getListCourse();
-            //return View(listCourse);
             return View();
         }
-        public ActionResult Detail()
-        {
-            return View();
-        }
-        public ActionResult ContentCourse()
-        {
-            return View();
-        }
+
         public ActionResult ViewVideo()
         {
             return View();
@@ -38,6 +25,7 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
+
         public ActionResult CreateCourseManager()
         {
             return View();
