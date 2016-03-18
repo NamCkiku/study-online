@@ -22,6 +22,7 @@ namespace StudyOnline.Repository
                 var result = (from a in _db.User
                               join b in _db.User_Teacher_Course on a.ID equals b.UserID
                               join c in _db.Course on b.CourseID equals c.ID
+                             
                               select new
                               {
                                   a,
