@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudyOnline.Service.Interface
 {
-    public interface IAttachMentService
+    public interface IAttachmentService
     {
         List<StudyOnline.Entities.Models.AttachMent> ListAllAttachMent();
         StudyOnline.Entities.Models.AttachMent ViewDetail(long id);
