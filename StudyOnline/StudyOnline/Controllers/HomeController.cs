@@ -12,7 +12,14 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
-
+        public ActionResult Detail()
+        {
+            return View();
+        }
+        public ActionResult ContentCourse()
+        {
+            return View();
+        }
         public ActionResult ViewVideo()
         {
             return View();
