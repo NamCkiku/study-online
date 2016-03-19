@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,14 +35,10 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 
-
+    @Scripts.Render("~/bundles/jquery")
     <script src="~/Contents/Angular/Module.js"></script>
     <script src="~/Contents/Angular/Service.js"></script>
     <script src="~/Contents/Angular/Controller.js"></script>
-
-
-    @*@System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap.js")
-    @System.Web.Optimization.Scripts.Render("~/Scripts/angular.js")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

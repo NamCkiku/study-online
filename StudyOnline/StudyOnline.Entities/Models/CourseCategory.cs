@@ -9,11 +9,11 @@ namespace StudyOnline.Entities.Models
     [Table("CourseCategory")]
     public partial class CourseCategory
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CourseCategory()
-        {
-            Course = new HashSet<Course>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public CourseCategory()
+        //{
+        //    Course = new HashSet<Course>();
+        //}
 
         public long ID { get; set; }
 
@@ -38,7 +38,7 @@ namespace StudyOnline.Entities.Models
 
         public bool? Status { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Course> Course { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<Course> Course { get; set; }
     }
 }

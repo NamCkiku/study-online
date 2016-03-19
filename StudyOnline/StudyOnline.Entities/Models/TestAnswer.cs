@@ -19,6 +19,6 @@ namespace StudyOnline.Entities.Models
 
         public long? TestQuestionID { get; set; }
 
-        public virtual TestQuestion TestQuestion { get; set; }
+        //public virtual TestQuestion TestQuestion { get; set; }
     }
 }

@@ -9,12 +9,12 @@ namespace StudyOnline.Entities.Models
     [Table("Section")]
     public partial class Section
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Section()
-        {
-            Lesson = new HashSet<Lesson>();
-            Test = new HashSet<Test>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public Section()
+        //{
+        //    Lesson = new HashSet<Lesson>();
+        //    Test = new HashSet<Test>();
+        //}
 
         public long ID { get; set; }
 
@@ -33,12 +33,12 @@ namespace StudyOnline.Entities.Models
 
         public long? CourseID { get; set; }
 
-        public virtual Course Course { get; set; }
+        //public virtual Course Course { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lesson> Lesson { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<Lesson> Lesson { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Test> Test { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<Test> Test { get; set; }
     }
 }

@@ -68,7 +68,7 @@ namespace StudyOnline.Repository
                 {
                     var c = _db.TestAnswer.Find(ta.ID);
                     c.Name = ta.Name;
-                    c.TestQuestion = ta.TestQuestion;
+                    //c.TestQuestion = ta.TestQuestion;
                     c.TittleAnswer = ta.TittleAnswer;
                     c.TestQuestionID = ta.TestQuestionID;
                     _db.SaveChanges();
