@@ -7,7 +7,7 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     @Styles.Render("~/Contents/css")
-        @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <!-- //Header -->
@@ -41,8 +41,8 @@
     <script src="~/Contents/Angular/Controller.js"></script>
 
 
-    @System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap.js")
-    @System.Web.Optimization.Scripts.Render("~/Scripts/angular.js")
+    @*@System.Web.Optimization.Scripts.Render("~/Scripts/bootstrap.js")
+    @System.Web.Optimization.Scripts.Render("~/Scripts/angular.js")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>
