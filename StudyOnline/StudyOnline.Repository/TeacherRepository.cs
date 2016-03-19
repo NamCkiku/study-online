@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StudyOnline.Entities.Models;
+using StudyOnline.Repository.Interface;
 
 namespace StudyOnline.Repository
 {
