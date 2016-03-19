@@ -5,31 +5,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StudyOnline.Repository.Interface;
 
 namespace StudyOnline.Service
 {
-    public class AttachMentService : IAttachMentService
+    public class AttachmentService : IAttachmentService
     {
-        AttachMentRepository amtRepository = new AttachMentRepository();
+        private readonly IAttachMentRepository attachmentRepository;
+        public AttachmentService(IAttachMentRepository repository)
+        {
+            attachmentRepository = repository;
+        }
+
         public List<StudyOnline.Entities.Models.AttachMent> ListAllAttachMent()
         {
-            return amtRepository.ListAllAttachMent();
+            return attachmentRepository.ListAllAttachMent();
         }
         public StudyOnline.Entities.Models.AttachMent ViewDetail(long id)
         {
-            return amtRepository.ViewDetail(id);
+            return attachmentRepository.ViewDetail(id);
         }
         public long InsertAttachMent(StudyOnline.Entities.Models.AttachMent am)
         {
-            return amtRepository.InsertAttachMent(am);
+            return attachmentRepository.InsertAttachMent(am);
         }
         public bool UpdateAttachMent(StudyOnline.Entities.Models.AttachMent am)
         {
-            return amtRepository.UpdateAttachMent(am);
+            return attachmentRepository.UpdateAttachMent(am);
         }
         public bool DeleteAttachMent(long id)
         {
-            return amtRepository.DeleteAttachMent(id);
+            return attachmentRepository.DeleteAttachMent(id);
         }
     }
 }
