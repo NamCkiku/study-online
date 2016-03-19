@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StudyOnline.Entities.Models;
 
-namespace StudyOnline.Repository
+namespace StudyOnline.Repository.Interface
 {
     public interface ITeacherRepository
     {
