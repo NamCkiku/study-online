@@ -88,8 +88,8 @@ namespace StudyOnline.Repository.Users
                     c.CreatedBy = us.CreatedBy;
                     c.ModifiedDate = us.ModifiedDate;
                     c.ModifiedBy = us.ModifiedBy;
-                    c.GroupID = us.GroupID;
-                    c.PayID = us.PayID;
+                    //c.GroupID = us.GroupID;
+                    //c.PayID = us.PayID;
                     _db.SaveChanges();
                     return true;
                 }

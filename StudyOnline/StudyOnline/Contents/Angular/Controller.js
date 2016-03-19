@@ -1,10 +1,10 @@
 ﻿app.controller("myCtrl", function ($scope, myService) {
     getDocumentCome();
     function getDocumentCome() {
-        alert(1);
+      
         myService.getDocumentCome()
         .success(function (come) {
-            $scope.items = come.data;
+            $scope.items = come;
             console.log("come", come);
         })
         .error(function (error) {
