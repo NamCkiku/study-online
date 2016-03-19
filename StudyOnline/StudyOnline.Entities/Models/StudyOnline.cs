@@ -31,45 +31,45 @@
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Course>()
-                .HasMany(e => e.User_Teacher_Course)
-                .WithRequired(e => e.Course)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Course>()
+            //    .HasMany(e => e.User_Teacher_Course)
+            //    .WithRequired(e => e.Course)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Course>()
-                .HasMany(e => e.User)
-                .WithMany(e => e.Course)
-                .Map(m => m.ToTable("User_Course").MapLeftKey("CourseID").MapRightKey("UserID"));
+            //modelBuilder.Entity<Course>()
+            //    .HasMany(e => e.User)
+            //    .WithMany(e => e.Course)
+            //    .Map(m => m.ToTable("User_Course").MapLeftKey("CourseID").MapRightKey("UserID"));
 
-            modelBuilder.Entity<GroupUser>()
-                .HasOptional(e => e.User)
-                .WithRequired(e => e.GroupUser);
+            //modelBuilder.Entity<GroupUser>()
+            //    .HasOptional(e => e.User)
+            //    .WithRequired(e => e.GroupUser);
 
-            modelBuilder.Entity<User>()
-                .Property(e => e.CreatedBy)
-                .IsUnicode(false);
+            //modelBuilder.Entity<User>()
+            //    .Property(e => e.CreatedBy)
+            //    .IsUnicode(false);
 
-            modelBuilder.Entity<User>()
-                .Property(e => e.ModifiedBy)
-                .IsUnicode(false);
+            //modelBuilder.Entity<User>()
+            //    .Property(e => e.ModifiedBy)
+            //    .IsUnicode(false);
 
-            modelBuilder.Entity<User>()
-                .Property(e => e.GroupID)
-                .IsUnicode(false);
+            //modelBuilder.Entity<User>()
+            //    .Property(e => e.GroupID)
+            //    .IsUnicode(false);
 
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.FriendUser)
-                .WithRequired(e => e.User)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<User>()
+            //    .HasMany(e => e.FriendUser)
+            //    .WithRequired(e => e.User)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.User_Teacher_Course)
-                .WithRequired(e => e.User)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<User>()
+            //    .HasMany(e => e.User_Teacher_Course)
+            //    .WithRequired(e => e.User)
+            //    .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<User_Study_Course>()
-                .HasOptional(e => e.User)
-                .WithRequired(e => e.User_Study_Course);
+            //modelBuilder.Entity<User_Study_Course>()
+            //    .HasOptional(e => e.User)
+            //    .WithRequired(e => e.User_Study_Course);
         }
     }
 }

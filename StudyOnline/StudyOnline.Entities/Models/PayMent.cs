@@ -19,6 +19,6 @@ namespace StudyOnline.Entities.Models
 
         public long? UserID { get; set; }
 
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
     }
 }

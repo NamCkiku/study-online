@@ -25,6 +25,6 @@ namespace StudyOnline.Entities.Models
 
         public bool? Follow { get; set; }
 
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
     }
 }

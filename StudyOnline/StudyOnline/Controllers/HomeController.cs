@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StudyOnline.Entities.Models;
+using StudyOnline.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +13,14 @@ namespace StudyOnline.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public JsonResult GetListCouse()
+        {
+            TeacherService cs = new TeacherService();
+            List<Tuple<User, Course>> lst = new List<Tuple<User, Course>>();
+            lst = cs.GetListByTearcherId(1);
+            return Json(lst, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult ViewVideo()

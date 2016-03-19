@@ -9,11 +9,11 @@ namespace StudyOnline.Entities.Models
     [Table("Test")]
     public partial class Test
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Test()
-        {
-            TestQuestion = new HashSet<TestQuestion>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public Test()
+        //{
+        //    TestQuestion = new HashSet<TestQuestion>();
+        //}
 
         public long ID { get; set; }
 
@@ -28,9 +28,9 @@ namespace StudyOnline.Entities.Models
 
         public int? Rank { get; set; }
 
-        public virtual Section Section { get; set; }
+        //public virtual Section Section { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TestQuestion> TestQuestion { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<TestQuestion> TestQuestion { get; set; }
     }
 }

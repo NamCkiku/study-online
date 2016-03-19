@@ -61,6 +61,33 @@ namespace StudyOnline.Repository
             }
         }
 
+        /// <summary>
+        /// Lấy khóa học theo loại khóa học
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<Tuple<User, Course>> GetListByCourseCategory(long id)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new Entities.Models.StudyOnline())
+            {
+                List<Tuple<User, Course>> list = new List<Tuple<User, Course>>();
+                var result = (from a in _db.User
+                              join b in _db.User_Teacher_Course on a.ID equals b.UserID
+                              join c in _db.Course on b.CourseID equals c.ID
+                              join d in _db.CourseCategory on c.CourseCategoryID equals d.ID
+                              select new
+                              {
+                                  a,
+                                  c
+                              }
+                ).ToList();
+                foreach (var item in result)
+                {
+                    list.Add(new Tuple<User, Course>(item.a, item.c));
 
+                }
+                return list;
+            }
+        }
     }
 }

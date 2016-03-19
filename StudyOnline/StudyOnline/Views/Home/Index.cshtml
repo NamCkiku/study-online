@@ -17,11 +17,11 @@
                     <p>3:04</p>
                 </div>
                 <div class="clck">
-                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-time" aria-hidden="true">{{item.Item1.UserName}}</span>
                 </div>
             </div>
             <div class="resent-grid-info recommended-grid-info">
-                <h3><a href="single.html" class="title title-info">{{item.CourseName}}</a></h3>
+                <h3><a href="single.html" class="title title-info">{{item.Item2.CourseName}}</a></h3>
                 <ul>
                     <li><p class="author author-info"><a href="#" class="author">John Maniya</a></p></li>
                     <li class="right-list"><p class="views views-info">2,114,200 views</p></li>
@@ -781,25 +781,6 @@
 
 @section scripts
 {
-    @*<script>
-        // You can also use "$(window).load(function() {"
-        $(function () {
-            // Slideshow 4
-            $("#slider3").responsiveSlides({
-                auto: true,
-                pager: false,
-                nav: true,
-                speed: 500,
-                namespace: "callbacks",
-                before: function () {
-                    $('.events').append("<li>before event fired.</li>");
-                },
-                after: function () {
-                    $('.events').append("<li>after event fired.</li>");
-                }
-            });
-
-        });
-    </script>*@
+   
 }
 

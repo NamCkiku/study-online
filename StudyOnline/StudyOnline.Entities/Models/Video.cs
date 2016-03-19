@@ -29,6 +29,6 @@ namespace StudyOnline.Entities.Models
 
         public long? LessonID { get; set; }
 
-        public virtual Lesson Lesson { get; set; }
+        //public virtual Lesson Lesson { get; set; }
     }
 }

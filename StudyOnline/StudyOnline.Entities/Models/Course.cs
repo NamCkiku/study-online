@@ -9,14 +9,14 @@ namespace StudyOnline.Entities.Models
     [Table("Course")]
     public partial class Course
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Course()
-        {
-            Section = new HashSet<Section>();
-            User_Study_Course = new HashSet<User_Study_Course>();
-            User_Teacher_Course = new HashSet<User_Teacher_Course>();
-            User = new HashSet<User>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public Course()
+        //{
+        //    Section = new HashSet<Section>();
+        //    User_Study_Course = new HashSet<User_Study_Course>();
+        //    User_Teacher_Course = new HashSet<User_Teacher_Course>();
+        //    User = new HashSet<User>();
+        //}
 
         public long ID { get; set; }
 
@@ -54,18 +54,18 @@ namespace StudyOnline.Entities.Models
 
         public long? CourseCategoryID { get; set; }
 
-        public virtual CourseCategory CourseCategory { get; set; }
+        //public virtual CourseCategory CourseCategory { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Section> Section { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<Section> Section { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User_Study_Course> User_Study_Course { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<User_Study_Course> User_Study_Course { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User_Teacher_Course> User_Teacher_Course { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<User_Teacher_Course> User_Teacher_Course { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> User { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<User> User { get; set; }
     }
 }
