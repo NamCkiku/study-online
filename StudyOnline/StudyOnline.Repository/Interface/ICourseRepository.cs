@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudyOnline.Repository
+namespace StudyOnline.Repository.Interface
 {
     public interface ICourseRepository
     {
