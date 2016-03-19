@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline.Service", "Stud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline", "StudyOnline\StudyOnline.csproj", "{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyOnline.API", "StudyOnline.API\StudyOnline.API.csproj", "{EE181F77-9BBF-467C-B1B2-5C5CD993117D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4213C48C-6E94-4D05-BB0E-F9B8A73642C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE181F77-9BBF-467C-B1B2-5C5CD993117D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE181F77-9BBF-467C-B1B2-5C5CD993117D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE181F77-9BBF-467C-B1B2-5C5CD993117D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE181F77-9BBF-467C-B1B2-5C5CD993117D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
