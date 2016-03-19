@@ -1,10 +1,9 @@
-﻿app.service("myService", function ($http) {
-    this.getListCourse = function () {
-        return $http.get("/Home/GetListCouse");
-    }
+﻿app.service("myService", ['$http', function ($http) {
+    var myService = {};
 
-    this.getDocumentCome = function () {
-        return $http.get("/Home/GetListCouse");
+    myService.getDocumentCome = function () {
+        return $http.get("http://localhost:22508/study-online/user/");
     };
 
-});
+    return myService;
+}]);

@@ -11,12 +11,13 @@ namespace StudyOnline.Service.Users
 
     public class UserService : IUserService
     {
-        public readonly IUserRepository userRepository;
+        //public readonly IUserRepository userRepository;
 
-        public UserService(IUserRepository userRepository)
-        {
-            this.userRepository = userRepository;
-        }
+        //public UserService(IUserRepository userRepository)
+        //{
+        //    this.userRepository = userRepository;
+        //}
+        UserRepository userRepository = new UserRepository();
         public List<StudyOnline.Entities.Models.User> ListAllUser()
         {
             return userRepository.ListAllUser();

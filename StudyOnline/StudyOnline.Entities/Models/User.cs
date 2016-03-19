@@ -53,10 +53,10 @@ namespace StudyOnline.Entities.Models
         [StringLength(50)]
         public string ModifiedBy { get; set; }
 
-        [StringLength(20)]
-        public string GroupID { get; set; }
+        //[StringLength(20)]
+        //public string GroupID { get; set; }
 
-        public int? PayID { get; set; }
+        //public int? PayID { get; set; }
 
         //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         //public virtual ICollection<FriendUser> FriendUser { get; set; }

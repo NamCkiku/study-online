@@ -16,7 +16,7 @@ namespace StudyOnline.API
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "study-online/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
