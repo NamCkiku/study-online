@@ -9,13 +9,13 @@ namespace StudyOnline.Entities.Models
     [Table("Lesson")]
     public partial class Lesson
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Lesson()
-        {
-            AttachMent = new HashSet<AttachMent>();
-            Comment = new HashSet<Comment>();
-            Video = new HashSet<Video>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public Lesson()
+        //{
+        //    AttachMent = new HashSet<AttachMent>();
+        //    Comment = new HashSet<Comment>();
+        //    Video = new HashSet<Video>();
+        //}
 
         public long ID { get; set; }
 
@@ -31,15 +31,15 @@ namespace StudyOnline.Entities.Models
 
         public long? SectionID { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<AttachMent> AttachMent { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<AttachMent> AttachMent { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comment { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<Comment> Comment { get; set; }
 
-        public virtual Section Section { get; set; }
+        //public virtual Section Section { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Video> Video { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //public virtual ICollection<Video> Video { get; set; }
     }
 }

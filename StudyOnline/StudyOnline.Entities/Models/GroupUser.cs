@@ -18,6 +18,6 @@ namespace StudyOnline.Entities.Models
 
         public int? RolesID { get; set; }
 
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
     }
 }

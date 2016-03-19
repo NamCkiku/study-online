@@ -31,6 +31,6 @@ namespace StudyOnline.Entities.Models
 
         public int? ParentID { get; set; }
 
-        public virtual Lesson Lesson { get; set; }
+        //public virtual Lesson Lesson { get; set; }
     }
 }
