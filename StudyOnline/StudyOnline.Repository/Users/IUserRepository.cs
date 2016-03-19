@@ -1,13 +1,12 @@
-﻿using StudyOnline.Entities.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudyOnline.Service.Interface
+namespace StudyOnline.Repository.Users
 {
-    public interface IUserService
+    public interface IUserRepository
     {
         List<StudyOnline.Entities.Models.User> ListAllUser();
         StudyOnline.Entities.Models.User ViewDetail(long id);
@@ -15,7 +14,10 @@ namespace StudyOnline.Service.Interface
         bool UpdateUser(StudyOnline.Entities.Models.User us);
         bool DeleteUser(long id);
         int Login(string userName, string password);
-        bool Signup(User user);
+        bool Signup(StudyOnline.Entities.Models.User user);
         void Active(int id, bool status);
+        bool CheckUserName(string userName);
+        bool CheckEmail(string email);
+        StudyOnline.Entities.Models.User GetById(string userName);
     }
 }

@@ -60,7 +60,7 @@
     <Compile Include="Interface\ITestAnswerRepository.cs" />
     <Compile Include="Interface\ITestQuestionRepository.cs" />
     <Compile Include="Interface\ITestRepository.cs" />
-    <Compile Include="Interface\IUserRepository.cs" />
+    <Compile Include="Users\IUserRepository.cs" />
     <Compile Include="Interface\IVideoRepository.cs" />
     <Compile Include="LessonRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,7 +69,7 @@
     <Compile Include="TestAnswerRepository.cs" />
     <Compile Include="TestQuestionRepository.cs" />
     <Compile Include="TestRepository.cs" />
-    <Compile Include="UserRepository.cs" />
+    <Compile Include="Users\UserRepository.cs" />
     <Compile Include="VideoRepository.cs" />
   </ItemGroup>
   <ItemGroup>

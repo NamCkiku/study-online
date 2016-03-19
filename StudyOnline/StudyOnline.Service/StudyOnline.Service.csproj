@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StudyOnline.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\StudyOnline.Repository\bin\Debug\StudyOnline.Repository.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,7 +57,7 @@
     <Compile Include="Interface\ITestAnswerService.cs" />
     <Compile Include="Interface\ITestQuestionService.cs" />
     <Compile Include="Interface\ITestService.cs" />
-    <Compile Include="Interface\IUserService.cs" />
+    <Compile Include="Users\IUserService.cs" />
     <Compile Include="Interface\IVideoService.cs" />
     <Compile Include="LessonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,7 +66,7 @@
     <Compile Include="TestAnswerService.cs" />
     <Compile Include="TestQuestionService.cs" />
     <Compile Include="TestService.cs" />
-    <Compile Include="UserService.cs" />
+    <Compile Include="Users\UserService.cs" />
     <Compile Include="VideoService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,13 +74,6 @@
       <Project>{e50afb03-52a8-49d6-98b4-17b7b35c4689}</Project>
       <Name>StudyOnline.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StudyOnline.Repository\StudyOnline.Repository.csproj">
-      <Project>{f9328973-32cd-4295-98f7-9b4fda59f6ef}</Project>
-      <Name>StudyOnline.Repository</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

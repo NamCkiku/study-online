@@ -1,13 +1,12 @@
-﻿using StudyOnline.Entities.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
-using StudyOnline.Repository.Interface;
+using StudyOnline.Entities.Models;
 
-namespace StudyOnline.Repository
+namespace StudyOnline.Repository.Users
 {
    
     public class UserRepository : IUserRepository
