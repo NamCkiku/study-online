@@ -3,13 +3,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<div class="main-grids no-padding-xs no-padding-sm" >
-
+<div class="main-grids no-padding-xs no-padding-sm">
+    
     <div class="top-grids">
         <div class="recommended-info">
             <h3>Recent Videos</h3>
         </div>
+        @*<div class="social-icons">
+            <ul>
+                <li><a class="facebook" href="#" target="_blank"> </a></li>
+                <li><a class="twitter" href="#" target="_blank"></a></li>
+                <li><a class="googleplus" href="#" target="_blank"></a></li>
+                <li><a class="pinterest" href="#" target="_blank"></a></li>
+                <li><a class="dribbble" href="#" target="_blank"></a></li>
+                <li><a class="vimeo" href="#" target="_blank"></a></li>
+            </ul>
+        </div>*@
         <div class="col-md-3 resent-grid recommended-grid" ng-repeat="user in vm.Users">
             <div class="resent-grid-img recommended-grid-img">
                 <a href="single.html"><img src="~/Contents/images/t1.jpg" alt="" /></a>
