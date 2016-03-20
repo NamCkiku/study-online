@@ -166,7 +166,7 @@ ul.nav.nav-sidebar li a {
 }
 
 .main-grids {
-    padding: 0 0 1em 1em;
+    padding: 0 30px 1em 40px;
 }
 
 .sidebar ul.nav-sidebar li a:hover {
@@ -3620,11 +3620,17 @@ p {
     .right {
         width: calc(100% - 30px);
     }
+    .no-padding-sm{
+        padding:0px;
+    }
 }
 
 @media (max-width: 422px) {
     .course-navigation li {
         width: 100%;
+    }
+    .no-padding-xs{
+        padding:0px;
     }
 }
 
@@ -4009,4 +4015,7 @@ p {
 .nomargin
 {
     margin:0px;
+}
+.no-padding-right{
+    padding-right:0px;
 }
