@@ -8,9 +8,10 @@ namespace StudyOnline
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            //BundleTable.EnableOptimizations = true;
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/angular.js"
+                        "~/Scripts/angular.js",
+                        "~/Angularjs/Users/UserController.js"
                         ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
