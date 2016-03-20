@@ -12,6 +12,9 @@
 <body>
     <!-- //Header -->
     @RenderPage("_Header.cshtml")
+    <div class="col-md-12 nopadding">
+        @RenderPage("_Slider.cshtml")
+    </div>
     <!-- //MenuLeft -->
     @*@RenderPage("_MenuLeft.cshtml")*@
     <div class="col-md-12 main" ng-controller="myApp.Users.UsersController as vm">

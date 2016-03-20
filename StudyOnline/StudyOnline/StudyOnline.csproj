@@ -238,6 +238,7 @@
     <Content Include="Contents\images\rss.png" />
     <Content Include="Contents\images\s1.jpg" />
     <Content Include="Contents\images\select-arrow.png" />
+    <Content Include="Contents\images\social-icons.png" />
     <Content Include="Contents\images\social.png" />
     <Content Include="Contents\images\sp1.jpg" />
     <Content Include="Contents\images\sp2.jpg" />
@@ -1097,6 +1098,7 @@
     <Content Include="Scripts\version.json" />
     <Content Include="tsd.json" />
     <Content Include="Views\Shared\_LayoutPage2.cshtml" />
+    <Content Include="Views\Shared\_Slider.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">

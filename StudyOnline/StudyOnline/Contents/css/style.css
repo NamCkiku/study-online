@@ -151,6 +151,7 @@ form.navbar-form.navbar-right {
 
 .main {
     padding: 5em 0 0 0;
+    background-color:#FFF;
 }
 
 ul.nav.nav-sidebar li.active a {
@@ -4016,6 +4017,107 @@ p {
 {
     margin:0px;
 }
+.nopadding{
+    padding:0px;
+}
 .no-padding-right{
     padding-right:0px;
+}
+
+
+
+
+.social-icons {
+ float: right;
+}
+.social-icons li a {
+	height: 40px;
+	width: 40px;
+	display:block;
+	text-indent: -9999px;
+	background: transparent url(../Contents/images/social-icons.png);
+}
+.contact-info1 {
+	font-family: Montserrat;
+	font-weight: 700;
+	color: #eee;
+}
+.social-icons li:first-child {
+	border-left: 1px solid rgba(231, 231, 231, 0.73);
+}
+.social-icons ul li:first-child, ol li:first-child {
+	margin-top: 0px;
+}
+.social-icons li {
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-right: 1px solid rgba(231, 231, 231, 0.73);
+	background: none;
+	padding: 0px;
+	margin: 0;
+    list-style:none;
+}
+.social-icons a.facebook:hover {
+	background-position: 0px bottom;
+}
+.social-icons a.facebook {
+	background-position: 0px top;
+}
+.social-icons li a {
+	height: 40px;
+	width: 40px;
+	display: block;
+	text-indent: -9999px;
+	background: transparent url(../images/social-icons.png);
+}
+.social-icons a.twitter {
+	background-position: -40px top;
+}
+.social-icons a.twitter:hover {
+	background-position: -40px bottom;
+}
+.social-icons a.googleplus {
+	background-position: -440px top;
+}
+.social-icons a.googleplus:hover {
+	background-position: -440px bottom;
+}
+.social-icons a.pinterest {
+	background-position: -480px top;
+}
+.social-icons a.pinterest:hover {
+	background-position: -480px bottom;
+}
+.social-icons a.dribbble {
+	background-position: -160px top;
+}
+.social-icons a.dribbble:hover {
+	background-position: -160px bottom;
+}
+.social-iconst a.dribbble:hover {
+	background-position: -160px bottom;
+}	
+.social-icons a.vimeo {
+	background-position: -120px top;
+}
+.social-icons a.vimeo:hover {
+	background-position: -120px bottom;
+}
+.right-content-heading-left{
+	float:left;
+	padding: 11px 0;
+}
+.right-content-heading {
+	/*border-bottom: 1px solid #F1F0F6;*/
+	margin-bottom: 20px;
+}
+.right-content-heading-right{
+	float:right;
+}
+.right-content-heading-left h3{
+	font-family: 'gandhi_sansregular';
+	color: #888;
+	text-transform: uppercase;
+	display: block;
 }
