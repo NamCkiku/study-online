@@ -13,8 +13,8 @@
     <!-- //Header -->
     @RenderPage("_Header.cshtml")
     <!-- //MenuLeft -->
-    @*@RenderPage("_MenuLeft.cshtml")*@
-    <div class="col-md-12 main" ng-controller="myApp.Users.UsersController as vm">
+    @RenderPage("_MenuLeft.cshtml")
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="myApp.Users.UsersController as vm">
         <div class="">
             @RenderBody()
         </div>
@@ -39,10 +39,10 @@
     <script src="~/App/Module/app.js"></script>
     <script src="~/App/Controller/Users.Controller.js"></script>
     <script src="~/App/Service/User.Service.js"></script>
-    @*<script src="~/Angularjs/Users/UserController.js"></script>*@    
+    @*<script src="~/Angularjs/Users/UserController.js"></script>*@
     @*<script src="~/Contents/Angular/Module.js"></script>
-    <script src="~/Contents/Angular/Service.js"></script>
-    <script src="~/Contents/Angular/Controller.js"></script>*@
-        @RenderSection("scripts", required: false)
+        <script src="~/Contents/Angular/Service.js"></script>
+        <script src="~/Contents/Angular/Controller.js"></script>*@
+    @RenderSection("scripts", required: false)
 </body>
 </html>

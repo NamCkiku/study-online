@@ -1096,6 +1096,7 @@
     <Content Include="Views\Shared\_MenuLeft.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="tsd.json" />
+    <Content Include="Views\Shared\_LayoutPage2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">

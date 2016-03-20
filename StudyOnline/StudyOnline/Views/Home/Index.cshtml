@@ -4,13 +4,13 @@
 }
 
 
-<div class="main-grids" >
+<div class="main-grids no-padding-xs no-padding-sm" >
 
     <div class="top-grids">
         <div class="recommended-info">
             <h3>Recent Videos</h3>
         </div>
-        <div class="col-md-4 resent-grid recommended-grid slider-top-grids" ng-repeat="user in vm.Users">
+        <div class="col-md-3 resent-grid recommended-grid" ng-repeat="user in vm.Users">
             <div class="resent-grid-img recommended-grid-img">
                 <a href="single.html"><img src="~/Contents/images/t1.jpg" alt="" /></a>
                 <div class="time">
@@ -28,7 +28,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
+        <div class="col-md-3 resent-grid recommended-grid ">
             <div class="resent-grid-img recommended-grid-img">
                 <a href="single.html"><img src="~/Contents/images/t2.jpg" alt="" /></a>
                 <div class="time">
@@ -46,7 +46,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-md-4 resent-grid recommended-grid slider-top-grids">
+        <div class="col-md-3 resent-grid recommended-grid ">
             <div class="resent-grid-img recommended-grid-img">
                 <a href="single.html"><img src="~/Contents/images/t3.jpg" alt="" /></a>
                 <div class="time">
@@ -781,7 +781,7 @@
 
 @section scripts
 {
-    @*<script>
+    <script>
         // You can also use "$(window).load(function() {"
         $(function () {
             // Slideshow 4
@@ -800,6 +800,6 @@
             });
 
         });
-    </script>*@
+    </script>
 }
 
