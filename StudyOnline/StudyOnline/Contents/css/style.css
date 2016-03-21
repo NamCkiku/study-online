@@ -16,6 +16,7 @@ body {
         -o-transition: 0.5s all;
         -moz-transition: 0.5s all;
         -ms-transition: 0.5s all;
+        font-size:14px;
     }
 
 a.navbar-brand {
@@ -1963,8 +1964,8 @@ span.glyphicon.glyphicon-user {
     border: 0px;
     outline: none;
     position: absolute;
-    left: 47.6%;
-    top: 231px;
+    left: 45.6%;
+    top: 108px;
     cursor: pointer;
     border-radius: 5%;
     -webkit-border-radius: 5%;
