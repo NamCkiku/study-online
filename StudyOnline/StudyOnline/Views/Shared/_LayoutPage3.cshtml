@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/Contents/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- //Header -->
+    @RenderPage("_Header.cshtml")
+    @*<div class="col-md-12 nopadding">
+        @RenderPage("_Slider.cshtml")
+    </div>*@
+    <!-- //MenuLeft -->
+    @*@RenderPage("_MenuLeft.cshtml")*@
+    <div class="col-md-12 main" ng-controller="myApp.Users.UsersController as vm">
+        <div class="">
+            @RenderBody()
+        </div>
+        <!-- footer -->
+        @RenderPage("_Footer.cshtml")
+        <!-- //footer -->
+    </div>
+    <div class="clearfix"> </div>
+    <div class="drop-menu">
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>
+            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another link</a></li>
+        </ul>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/App/Module/app.js"></script>
+    <script src="~/App/Controller/Users.Controller.js"></script>
+    <script src="~/App/Service/User.Service.js"></script>
+    @*<script src="~/Angularjs/Users/UserController.js"></script>*@
+    @*<script src="~/Contents/Angular/Module.js"></script>
+        <script src="~/Contents/Angular/Service.js"></script>
+        <script src="~/Contents/Angular/Controller.js"></script>*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -150,7 +150,7 @@ form.navbar-form.navbar-right {
         }
 
 .main {
-    padding: 5em 0 0 0;
+    padding: 3em 0 0 0;
     background-color:#FFF;
 }
 
@@ -1388,7 +1388,7 @@ select.form-control.bfh-countries:hover {
     }
 
         .box input[type="text"]:nth-child(2) {
-            margin: 1em 0;
+            /*margin: 1em 0;*/
         }
 
     .box textarea {
@@ -3493,6 +3493,7 @@ p {
 
     .course-cta-wrapper .cta {
         margin-bottom: 30px;
+        padding-top:10px;
     }
 
     .course-cta-wrapper .invite {
@@ -4024,7 +4025,9 @@ p {
     padding-right:0px;
 }
 
-
+.padding-top-10{
+    padding-top:10px;
+}
 
 
 .social-icons {
