@@ -12,11 +12,11 @@
 <script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 <script src="~/Contents/js/bootstrap-switch.min.js"></script>
 <div id="" class="main-container no-paddingxs">
-    <ol class="breadcrumb main-breadcrumb">
-        <li><a title="Trang Chủ" href="/">Zuni</a></li>
-        <li><a href="/khoa-hoc-cua-toi/dang-day">Quản lý khóa học</a></li>
-        <li class="active">Tạo khóa học</li>
-    </ol>
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#">UI Elements</a></li>
+        <li class="active">Modal</li>
+    </ul>
     <div class="courseManage">
 
     </div>
@@ -314,37 +314,99 @@
                                     <div class="title-h2">
                                         <i class="fa fa-info-circle"></i> Video
                                     </div>
-                                    <form class="form-horizontal">
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Riêng Tư[?]</label>
-                                            <div class="col-md-10">
-                                                <input type="checkbox" class="switch-square" checked>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Học Phí</label>
-                                            <div class="col-md-5">
-                                                <div class="input-group m-bot15">
-                                                    <span class="input-group-addon">VNĐ</span>
-                                                    <input type="text" class="form-control" placeholder="học phí thực tế học sinh phải trả">
-                                                    <span class="input-group-addon">.000</span>
+                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videointro">
+                                        Video Giới Thiệu
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade bs-example-modal-lg" id="videointro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="upload-right">
+                                                        <div class="upload-file">
+                                                            <div class="services-icon">
+                                                                <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
+                                                            </div>
+                                                            <input type="file" id="ful" value="Choose file..">
+                                                        </div>
+                                                        <div class="upload-info">
+                                                            <h5>Chọn File Upload</h5>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="progress progress-striped active progress-sm">
+                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                                                    <span class="sr-only">45% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                            <h3 id="status"></h3>
+                                                            <p id="load-total"></p>
+                                                        </div>
+                                                        <div class="col-md-1"><input class="btn btn-success" type="button" id="btn-upload" value="Upload File" onclick="uploadFile()"></div>
+
+                                                        @*<div class="progress">
+                                                                <div class="progress-bar">
+                                                                    0%
+                                                                </div>
+                                                            </div>
+                                                            <div id="status">
+
+                                                            </div>*@
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Lưu File</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label"></label>
-                                            <div class="col-md-5">
-                                                <div class="input-group m-bot15">
-                                                    <span class="input-group-addon">VNĐ</span>
-                                                    <input type="text" class="form-control" placeholder="học phí gốc">
-                                                    <span class="input-group-addon">.000</span>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videodemo">
+                                        Video Học Thử
+                                    </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade bs-example-modal-lg" id="videodemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Video Học Thử</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="upload-right">
+                                                        <div class="upload-file">
+                                                            <div class="services-icon">
+                                                                <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
+                                                            </div>
+                                                            <input type="file" id="ful" value="Choose file..">
+                                                        </div>
+                                                        <div class="upload-info">
+                                                            <h5>Chọn File Upload</h5>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <div class="progress progress-striped active progress-sm">
+                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                                                    <span class="sr-only">45% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                            <h3 id="status"></h3>
+                                                            <p id="load-total"></p>
+                                                        </div>
+                                                        <div class="col-md-1"><input class="btn btn-success" type="button" id="btn-upload" value="Upload File" onclick="uploadFile()"></div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Lưu File</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
-
                             <div role="tabpanel" class="tab-pane" id="teacher"></div>
                         </div>
                     </div>
@@ -366,4 +428,36 @@
         });
     });
     $(".switch-square").bootstrapSwitch();
+</script>
+<script>
+    //var bar = $(".progress-bar");
+    //var percent = $(".progress-bar");
+    //var status = $("#status");
+    //$('form').ajaxForm({
+    //    beforeSend: function () {
+    //        status.empty();
+    //        percentValue='0%';
+    //        bar.width(percentValue);
+    //        percent.html(percentValue);
+    //    },
+    //    upLoadProgress: function (event,position,total,percentComplete) {
+    //        var percentValue=percentComplete+'%';
+    //        bar.width(percentValue);
+    //        percent.html(percentValue);
+    //    },
+    //    success: function (d) {
+    //        percentValue='100%';
+    //        bar.width(percentValue);
+    //        percent.html(percentValue);
+    //        $('#ful').val('');
+    //    },
+    //    complete: function (xhr) {
+    //        status.html(xhr.responseText);
+    //    },
+    //});
+    function uploadFile() {
+        var file = $('#ful');
+        //var percent = $(".progress-bar");
+        //var status = $("#status");
+    }
 </script>
