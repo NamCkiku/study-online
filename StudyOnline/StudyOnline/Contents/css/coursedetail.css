@@ -6,9 +6,11 @@
 .padding-right-30 {
     padding-right: 30px;
 }
-.padding-top-10{
-    padding-top:10px;
+
+.padding-top-10 {
+    padding-top: 10px;
 }
+
 .nopading-left {
     padding-left: 0px;
 }
@@ -1045,7 +1047,7 @@
     display: block;
     float: left;
     width: 100%;
-    font-size:16px;
+    font-size: 16px;
 }
 
 p.course-image-desc {
@@ -1063,19 +1065,97 @@ p.course-image-desc {
     border-color: #7f8c9a;
     border-radius: 6px 0 0 6px;
 }
+
 .switch-square span.switch-left {
     border-radius: 6px 0 0 6px;
 }
-.switch-square span.switch-left [class*="fui-"] {
-    text-indent: -10px;
-}
+
+    .switch-square span.switch-left [class*="fui-"] {
+        text-indent: -10px;
+    }
+
 .switch-square span.switch-right {
     border-radius: 0 6px 6px 0;
 }
-.switch-square span.switch-right [class*="fui-"] {
-    text-indent: 5px;
-}
+
+    .switch-square span.switch-right [class*="fui-"] {
+        text-indent: 5px;
+    }
+
 .switch-square label {
     border-radius: 0 6px 6px 0;
     border-color: #41cac0;
 }
+
+
+/*///QuanLy Loi Dung*/
+
+.cm-header {
+    background: #fff !important;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+}
+
+.cm-title,
+.cm-h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.back-buttons {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+    .back-buttons li {
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+        .back-buttons li.active {
+            display: none;
+        }
+
+.zn-btn {
+    border-radius: 3px;
+    background-color: #ebebeb;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 14px;
+    color: #999;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+}
+
+    .zn-btn.btn-medium {
+        height: 24px;
+        line-height: 24px;
+        padding: 0 12px;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+
+    .zn-btn.active,
+    .zn-btn:hover,
+    a.zn-btn:hover {
+        text-decoration: none;
+        background: #ADADAD;
+        color: #fff;
+    }
+
+    .zn-btn:active {
+        outline: none;
+        background: #00aa58;
+        color: #fff;
+    }
+
+    .zn-btn:focus {
+        outline: none;
+    }

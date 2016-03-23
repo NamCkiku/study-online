@@ -11,6 +11,7 @@
 <script src="~/Contents/Plugins/dist/summernote.min.js"></script>
 <script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
 <script src="~/Contents/js/bootstrap-switch.min.js"></script>
+<script src="~/Contents/js/progress.js"></script>
 <div id="" class="main-container no-paddingxs">
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -337,9 +338,14 @@
                                                             <h5>Chọn File Upload</h5>
                                                         </div>
                                                         <div class="col-md-10">
-                                                            <div class="progress progress-striped active progress-sm">
+                                                            @*<div class="progress progress-striped active progress-sm">
                                                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
                                                                     <span class="sr-only">45% Complete</span>
+                                                                </div>
+                                                            </div>*@
+                                                            <div id="progress_bar" class="progress progress-striped active progress-sm">
+                                                                <div class="ui-progress progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                                                                    <span class="ui-label" style="display:none;">Processing <b class="value">79%</b></span>
                                                                 </div>
                                                             </div>
                                                             <h3 id="status"></h3>
@@ -455,9 +461,9 @@
     //        status.html(xhr.responseText);
     //    },
     //});
-    function uploadFile() {
-        var file = $('#ful');
+    //function uploadFile() {
+    //    var file = $('#ful');
         //var percent = $(".progress-bar");
         //var status = $("#status");
-    }
+    //}
 </script>
