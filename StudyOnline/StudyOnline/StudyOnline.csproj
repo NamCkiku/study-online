@@ -113,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contents\TypeScript\" />
-    <Folder Include="Scripts\AngularJS\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -126,7 +125,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\Users\LOL.js" />
+    <Content Include=".gitignore" />
+    <Content Include="App_Scripts\Users\LOL.js" />
     <Content Include="Contents\Angular\Controller.js" />
     <Content Include="Contents\Angular\Module.js" />
     <Content Include="Contents\Angular\Service.js" />
@@ -274,8 +274,8 @@
     <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -322,6 +322,8 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1073,6 +1075,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="styles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1095,7 +1098,8 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_MenuLeft.cshtml" />
     <Content Include="Scripts\version.json" />
-    <Content Include="tsd.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typings.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">
@@ -1112,17 +1116,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App\Controller\Users.Controller.ts" />
-    <TypeScriptCompile Include="App\Module\app.ts" />
-    <TypeScriptCompile Include="App\Service\User.Service.ts" />
-    <TypeScriptCompile Include="App\Users\UserController.ts" />
+    <TypeScriptCompile Include="App\app.component.ts" />
+    <TypeScriptCompile Include="App\hero-detail.component.ts" />
+    <TypeScriptCompile Include="App\hero.ts" />
+    <TypeScriptCompile Include="App\main.ts" />
+    <TypeScriptCompile Include="App_Scripts\Controller\Users.Controller.ts" />
+    <TypeScriptCompile Include="App_Scripts\Module\app.ts" />
+    <TypeScriptCompile Include="App_Scripts\Service\User.Service.ts" />
+    <TypeScriptCompile Include="App_Scripts\Users\UserController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
