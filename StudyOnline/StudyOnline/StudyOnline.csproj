@@ -134,6 +134,7 @@
     <Content Include="Contents\css\bootstrap.min.css" />
     <Content Include="Contents\css\coursedetail.css" />
     <Content Include="Contents\css\dashboard.css" />
+    <Content Include="Contents\css\jstree.css" />
     <Content Include="Contents\css\popuo-box.css" />
     <Content Include="Contents\css\style.css" />
     <Content Include="Contents\fonts\font-awesome\css\font-awesome.css" />
@@ -142,6 +143,7 @@
     <Content Include="Contents\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Contents\images\12.png" />
     <Content Include="Contents\images\13.png" />
+    <Content Include="Contents\images\32px.png" />
     <Content Include="Contents\images\9.png" />
     <Content Include="Contents\images\behance.png" />
     <Content Include="Contents\images\c.jpg" />
@@ -271,8 +273,11 @@
     <Content Include="Contents\js\jquery-1.11.1.min.js" />
     <Content Include="Contents\js\jquery.magnific-popup.js" />
     <Content Include="Contents\js\jquery.polyglot.language.switcher.js" />
+    <Content Include="Contents\js\jstree.min.js" />
     <Content Include="Contents\js\modernizr.custom.min.js" />
+    <Content Include="Contents\js\progress.js" />
     <Content Include="Contents\js\responsiveslides.min.js" />
+    <Content Include="Contents\js\ui-tree.js" />
     <Content Include="Contents\js\video.js" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
