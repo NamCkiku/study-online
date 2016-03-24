@@ -324,6 +324,7 @@
 .mycourse .mycourse-header {
     height: 50px;
     border-bottom: 3px solid black;
+    margin-bottom:50px;
 }
 
     .mycourse .mycourse-header .mycourse-tab {

@@ -139,6 +139,7 @@
     <Content Include="Contents\css\fixboostrap.css" />
     <Content Include="Contents\css\jstree.css" />
     <Content Include="Contents\css\ListCourse.css" />
+    <Content Include="Contents\css\fdsf.css" />
     <Content Include="Contents\css\slidebars.css" />
     <Content Include="Contents\css\style-responsive.css" />
     <Content Include="Contents\css\style.css" />
@@ -151,7 +152,6 @@
     <Content Include="Contents\img\nav-expand.png" />
     <Content Include="Contents\img\search-icon.png" />
     <Content Include="Contents\img\themes.png" />
-    <Content Include="Contents\js\bootstrap-switch.min.js" />
     <Content Include="Contents\js\bootstrap.min.js" />
     <Content Include="Contents\js\common-scripts.js" />
     <Content Include="Contents\js\jquery-1.11.1.min.js" />
@@ -161,64 +161,20 @@
     <Content Include="Contents\js\jquery.nicescroll.js" />
     <Content Include="Contents\js\jquery.polyglot.language.switcher.js" />
     <Content Include="Contents\js\jquery.scrollTo.min.js" />
-    <Content Include="Contents\js\jstree.min.js" />
     <Content Include="Contents\js\modernizr.custom.min.js" />
-    <Content Include="Contents\js\progress.js" />
     <Content Include="Contents\js\respond.min.js" />
     <Content Include="Contents\js\responsiveslides.min.js" />
     <Content Include="Contents\js\slidebars.min.js" />
-    <Content Include="Contents\js\ui-tree.js" />
     <Content Include="Contents\js\video.js" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
-    <Content Include="Contents\Plugins\bootstrap-fileupload\bootstrap-fileupload.css" />
-    <Content Include="Contents\Plugins\bootstrap-fileupload\bootstrap-fileupload.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-ar-AR.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-bg-BG.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-ca-ES.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-cs-CZ.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-da-DK.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-de-DE.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-es-ES.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-es-EU.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-fa-IR.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-fi-FI.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-fr-FR.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-he-IL.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-hu-HU.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-id-ID.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-it-IT.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-ja-JP.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-ko-KR.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-lt-LT.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-nb-NO.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-nl-NL.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-pl-PL.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-pt-BR.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-pt-PT.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-ro-RO.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-ru-RU.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-sk-SK.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-sl-SI.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-sr-RS-Latin.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-sr-RS.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-sv-SE.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-th-TH.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-tr-TR.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-uk-UA.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-vi-VN.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-zh-CN.js" />
-    <Content Include="Contents\Plugins\dist\lang\summernote-zh-TW.js" />
-    <Content Include="Contents\Plugins\dist\plugin\hello\summernote-ext-hello.js" />
-    <Content Include="Contents\Plugins\dist\plugin\specialchars\summernote-ext-specialchars.js" />
-    <Content Include="Contents\Plugins\dist\summernote.css" />
-    <Content Include="Contents\Plugins\dist\summernote.js" />
-    <Content Include="Contents\Plugins\dist\summernote.min.js" />
-    <Content Include="Contents\Plugins\slidebar\slidebars.css" />
-    <Content Include="Contents\Plugins\slidebar\slidebars.min.js" />
     <Content Include="favicon.ico" />
+    <Content Include="Frontend\app\app\app.component.css" />
+    <Content Include="Frontend\app\app\index.html" />
+    <Content Include="Frontend\app\app\styles.css" />
+    <Content Include="Frontend\app\hero\heroes.component.css" />
+    <Content Include="Frontend\app\hero\heroes.component.html" />
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -265,14 +221,10 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
-<<<<<<< HEAD
-    <Content Include="Contents\Plugins\dist\font\summernote.eot" />
-    <Content Include="Contents\Plugins\dist\font\summernote.ttf" />
-    <Content Include="Contents\Plugins\dist\font\summernote.woff" />
-=======
-    <Content Include="package.json" />
     <Content Include="README.md" />
->>>>>>> 121a4f76e84494a97452a81cd5c63fa3e519fb11
+    <Content Include="Frontend\package.json" />
+    <Content Include="Frontend\tsconfig.json" />
+    <Content Include="Frontend\typings.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1024,7 +976,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="styles.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1047,17 +998,6 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_MenuLeft.cshtml" />
     <Content Include="Scripts\version.json" />
-<<<<<<< HEAD
-    <Content Include="tsd.json" />
-    <Content Include="Views\Shared\_LayoutPage2.cshtml" />
-    <Content Include="Views\Shared\_Slider.cshtml" />
-    <Content Include="Views\Shared\_LayoutPage3.cshtml" />
-    <Content Include="Views\Home\CreateCourseContentManager.cshtml" />
-    <Content Include="Views\Shared\_MenuManageCourse.cshtml" />
-=======
-    <Content Include="tsconfig.json" />
-    <Content Include="typings.json" />
->>>>>>> 121a4f76e84494a97452a81cd5c63fa3e519fb11
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">
@@ -1074,17 +1014,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="App\app.component.ts" />
-    <TypeScriptCompile Include="App\hero-detail.component.ts" />
-    <TypeScriptCompile Include="App\hero.ts" />
-    <TypeScriptCompile Include="App\main.ts" />
     <TypeScriptCompile Include="App_Scripts\Controller\Users.Controller.ts" />
     <TypeScriptCompile Include="App_Scripts\Module\app.ts" />
     <TypeScriptCompile Include="App_Scripts\Service\User.Service.ts" />
     <TypeScriptCompile Include="App_Scripts\Users\UserController.ts" />
+    <TypeScriptCompile Include="Frontend\app\app\app.component.ts" />
+    <TypeScriptCompile Include="Frontend\app\hero\hero.service.ts" />
+    <TypeScriptCompile Include="Frontend\app\hero\hero.ts" />
+    <TypeScriptCompile Include="Frontend\app\hero\heroes.component.ts" />
+    <TypeScriptCompile Include="Frontend\main.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
