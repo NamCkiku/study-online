@@ -16,21 +16,25 @@ namespace StudyOnline
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*",
-                        "~/Contents/js/jquery-1.11.1.min.js",
+            bundles.Add(new ScriptBundle("~/Contents/js").Include(
+                        "~/Contents/js/jquery.js",
                         "~/Contents/js/bootstrap.min.js",
-                      "~/Contents/js/modernizr.custom.min.js",
-                      "~/Contents/js/jquery.magnific-popup.js",
-                      "~/Contents/js/responsiveslides.min.js"
+                        "~/Contents/js/jquery.dcjqaccordion.2.7.js",
+                        "~/Contents/js/jquery.scrollTo.min.js",
+                        "~/Contents/js/jquery.nicescroll.js",
+                        "~/Contents/js/respond.min.js",
+                        "~/Contents/js/slidebars.min.js",
+                        "~/Contents/js/common-scripts.js"
                         ));
             bundles.Add(new StyleBundle("~/Contents/css").Include(
-                      "~/Contents/css/bootstrap.min.css",
-                         "~/Contents/css/dashboard.css",
+                          "~/Contents/css/bootstrap.min.css",
+                          "~/Contents/css/bootstrap-reset.css",
+                          "~/Contents/fonts/font-awesome/css/font-awesome.css",
+                          "~/Contents/css/slidebars.css",
+                          "~/Contents/css/ListCourse.css",
                           "~/Contents/css/style.css",
-                         "~/Contents/css/popuo-box.css",
-                           "~/Contents/fonts/font-awesome/css/font-awesome.css",
-                      "~/Contents/site.css"));
+                          "~/Contents/css/style-responsive.css"
+                      ));
 
 
         }
