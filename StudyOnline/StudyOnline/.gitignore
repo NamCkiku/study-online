@@ -1,0 +1,4 @@
+Frontend/typings/
+Frontend/node_modules/
+*.js
+*.js.map
