@@ -1,17 +1,35 @@
 ﻿@{
     ViewBag.Title = "CreateCourseManager";
-    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
-<link href="~/Contents/Plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
-<link href="~/Contents/Plugins/dist/summernote.css" rel="stylesheet" />
-<link href="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
-<link href="~/Contents/css/bootstrap-switch.min.css" rel="stylesheet" />
-<script src="~/Contents/Plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script src="~/Contents/Plugins/dist/summernote.min.js"></script>
-<script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<script src="~/Contents/js/bootstrap-switch.min.js"></script>
-<script src="~/Contents/js/progress.js"></script>
+@section masterjs
+{
+    <link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+    <link href="~/Contents/Plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <link href="~/Contents/Plugins/dist/summernote.css" rel="stylesheet" />
+    <link href="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
+    <link href="~/Contents/css/bootstrap-switch.min.css" rel="stylesheet" />
+    <script src="~/Contents/Plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="~/Contents/Plugins/dist/summernote.min.js"></script>
+    <script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+    <script src="~/Contents/js/bootstrap-switch.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+    $(document).ready(function () {
+        $('.summernote').summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null,
+            focus: true,
+        });
+    });
+    $(".switch-square").bootstrapSwitch();
+</script>
+}
+
+@*<script src="~/Contents/js/progress.js"></script>*@
 <div id="" class="main-container no-paddingxs">
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -284,7 +302,7 @@
                                     </div>
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Riêng Tư[?]</label>
+                                            <label for="inputEmail3" class="col-md-2 control-label">Riêng Tư[?]</label>
                                             <div class="col-md-10">
                                                 <input type="checkbox" class="switch-square" checked>
                                             </div>
@@ -339,10 +357,10 @@
                                                         </div>
                                                         <div class="col-md-10">
                                                             @*<div class="progress progress-striped active progress-sm">
-                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-                                                                    <span class="sr-only">45% Complete</span>
-                                                                </div>
-                                                            </div>*@
+                                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                                                        <span class="sr-only">45% Complete</span>
+                                                                    </div>
+                                                                </div>*@
                                                             <div id="progress_bar" class="progress progress-striped active progress-sm">
                                                                 <div class="ui-progress progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
                                                                     <span class="ui-label" style="display:none;">Processing <b class="value">79%</b></span>
@@ -421,20 +439,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $(function () {
-        $(".datepicker").datepicker();
-    });
-    $(document).ready(function () {
-        $('.summernote').summernote({
-            height: 300,
-            minHeight: null,
-            maxHeight: null,
-            focus: true,
-        });
-    });
-    $(".switch-square").bootstrapSwitch();
-</script>
+
 <script>
     //var bar = $(".progress-bar");
     //var percent = $(".progress-bar");
@@ -463,7 +468,7 @@
     //});
     //function uploadFile() {
     //    var file = $('#ful');
-        //var percent = $(".progress-bar");
-        //var status = $("#status");
+    //var percent = $(".progress-bar");
+    //var status = $("#status");
     //}
 </script>
