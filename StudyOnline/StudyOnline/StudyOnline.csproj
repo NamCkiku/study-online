@@ -44,6 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -54,6 +58,30 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -63,40 +91,12 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <Private>True</Private>
@@ -139,7 +139,6 @@
     <Content Include="Contents\css\fixboostrap.css" />
     <Content Include="Contents\css\jstree.css" />
     <Content Include="Contents\css\ListCourse.css" />
-    <Content Include="Contents\css\fdsf.css" />
     <Content Include="Contents\css\slidebars.css" />
     <Content Include="Contents\css\style-responsive.css" />
     <Content Include="Contents\css\style.css" />
@@ -148,6 +147,17 @@
     <Content Include="Contents\fonts\font-awesome\fonts\fontawesome-webfontba72.html" />
     <Content Include="Contents\fonts\font-awesome\fonts\fontawesome-webfontba72.svg" />
     <Content Include="Contents\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Contents\HomeIndex\assets\ico\favicon.ico" />
+    <Content Include="Contents\HomeIndex\assets\img\bigBG.jpg" />
+    <Content Include="Contents\HomeIndex\assets\img\mobile.png" />
+    <Content Include="Contents\HomeIndex\assets\img\screen1.jpg" />
+    <Content Include="Contents\HomeIndex\assets\img\screen2.jpg" />
+    <Content Include="Contents\HomeIndex\assets\img\tablet.png" />
+    <Content Include="Contents\HomeIndex\css\bootstrap.min.css" />
+    <Content Include="Contents\HomeIndex\css\custom.css" />
+    <Content Include="Contents\HomeIndex\css\flexslider.css" />
+    <Content Include="Contents\HomeIndex\js\bootstrap.min.js" />
+    <Content Include="Contents\HomeIndex\js\flexslider.js" />
     <Content Include="Contents\img\g.jpg" />
     <Content Include="Contents\img\nav-expand.png" />
     <Content Include="Contents\img\search-icon.png" />
@@ -168,6 +178,55 @@
     <Content Include="Contents\js\video.js" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="Contents\Plugins\bootstrap-fileupload\bootstrap-fileupload.css" />
+    <Content Include="Contents\Plugins\bootstrap-fileupload\bootstrap-fileupload.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-ar-AR.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-bg-BG.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-ca-ES.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-cs-CZ.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-da-DK.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-de-DE.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-es-ES.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-es-EU.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-fa-IR.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-fi-FI.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-fr-FR.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-he-IL.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-hu-HU.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-id-ID.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-it-IT.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-ja-JP.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-ko-KR.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-lt-LT.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-nb-NO.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-nl-NL.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-pl-PL.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-pt-BR.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-pt-PT.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-ro-RO.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-ru-RU.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-sk-SK.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-sl-SI.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-sr-RS-Latin.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-sr-RS.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-sv-SE.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-th-TH.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-tr-TR.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-uk-UA.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-vi-VN.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-zh-CN.js" />
+    <Content Include="Contents\Plugins\dist\lang\summernote-zh-TW.js" />
+    <Content Include="Contents\Plugins\dist\plugin\hello\summernote-ext-hello.js" />
+    <Content Include="Contents\Plugins\dist\plugin\specialchars\summernote-ext-specialchars.js" />
+    <Content Include="Contents\Plugins\dist\summernote.css" />
+    <Content Include="Contents\Plugins\dist\summernote.js" />
+    <Content Include="Contents\Plugins\dist\summernote.min.js" />
+    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.jpg" />
+    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.seeking.gif" />
+    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.video.play.png" />
+    <Content Include="Contents\Plugins\JPlayer\jplayer.blue.monday.min.css" />
+    <Content Include="Contents\Plugins\JPlayer\jplayer.playlist.min.js" />
+    <Content Include="Contents\Plugins\JPlayer\jquery.jplayer.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Frontend\app\app\app.component.css" />
     <Content Include="Frontend\app\app\index.html" />
@@ -225,6 +284,10 @@
     <Content Include="Frontend\package.json" />
     <Content Include="Frontend\tsconfig.json" />
     <Content Include="Frontend\typings.json" />
+    <Content Include="Contents\Plugins\dist\font\summernote.eot" />
+    <Content Include="Contents\Plugins\dist\font\summernote.ttf" />
+    <Content Include="Contents\Plugins\dist\font\summernote.woff" />
+    <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -998,6 +1061,8 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_MenuLeft.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Shared\_LayoutHomeIndex.cshtml" />
+    <Content Include="Views\Home\HomeIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">

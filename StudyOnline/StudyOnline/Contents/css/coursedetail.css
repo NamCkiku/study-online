@@ -1,4 +1,781 @@
-﻿/*padding*/
+﻿
+body {
+    background: #F4F5F5 !Important;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    body a {
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+        font-size: 14px;
+    }
+
+
+
+
+h1 {
+    color: #333;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    color: #333;
+    font-size: 12px;
+    text-align: left;
+}
+
+.stats {
+    display: block;
+    max-width: 100%;
+    width: 400px;
+    margin: 10px 0;
+    height: 20px;
+    color: #333;
+}
+
+.rate-box {
+    float: left;
+    letter-spacing: 3px;
+}
+
+    .rate-box .fa {
+        color: #D94D38;
+        font-size: 18px;
+    }
+
+.review-counter {
+    float: left;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 15px;
+    color: #333;
+}
+
+.users .fa {
+    font-size: 22px;
+    color: #b22bd9;
+}
+
+.users {
+    float: right;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+    .users b {
+    }
+
+.course-navigation {
+    background: transparent;
+    border-bottom: 3px solid #b22bd9;
+    text-align: center;
+}
+
+    .course-navigation li {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #333;
+        line-height: 40px;
+        width: 24%;
+        text-align: center;
+        background: transparent;
+        position: relative;
+    }
+
+        .course-navigation li.active a, .course-navigation li a:hover {
+            background: transparent;
+            color: #b22bd9;
+        }
+
+        .course-navigation li a {
+            padding: 0px 30px;
+            /*color: #fff !important;*/
+        }
+
+        .course-navigation li.active:after {
+            width: 0;
+            height: 0;
+            content: " ";
+            border-style: solid;
+            border-width: 0 6px 6px 6px;
+            border-color: transparent transparent #b22bd9 transparent;
+            position: absolute;
+            bottom: 0;
+            left: 46%;
+        }
+
+.course-cta-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 26px;
+}
+
+    .course-cta-wrapper .cta {
+        margin-bottom: 30px;
+        padding-top: 10px;
+    }
+
+    .course-cta-wrapper .invite {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #7F7F7F;
+    }
+
+    .course-cta-wrapper .invite, .course-cta-wrapper .price {
+        margin-bottom: 10px;
+    }
+
+    .course-cta-wrapper .actions a {
+        background: #1bb35b;
+        padding: 10px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+        .course-cta-wrapper .actions a:hover {
+            color: #fff;
+            background: #137E40;
+        }
+
+    .course-cta-wrapper .price {
+        color: #F75E06;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .course-cta-wrapper .original-price {
+        text-decoration: line-through;
+        font-size: 20px;
+        color: #666;
+    }
+
+    .course-cta-wrapper .social-box {
+        margin-right: -26%;
+        float: right;
+    }
+
+#second {
+    margin-top: 30px;
+}
+
+.course-spec-list {
+}
+
+    .course-spec-list .spec {
+        font-size: 13px;
+        margin-bottom: 10px;
+        float: left;
+        clear: right;
+        width: 100%;
+    }
+
+        .course-spec-list .spec:before {
+            font-family: FontAwesome;
+            content: "\f00c";
+            color: #FF8C47;
+            height: 30px;
+            float: left;
+            padding-right: 10px;
+        }
+
+.introduction, #outline, #reviews, #teacher {
+    padding: 20px 0;
+}
+
+.introduction {
+    font-size: 14px;
+}
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+#reviews .review-summary {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+#course-faq .panel {
+    background: transparent;
+}
+
+#peer-courses {
+    margin-bottom: 10px;
+}
+
+    #peer-courses .course-item-2 {
+        margin: 20px 0;
+    }
+
+#form-hoc-bong > input {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    .review-list .review {
+        width: 50%;
+        float: left;
+        padding-right: 5%;
+    }
+
+    #peer-courses {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .course-navigation li {
+        /*width: auto;*/
+    }
+
+    .left {
+        width: calc(100% - 30px);
+        margin-bottom: 20px;
+        margin-right: 15px;
+    }
+
+    .right {
+        width: calc(100% - 30px);
+    }
+
+    .no-padding-sm {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 422px) {
+    .course-navigation li {
+        width: 100%;
+    }
+
+    .no-padding-xs {
+        padding: 0px;
+    }
+}
+
+.review-bubble {
+    position: fixed;
+    right: 10px;
+    bottom: 210px;
+    width: 300px;
+    background: #E5E5E5;
+    border-radius: 4px;
+}
+
+    .review-bubble .review {
+        width: 95% !important;
+        margin-left: 5%;
+    }
+
+    .review-bubble .title {
+        padding: 10px 0 0 10px;
+        color: #A9A49D;
+    }
+
+        .review-bubble .title a {
+            float: right;
+            padding-right: 10px;
+            color: #1bb35b;
+            text-decoration: underline;
+        }
+
+/*Teacher*/
+.teacher-showoff {
+}
+
+    .teacher-showoff .avatar {
+        width: 240px;
+        height: 240px;
+        border-radius: 100%;
+        overflow: hidden;
+        display: block;
+        float: right;
+    }
+
+        .teacher-showoff .avatar img {
+            width: 100%;
+            border-radius: 100%;
+            border: 7px solid #F5F6F7;
+        }
+
+    .teacher-showoff .avatar-container {
+        width: 240px;
+        text-align: right;
+        flex: 0 0 240px;
+    }
+
+    .teacher-showoff .metas {
+        flex: 1;
+        padding-left: 30px;
+        max-width: 600px;
+    }
+
+        .teacher-showoff .metas .name {
+            font-weight: bold;
+            font-size: 20px;
+            color: #25ae6c;
+        }
+
+    .teacher-showoff .academic-title {
+        font-size: 15px;
+        color: #999;
+    }
+
+    .teacher-showoff .biography {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .teacher-showoff .content {
+        display: flex;
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teacher-showoff .reviews {
+        padding-top: 20px;
+    }
+
+    .teacher-showoff .review-heading {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .teacher-showoff .review-heading:before {
+            content: '.';
+            display: block;
+            border-top: 1px solid #eee;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+        }
+
+        .teacher-showoff .review-heading span {
+            font-size: 20px;
+            color: #1BB35B;
+            z-index: 2;
+            position: relative;
+            background: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+    .teacher-showoff .reviews .reviewer-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        overflow: hidden;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+        .teacher-showoff .reviews .reviewer-avatar img {
+            width: 100%;
+        }
+
+    .teacher-showoff .reviews .meta {
+        width: 100%;
+        padding: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border: 1px solid #e3e3e3;
+        border-radius: 7px;
+        font-size: 14px;
+        position: relative;
+    }
+
+        .teacher-showoff .reviews .meta:before,
+        .teacher-showoff .reviews .meta:after {
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            bottom: 100%;
+        }
+
+        .teacher-showoff .reviews .meta:before {
+            border-color: rgba(255,255,255,0);
+            border-bottom-color: #e3e3e3;
+            border-width: 12px;
+            left: 50%;
+            margin-left: -12px;
+        }
+
+        .teacher-showoff .reviews .meta:after {
+            border-color: rgba(255,255,255,0);
+            border-bottom-color: #fff;
+            border-width: 10px;
+            left: 50%;
+            margin-left: -10px;
+        }
+
+        .teacher-showoff .reviews .meta .review-content {
+            color: #606060;
+        }
+
+        .teacher-showoff .reviews .meta .quote:before {
+            content: open-quote;
+            font-size: 3em;
+            line-height: 0.1em;
+            margin-right: 0.1em;
+            vertical-align: -0.4em;
+        }
+
+        .teacher-showoff .reviews .meta .quote:after {
+            content: close-quote;
+            font-size: 3em;
+            line-height: 0.1em;
+            margin-left: 0.1em;
+            vertical-align: -0.4em;
+        }
+
+        .teacher-showoff .reviews .meta .name {
+            font-weight: bold;
+        }
+
+    .teacher-showoff .reviews .carousel-indicators {
+        bottom: -30px;
+    }
+
+        .teacher-showoff .reviews .carousel-indicators li {
+            background: #999999;
+            border: none;
+        }
+
+            .teacher-showoff .reviews .carousel-indicators li.active {
+                background: #1bb35b;
+            }
+
+/*End Teacher*/
+
+/*Giao Trinh*/
+#curiculums {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.curiculums-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #212121;
+    border-bottom: 1px solid #b6b6b6;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+#reviews .review-summary {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+#course-faq .panel {
+    background: transparent;
+}
+
+#peer-courses {
+    margin-bottom: 10px;
+}
+
+    #peer-courses .course-item-2 {
+        margin: 20px 0;
+    }
+
+#form-hoc-bong > input {
+    margin-bottom: 10px;
+}
+
+.review-summary .avg {
+    font-size: 70px;
+    color: #D94D38;
+}
+
+.review-summary .review-counter {
+    color: #333 !important;
+}
+
+.review-summary .rating-histogram {
+    width: 300px;
+}
+
+    .review-summary .rating-histogram .bar {
+        width: 150px;
+        display: inline-block;
+        background: #F5F6F7;
+        height: 13px;
+    }
+
+    .review-summary .rating-histogram .bar-fill {
+        background: #1BB35B;
+        height: 13px;
+        display: inline-block;
+    }
+
+.introduction .info-group .info-heading a {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.action-box {
+    padding: 15px 0;
+    background: #fff;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.timeline {
+    float: left;
+    white-space: nowrap;
+    margin-right: 50px;
+}
+
+    .timeline > .fa {
+        float: left;
+        display: inline-block;
+        font-size: 18px;
+        margin: 0 35px;
+        line-height: 42px;
+        color: #999;
+    }
+
+
+.start,
+.end {
+    display: inline-block;
+    float: left;
+}
+
+    .start .fa,
+    .end .fa {
+    }
+
+    /*.course-price {
+    margin-top: 5px;
+    float: left;
+    padding-right: 20px;
+
+}*/
+
+    .start span,
+    .end span {
+        display: block;
+        color: #999;
+    }
+
+    .start b,
+    .end b {
+        font-size: 18px;
+        font-weight: bold;
+        color: #25AE6C;
+    }
+
+.course-actions {
+    /*float: left;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 330px;*/
+    display: block;
+    margin-top: 5%;
+}
+
+.course-actions {
+    text-align: center;
+}
+
+    .course-actions .btn-cta2 {
+        font-size: 30px;
+        height: 65px;
+        /*padding-top: 15px;*/
+        padding: 15px 30px;
+        text-transform: uppercase;
+    }
+
+.btn-try {
+    background: #FF5B1A;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.try-actions {
+    font-size: 30px;
+    background: #222832;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.scroll-button {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    /*padding-bottom: 50px;*/
+    opacity: 0.7;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+    z-index: 99;
+    font-size: 64px;
+}
+
+.nomargin {
+    margin: 0px;
+}
+
+.nopadding {
+    padding: 0px;
+}
+
+.no-padding-right {
+    padding-right: 0px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+
+.social-icons {
+    float: right;
+}
+
+    .social-icons li a {
+        height: 40px;
+        width: 40px;
+        display: block;
+        text-indent: -9999px;
+        background: transparent url(../Contents/images/social-icons.png);
+    }
+
+.contact-info1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #eee;
+}
+
+.social-icons li:first-child {
+    border-left: 1px solid rgba(231, 231, 231, 0.73);
+}
+
+.social-icons ul li:first-child, ol li:first-child {
+    margin-top: 0px;
+}
+
+.social-icons li {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-right: 1px solid rgba(231, 231, 231, 0.73);
+    background: none;
+    padding: 0px;
+    margin: 0;
+    list-style: none;
+}
+
+.social-icons a.facebook:hover {
+    background-position: 0px bottom;
+}
+
+.social-icons a.facebook {
+    background-position: 0px top;
+}
+
+.social-icons li a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    text-indent: -9999px;
+    background: transparent url(../images/social-icons.png);
+}
+
+.social-icons a.twitter {
+    background-position: -40px top;
+}
+
+    .social-icons a.twitter:hover {
+        background-position: -40px bottom;
+    }
+
+.social-icons a.googleplus {
+    background-position: -440px top;
+}
+
+    .social-icons a.googleplus:hover {
+        background-position: -440px bottom;
+    }
+
+.social-icons a.pinterest {
+    background-position: -480px top;
+}
+
+    .social-icons a.pinterest:hover {
+        background-position: -480px bottom;
+    }
+
+.social-icons a.dribbble {
+    background-position: -160px top;
+}
+
+    .social-icons a.dribbble:hover {
+        background-position: -160px bottom;
+    }
+
+.social-iconst a.dribbble:hover {
+    background-position: -160px bottom;
+}
+
+.social-icons a.vimeo {
+    background-position: -120px top;
+}
+
+    .social-icons a.vimeo:hover {
+        background-position: -120px bottom;
+    }
+
+.right-content-heading-left {
+    float: left;
+    padding: 11px 0;
+}
+
+.right-content-heading {
+    /*border-bottom: 1px solid #F1F0F6;*/
+    margin-bottom: 20px;
+}
+
+.right-content-heading-right {
+    float: right;
+}
+
+.right-content-heading-left h3 {
+    font-family: 'gandhi_sansregular';
+    color: #888;
+    text-transform: uppercase;
+    display: block;
+}
+
+
+/*padding*/
 .nopading {
     padding: 0px;
 }
@@ -324,7 +1101,7 @@
 .mycourse .mycourse-header {
     height: 50px;
     border-bottom: 3px solid black;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 
     .mycourse .mycourse-header .mycourse-tab {
@@ -1160,3 +1937,10 @@ p.course-image-desc {
     .zn-btn:focus {
         outline: none;
     }
+
+.rating {
+    width: 50%;
+    display: inline-block;
+    padding: 0 5px;
+    float: left;
+}
