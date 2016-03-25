@@ -35,8 +35,15 @@ namespace StudyOnline
                           "~/Contents/css/style.css",
                           "~/Contents/css/style-responsive.css"
                       ));
-
-
+            bundles.Add(new StyleBundle("~/Contents/homeindex").Include(
+                          "~/Contents/HomeIndex/css/bootstrap.min.css",
+                          "~/Contents/HomeIndex/css/custom.css",
+                          "~/Contents/fonts/font-awesome/css/font-awesome.css",
+                          "~/Contents/HomeIndex/css/flexslider.css",
+                          "~/Contents/css/ListCourse.css",
+                          "~/Contents/css/style.css",
+                          "~/Contents/css/style-responsive.css"
+                      ));
         }
     }
 }
