@@ -1,20 +1,17 @@
 import {Injectable} from 'angular2/core';
-import {HEROES}     from './mock-heroes';
 
 export interface IHeroService {
-    getHeroes(): Promise(HEROES);
+    getHeroes(): Promise<string>;
     getHero(id: number);
 }
 
 @Injectable()
-export class HeroService implements IHeroService{
-  public async getHeroes(): Promise(HEROES) {
-    return HEROES;
-  }
+export class HeroService implements IHeroService {
+    public async getHeroes(): Promise<string> {
+      return "";
+    }
 
-	public async getHero(id: number) {
-    return Promise.resolve(HEROES).then(
-      heroes => heroes.filter(hero => hero.id === id)[0]
-    );
-  }
+    public async getHero(id: number) {
+      return 1;
+    }
 }
