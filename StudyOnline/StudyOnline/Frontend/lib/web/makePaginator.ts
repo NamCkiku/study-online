@@ -1,5 +1,3 @@
-/// <reference path="../../typings/curama.d.ts"/>
-
 export interface Paginator {
     prev?: string;
     prevPageNum?: number;
@@ -19,18 +17,11 @@ export interface PageRange {
         pageNum: number;
 }
 
-/**
- * ページネーションに必要な情報を作ります
- * @param  {number}    limitPerPage   1ページの表示件数
- * @param  {number}    currentPageNum 現在のページナンバー
- * @param  {number}    totalCount     全件数
- * @return {Paginator}                [description]
- */
 export function makePaginator(limitPerPage: number, currentPageNum: number, totalCount: number): Paginator {
     if (typeof totalCount === "undefined" || totalCount === null) {
         return null;
     }
-    let lastPageNum = Math.floor((totalCount - 1) / limitPerPage) + 1; // currentやnextと同じ値があり得る
+    let lastPageNum = Math.floor((totalCount - 1) / limitPerPage) + 1;
     let pageRange = range(1, lastPageNum);
     // for (let pageNum: number = 1; pageNum <= lastPageNum; pageNum++) {
     //     pageRange.push({pageNum: pageNum});
@@ -55,13 +46,6 @@ export function makePaginator(limitPerPage: number, currentPageNum: number, tota
     };
 }
 
-/**
- * 必要なpageRangeを返します
- * @param  {PageRange[]} pageRange      makePaginatorの返り値のpageRange
- * @param  {number}      currentPageNum 現在のページナンバー
- * @param  {number}      displayCount   paginatorに表示するページ数
- * @return {PageRange[]}                [description]
- */
 export function cutPageRange(pageRange: PageRange[], currentPageNum: number, displayCount: number): PageRange[] {
     currentPageNum = Number(currentPageNum);
     if (displayCount > currentPageNum) {
@@ -78,7 +62,6 @@ export function cutPageRange(pageRange: PageRange[], currentPageNum: number, dis
         tmp++;
     }
 
-    // 数値ソート http://qiita.com/PianoScoreJP/items/f0ff7345229871039672
     returnArray.sort(function(a: number, b: number): number {
         if ( a < b ) { return -1; }
         if ( a > b ) { return 1; }
