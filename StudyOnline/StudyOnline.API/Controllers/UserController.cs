@@ -6,9 +6,11 @@ using System.Net.Http;
 using System.Web.Http;
 using StudyOnline.Service.Users;
 using StudyOnline.Entities.Models;
+using System.Web.Http.Cors;
 
 namespace StudyOnline.API.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
         //private readonly IUserService userService;

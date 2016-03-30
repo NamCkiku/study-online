@@ -221,12 +221,6 @@
     <Content Include="Contents\Plugins\dist\summernote.css" />
     <Content Include="Contents\Plugins\dist\summernote.js" />
     <Content Include="Contents\Plugins\dist\summernote.min.js" />
-    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.jpg" />
-    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.seeking.gif" />
-    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.video.play.png" />
-    <Content Include="Contents\Plugins\JPlayer\jplayer.blue.monday.min.css" />
-    <Content Include="Contents\Plugins\JPlayer\jplayer.playlist.min.js" />
-    <Content Include="Contents\Plugins\JPlayer\jquery.jplayer.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Frontend\app\app\app.component.css" />
     <Content Include="Frontend\app\app\index.html" />

@@ -9,6 +9,8 @@ namespace StudyOnline.API
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors();
+
             // Web API configuration and services
 
             // Web API routes
