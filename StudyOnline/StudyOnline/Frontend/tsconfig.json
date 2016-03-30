@@ -8,7 +8,7 @@
     "removeComments": false,
     "noImplicitAny": false,
     "noLib": false,
-    "declaration": false,
+    "declaration": false
   },
   "exclude": [
     "node_modules"
