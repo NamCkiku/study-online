@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html xmlns='http://www.w3.org/1999/xhtml'
+xmlns:b='http://www.google.com/2005/gml/b'
+xmlns:data='http://www.google.com/2005/gml/data'
+xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <b:include data='blog' name='all-head-content'/>
+
+  <b:if cond='data:blog.url == data:blog.homepageUrl'>
+
+    <title><data:blog.title/></title>
+
+  </b:if>
+
+  <b:if cond='data:blog.pageType == &quot;index&quot;'>
+
+    <title><data:blog.pageTitle/></title>
+
+    <meta content='Mô tả' name='description'/>
+
+    <meta content='Các từ khóa' name='keywords'/>
+
+  <b:else/>
+
+    <title><data:blog.pageName/> - <data:blog.title/></title>
+
+    <meta expr:content='data:blog.pageName + &quot; - Mô tả &quot;' name='description'/>
+
+    <meta expr:content='data:blog.pageName + &quot;, Các từ khóa &quot;' name='keywords'/>
+
+  </b:if>
+
+  <b:skin>
+    <![CDATA[]]>
+  </b:skin>
+
+</head>
+
+<body>
+
+  <b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'>
+
+    <b:widget id='Navbar1' locked='true' title='Thanh điều hướng' type='Navbar'/>
+
+  </b:section>
+
+</body>
+
+</html>
