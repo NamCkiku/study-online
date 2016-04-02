@@ -1,9 +1,10 @@
-﻿<header class="header white-bg" ng-controller="myUser" ng-init="qty=@Session["UserID"].ToString();cost=2">
-    <div>
-        Quantity: <input type="number" min="0" ng-model="qty">
-    </div>
-   
-  
+﻿<header class="header white-bg" ng-controller="myUser" ng-init="username=@Session["UserID"].ToString();cost=2">
+    <script>
+        function getSession()
+        {
+            return @Session["UserID"].ToString()
+        }
+    </script>
     <div class="sidebar-toggle-box">
         <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
     </div>
@@ -161,8 +162,8 @@
             <!-- user login dropdown start-->
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <img alt="" src="img/avatar1_small.jpg">
-                    <span class="username">Jhon Doue</span>
+                    <img alt="" ng-src="{{Image}}" style="width:20px;height:25px"/> 
+                    <span class="username">{{UserName}}</span>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu extended logout">
