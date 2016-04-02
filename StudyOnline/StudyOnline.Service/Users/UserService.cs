@@ -54,5 +54,22 @@ namespace StudyOnline.Service.Users
         {
             userRepository.Active(id, status);
         }
+
+
+        public bool CheckEmail(string email)
+        {
+            return userRepository.CheckEmail(email);
+        }
+
+        public bool CheckUserName(string userName)
+        {
+            return userRepository.CheckUserName(userName);
+        }
+
+
+        public List<User> GetUserById(long id)
+        {
+            return userRepository.GetUserById(id);
+        }
     }
 }

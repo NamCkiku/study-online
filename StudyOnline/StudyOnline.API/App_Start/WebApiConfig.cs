@@ -9,8 +9,6 @@ namespace StudyOnline.API
     {
         public static void Register(HttpConfiguration config)
         {
-            config.EnableCors();
-
             // Web API configuration and services
 
             // Web API routes
@@ -18,7 +16,7 @@ namespace StudyOnline.API
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "study-online/{controller}/{id}",
+                routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }

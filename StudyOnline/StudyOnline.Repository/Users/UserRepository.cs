@@ -244,5 +244,14 @@ namespace StudyOnline.Repository.Users
         //    }
         //    return View("ViewRegister", models);
         //}
+
+
+        public List<User> GetUserById(long id)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                return _db.User.Where(x => x.ID == id).ToList();
+            }
+        }
     }
 }

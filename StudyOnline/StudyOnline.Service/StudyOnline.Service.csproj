@@ -43,14 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttachMentService.cs" />
-    <Compile Include="CommentService.cs" />
-    <Compile Include="CourseCategoryService.cs" />
+    <Compile Include="AttachMents\AttachMentService.cs" />
+    <Compile Include="Comments\CommentService.cs" />
+    <Compile Include="CourseCategorys\CourseCategoryService.cs" />
     <Compile Include="Interface\IAttachMentService.cs" />
     <Compile Include="Interface\ICommentService.cs" />
     <Compile Include="Interface\ICourseCategoryService.cs" />
     <Compile Include="Interface\ICourseService.cs" />
-    <Compile Include="CourseService.cs" />
+    <Compile Include="Courses\CourseService.cs" />
     <Compile Include="Interface\ILessonService.cs" />
     <Compile Include="Interface\ISecctionService.cs" />
     <Compile Include="Interface\ITeacherService.cs" />
@@ -59,15 +59,15 @@
     <Compile Include="Interface\ITestService.cs" />
     <Compile Include="Users\IUserService.cs" />
     <Compile Include="Interface\IVideoService.cs" />
-    <Compile Include="LessonService.cs" />
+    <Compile Include="Lessons\LessonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecctionService.cs" />
-    <Compile Include="TeacherService.cs" />
-    <Compile Include="TestAnswerService.cs" />
-    <Compile Include="TestQuestionService.cs" />
-    <Compile Include="TestService.cs" />
+    <Compile Include="Secctions\SecctionService.cs" />
+    <Compile Include="Teachers\TeacherService.cs" />
+    <Compile Include="TestAnswers\TestAnswerService.cs" />
+    <Compile Include="TestQuestions\TestQuestionService.cs" />
+    <Compile Include="Tests\TestService.cs" />
     <Compile Include="Users\UserService.cs" />
-    <Compile Include="VideoService.cs" />
+    <Compile Include="Videos\VideoService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Entities\StudyOnline.Entities.csproj">

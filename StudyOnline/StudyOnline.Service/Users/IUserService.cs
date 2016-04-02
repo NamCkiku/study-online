@@ -10,6 +10,7 @@ namespace StudyOnline.Service.Users
     public interface IUserService
     {
         List<StudyOnline.Entities.Models.User> ListAllUser();
+        List<StudyOnline.Entities.Models.User> GetUserById(long id);
         StudyOnline.Entities.Models.User ViewDetail(long id);
         long CreateUser(StudyOnline.Entities.Models.User tq);
         bool UpdateUser(StudyOnline.Entities.Models.User us);
@@ -17,5 +18,7 @@ namespace StudyOnline.Service.Users
         int Login(string userName, string password);
         bool Signup(User user);
         void Active(int id, bool status);
+        bool CheckEmail(string email);
+        bool CheckUserName(string userName);
     }
 }

@@ -4,29 +4,27 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using StudyOnline.Service.Users;
 using StudyOnline.Entities.Models;
-using System.Web.Http.Cors;
+using StudyOnline.Service.Users;
 
 namespace StudyOnline.API.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
-        //private readonly IUserService userService;
-        //public UserController(IUserService userService)
-        //{
-        //    this.userService = userService;
-        //}
+        // GET api/user
+        UserService cal = new UserService();
 
-        UserService userService = new UserService();
-        // GET study-online/user
-        public IEnumerable<User> Get()
+         [HttpGet, ActionName("list")]
+        public IEnumerable<string> Get()
         {
-            var user = userService.ListAllUser();
-            return user;
-
+            return new string[] { "value1", "value2" };
         }
+
+        [HttpGet, ActionName("getuserbyid")]
+         public IEnumerable<User> GetUserById(long id)
+         {
+             return cal.GetUserById(id);
+         }
 
         // GET api/user/5
         public string Get(int id)
