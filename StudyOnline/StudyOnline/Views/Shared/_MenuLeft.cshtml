@@ -1,4 +1,5 @@
-﻿<div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;">
+﻿<div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;" ng-controller="CtrlMenu">
+    {{Name}}
     <!-- sidebar menu start-->
     <ul class="sidebar-menu" id="nav-accordion">
         <li>
@@ -7,42 +8,20 @@
                 <span>Dashboard</span>
             </a>
         </li>
-
-        <li class="sub-menu dcjq-parent-li">
-            <a href="javascript:;" class="dcjq-parent">
-                <i class="fa fa-laptop"></i>
-                <span>Layouts</span>
-                <span class="dcjq-icon fa fa-plus"></span>
-            </a>
-            <ul class="sub" style="display: none;">
-                <li><a href="boxed_page.html">Boxed Page</a></li>
-                <li><a href="horizontal_menu.html">Horizontal Menu</a></li>
-                <li><a href="header-color.html">Different Color Top bar</a></li>
-                <li><a href="mega_menu.html">Mega Menu</a></li>
-                <li><a href="language_switch_bar.html">Language Switch Bar</a></li>
-                <li><a href="email_template.html" target="_blank">Email Template</a></li>
-            </ul>
-        </li>
-
-        <li class="sub-menu dcjq-parent-li">
-            <a href="javascript:;" class="dcjq-parent">
+        
+        <li class="sub-menu dcjq-parent-li" ng-repeat="item in Menus" >
+            <a href="javascript:;" class="dcjq-parent" ng-if="item.ParentID==0">
                 <i class="fa fa-book"></i>
-                <span>UI Elements</span>
+                <span>{{item.Name}}</span>
                 <span class="dcjq-icon fa fa-plus"></span>
             </a>
-            <ul class="sub" style="display: none;">
-                <li><a href="general.html">General</a></li>
-                <li><a href="buttons.html">Buttons</a></li>
-                <li><a href="modal.html">Modal</a></li>
-                <li><a href="toastr.html">Toastr Notifications</a></li>
-                <li><a href="widget.html">Widget</a></li>
-                <li><a href="slider.html">Slider</a></li>
-                <li><a href="nestable.html">Nestable</a></li>
-                <li><a href="font_awesome.html">Font Awesome</a></li>
+            <ul class="sub" style="display: block;" >
+                <li ng-repeat="item1 in Menus" ng-if="item1.ParentID==item.ID"><a href="general.html">{{item1.Name}}</a></li>
+              
             </ul>
         </li>
 
-        <li class="sub-menu dcjq-parent-li">
+        @*<li class="sub-menu dcjq-parent-li">
             <a href="javascript:;" class="dcjq-parent">
                 <i class="fa fa-cogs"></i>
                 <span>Components</span>
@@ -86,7 +65,7 @@
                 <li><a href="dynamic_table.html">Dynamic Table</a></li>
                 <li><a href="editable_table.html">Editable Table</a></li>
             </ul>
-        </li>
+        </li>*@
 
 
     </ul>
