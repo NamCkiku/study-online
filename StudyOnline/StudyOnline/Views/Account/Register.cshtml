@@ -1,0 +1,78 @@
+﻿@model StudyOnline.Entities.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link href="~/Contents/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Contents/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="~/Contents/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--external css-->
+    <!-- Custom styles for this template -->
+    <link href="~/Contents/css/style.css" rel="stylesheet">
+    <link href="~/Contents/css/style-responsive.css" rel="stylesheet" />
+    <link href="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
+</head>
+<body class="login-body">
+    <div class="container">
+        <div class="form-horizontal form-signin">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <h2 class="form-signin-heading">registration now</h2>
+                <div class="login-wrap">
+                    @ViewBag.Message
+                    <p>Enter your personal details below</p>
+                    @Html.ValidationSummary(true)
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "UserName" })
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = "Số Điện Thoại" })
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Họ Và Tên" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                    @Html.TextBoxFor(m => m.Address, new { @class = "form-control", @placeholder = "Địa Chỉ" })
+                    <input type="file" name="Avatar" id="Avatar" />
+                    @*<div class="fileupload fileupload-new" data-provides="fileupload">
+                            <span class="btn btn-white btn-file">
+                                <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select file</span>
+                                <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                <input type="file" class="default">
+                            </span>
+                            <span class="fileupload-preview" style="margin-left:5px;"></span>
+                            <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+                        </div>
+                        <span class="label label-danger">NOTE!</span>
+                        <span>
+                            Kích thước hình nhỏ hơn 4MB
+                        </span>
+                        <br />*@
+                    <button class="btn btn-lg btn-login btn-block" onclick="return checkfile();" type="submit">Submit</button>
+                    <div class="registration">
+                        Already Registered.
+                        <a class="" href="login.html">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+    <script>
+        function checkfile() {
+            var f = document.getElementById("Avatar").value;
+            if (f == "" || f == null) {
+                alert("Ban chua chon anh");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

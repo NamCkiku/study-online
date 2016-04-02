@@ -1,0 +1,102 @@
+﻿@model StudyOnline.Models.AccountModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Contents/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Contents/css/bootstrap-reset.css" rel="stylesheet">
+    <link href="~/Contents/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--external css-->
+    <!-- Custom styles for this template -->
+    <link href="~/Contents/css/style.css" rel="stylesheet">
+    <link href="~/Contents/css/style-responsive.css" rel="stylesheet" />
+</head>
+<body class="login-body">
+    <div class="container">
+        <div class="form-signin">
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <h2 class="form-signin-heading">Đăng Nhập</h2>
+                @Html.ValidationMessage("", new { @class = "text-danger" })
+                <div class="login-wrap">
+                    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control placeholder-no-fix", @autocomplete = "off", @placeholder = "Username" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control placeholder-no-fix", @autocomplete = "off", @placeholder = "Password" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me"> Nhớ Mật Khẩu
+                        <span class="pull-right">
+                            <a data-toggle="modal" id="btn-forgotpass" href="#myModal"> Quên Mật Khẩu?</a>
+                        </span>
+                    </label>
+                    <button class="btn btn-lg btn-login btn-block" id="btn-login" type="submit">Đăng Nhập</button>
+                    <p>Hoặc Đăng Nhập Nhanh Với</p>
+                    <div class="login-social-link">
+                        <a href="index.html" class="facebook">
+                            <i class="fa fa-facebook"></i>
+                            Facebook
+                        </a>
+                        <a href="index.html" class="twitter">
+                            <i class="fa fa-twitter"></i>
+                            Twitter
+                        </a>
+                    </div>
+                    <div class="registration">
+                        Don't have an account yet?
+                        <a class="" href="/Account/Register">
+                            Tạo Tài Khoản Mới
+                        </a>
+                    </div>
+                </div>
+            }
+            <!-- Modal -->
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Forgot Password ?</h4>
+                        </div>
+                        <div class="modal-body model-forgot">
+                        </div>
+                    </div>
+                </div>
+                <!-- modal -->
+            </div>
+            <!-- modal -->
+        </div>
+    </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="~/Contents/js/jquery.js"></script>
+    <script src="~/Contents/js/bootstrap.min.js"></script>
+    @*<script>
+            $("#btn-login").click(function () {
+                userName = $("#userName").val(),
+                password = $("#password").val(),
+                $.ajax({
+                    type: "POST",
+                    data: JSON.stringify([userName, password]),
+                    url: "http://localhost:22508/api/Account/Login/",
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (data) {
+                        location.href("google.com.vn");
+                    }
+                });
+            });
+        </script>*@
+    <script>
+        $("#btn-forgotpass").click(function () {
+            $(".model-forgot").load("@Url.Action("ForgotPassword", "Account")");
+        });
+    </script>
+</body>
+</html>

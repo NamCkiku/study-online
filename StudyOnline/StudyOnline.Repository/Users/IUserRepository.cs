@@ -9,6 +9,7 @@ namespace StudyOnline.Repository.Users
     public interface IUserRepository
     {
         List<StudyOnline.Entities.Models.User> ListAllUser();
+        List<StudyOnline.Entities.Models.User> GetUserById(long id);
         StudyOnline.Entities.Models.User ViewDetail(long id);
         long CreateUser(StudyOnline.Entities.Models.User tq);
         bool UpdateUser(StudyOnline.Entities.Models.User us);

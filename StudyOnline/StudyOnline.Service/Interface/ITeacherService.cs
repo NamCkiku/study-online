@@ -11,5 +11,7 @@ namespace StudyOnline.Service.Interface
     {
         List<Tuple<User, Course>> GetListByTearcherId(long id);
         long CreateCouseByTeacherId(long id, Course cs);
+        List<Section> GetSectionByCourseId(long id);
+        List<Lesson> GetLessonBySection();
     }
 }

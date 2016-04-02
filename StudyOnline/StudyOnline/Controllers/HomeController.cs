@@ -14,8 +14,11 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
-
-      public ActionResult GetListCouse()
+        public ActionResult HomeIndex()
+        {
+            return View();
+        }
+        public ActionResult GetListCouse()
         {
             TeacherService ts = new TeacherService();
             return Json(ts.GetListByTearcherId(1), JsonRequestBehavior.AllowGet);
@@ -42,6 +45,10 @@ namespace StudyOnline.Controllers
         }
 
         public ActionResult CreateCourseManager()
+        {
+            return View();
+        }
+        public ActionResult CreateCourseContentManager()
         {
             return View();
         }

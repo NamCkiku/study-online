@@ -1,0 +1,17 @@
+﻿#top-content .navbar-default .navbar-toggle {
+    border-color: transparent;
+    float: right;
+    padding:0px;
+}
+
+    #top-content .navbar-default .navbar-toggle:hover {
+        background: url(../img/bg-menu.png) repeat-x;
+    }
+
+    #top-content .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+    #top-content .navbar-default .navbar-toggle:focus {
+        background: url(../img/bg-menu.png) repeat-x;
+    }
