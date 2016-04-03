@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using StudyOnline.Entities.Models;
 using StudyOnline.Service.Users;
+using StudyOnline.Service;
 
 namespace StudyOnline.API.Controllers
 {
@@ -14,7 +15,10 @@ namespace StudyOnline.API.Controllers
         // GET api/user
         UserService cal = new UserService();
 
-         [HttpGet, ActionName("list")]
+
+        TeacherService teacherService = new TeacherService();
+
+        [HttpGet, ActionName("list")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -25,6 +29,12 @@ namespace StudyOnline.API.Controllers
          {
              return cal.GetUserById(id);
          }
+
+        [HttpGet, ActionName("getcourseviewcount")]
+        public IEnumerable<Tuple<User, Course>> GetCourse()
+        {
+            return teacherService.GetListByTearcherId(1).OrderByDescending(x => x.Item2.ViewCount).Skip(1).Take(4);
+        }
 
         // GET api/user/5
         public string Get(int id)

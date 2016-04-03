@@ -43,13 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\StudyOnline.Entities\bin\Debug\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\_SourceCodeDemo\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\StudyOnline.Entities\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\..\_SourceCodeDemo\StudyOnline\StudyOnline.Entities\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -139,9 +138,6 @@
     <Content Include="App_Scripts\Controller.js" />
     <Content Include="App_Scripts\Module.js" />
     <Content Include="App_Scripts\Service.js" />
-    <Content Include="Contents\Angular\Controller.js" />
-    <Content Include="Contents\Angular\Module.js" />
-    <Content Include="Contents\Angular\Service.js" />
     <Content Include="Contents\css\bootstrap-reset.css" />
     <Content Include="Contents\css\bootstrap-switch.min.css" />
     <Content Include="Contents\css\bootstrap.min.css" />
