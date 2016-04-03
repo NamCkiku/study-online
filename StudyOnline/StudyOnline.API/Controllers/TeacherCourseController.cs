@@ -13,7 +13,8 @@ namespace StudyOnline.API.Controllers
     {
         // GET api/teachercourse
         TeacherService teacherService = new TeacherService();
-
+        CourseCategoryService cal = new CourseCategoryService();
+        
         [HttpGet, ActionName("getcourseviewcount")]
         public IEnumerable<Tuple<User, Course>> Get()
          {
@@ -54,6 +55,12 @@ namespace StudyOnline.API.Controllers
         {
             return teacherService.GetLessonBySection();
 
+        }
+
+        [HttpGet, ActionName("getcoursecategory")]
+        public IEnumerable<CourseCategory> GetListCourseCategory()
+        {
+            return cal.ListAllCourseCategory();
         }
 
         // GET api/teachercourse/5
