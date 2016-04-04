@@ -13,23 +13,24 @@
     <script src="~/Contents/Plugins/dist/summernote.min.js"></script>
     <script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
     <script src="~/Contents/js/bootstrap-switch.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $(".datepicker").datepicker();
-    });
-    $(document).ready(function () {
-        $('.summernote').summernote({
-            height: 300,
-            minHeight: null,
-            maxHeight: null,
-            focus: true,
+    <script type="text/javascript">
+        $(function () {
+            $(".datepicker").datepicker();
         });
-    });
-    $(".switch-square").bootstrapSwitch();
-</script>
+        $(document).ready(function () {
+            $('.summernote').summernote({
+                height: 300,
+                minHeight: null,
+                maxHeight: null,
+                focus: true,
+            });
+        });
+        $(".switch-square").bootstrapSwitch();
+    </script>
 }
 
-@*<script src="~/Contents/js/progress.js"></script>*@
+@*
+    <script src="~/Contents/js/progress.js"></script>*@
 <div id="" class="main-container no-paddingxs">
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -101,44 +102,45 @@
                 </div>
 
                 @*<div id="cm-toolbox" class="box">
-                    <div class="content">
-                    <p class="head">Công cụ</p>
-                    <a class="btn-link" target="_blank" href="/quan-ly-khoa-hoc/2276/gui-thong-bao"> <i class="fa fa-bullhorn"></i> Gửi tin nhắn đến học viên</a>
-                    <a class="btn-link" target="_blank" href="/coursemgt/coupon/manage/course_id/2276"><i class="fa fa-shopping-cart"></i> Quản lý coupon</a>
-                    </div>
+                        <div class="content">
+                            <p class="head">Công cụ</p>
+                            <a class="btn-link" target="_blank" href="/quan-ly-khoa-hoc/2276/gui-thong-bao"> <i class="fa fa-bullhorn"></i> Gửi tin nhắn đến học viên</a>
+                            <a class="btn-link" target="_blank" href="/coursemgt/coupon/manage/course_id/2276"><i class="fa fa-shopping-cart"></i> Quản lý coupon</a>
+                        </div>
                     </div>
 
                     <div class="zn-left-support">
-                    <div id="zn-course-support" class="contained">
-                    <p class="head">Bạn cần hỗ trợ?</p>
-                    <div class="hotline">
-                    <div class="number"><i class="fa fa-phone"></i> 0968.63.03.03</div>
-                    </div>
-                    <div class="socials">
-                    <a href="javascript:void(0)" class="zn-send-message" data-id="2" data-username="[BQT] Hỗ trợ giáo viên">
-                    <span class="support-avatar">
-                    <img src="http://img1.res.zuni.vn/avatar/2014/12/22/20141222171036-nen trag gv.jpg" onerror="Zuni.Layout.fixErrorImgs(this);" class="upAvatar" alt="">
-                    </span>
-                    Gửi tin nhắn cho Ban quản trị
-                    </a>
-                    <a class="email" href="mailto:teacher@zuni.vn"><i class="fa fa-envelope"></i> Liên hệ qua email</a>
-                    <a class="facebook" target="__blank" href="https://www.facebook.com/groups/zuniteacher/"><i class="fa fa-facebook-square"></i> Cộng đồng Giáo viên giảng dạy trực tuyến</a>
-                    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                    <a href="skype:zuni.vng?chat" class="skype">
-                    <i class="fa fa-skype"></i> Hỗ trợ trực tuyến
-                    </a>
-                    </div>
-                    </div>
+                        <div id="zn-course-support" class="contained">
+                            <p class="head">Bạn cần hỗ trợ?</p>
+                            <div class="hotline">
+                                <div class="number"><i class="fa fa-phone"></i> 0968.63.03.03</div>
+                            </div>
+                            <div class="socials">
+                                <a href="javascript:void(0)" class="zn-send-message" data-id="2" data-username="[BQT] Hỗ trợ giáo viên">
+                                    <span class="support-avatar">
+                                        <img src="http://img1.res.zuni.vn/avatar/2014/12/22/20141222171036-nen trag gv.jpg" onerror="Zuni.Layout.fixErrorImgs(this);" class="upAvatar" alt="">
+                                    </span>
+                                    Gửi tin nhắn cho Ban quản trị
+                                </a>
+                                <a class="email" href="mailto:teacher@zuni.vn"><i class="fa fa-envelope"></i> Liên hệ qua email</a>
+                                <a class="facebook" target="__blank" href="https://www.facebook.com/groups/zuniteacher/"><i class="fa fa-facebook-square"></i> Cộng đồng Giáo viên giảng dạy trực tuyến</a>
+                                <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                                <a href="skype:zuni.vng?chat" class="skype">
+                                    <i class="fa fa-skype"></i> Hỗ trợ trực tuyến
+                                </a>
+                            </div>
+                        </div>
                     </div>*@
 
-                @*<script type="text/javascript">
-                    $('#btn-quick-review').on('click', function (e) {
-                    $.post('/coursemgt/course-manager/push-courseware-to-live', { id: "2276" }, function (resp) {
-                    if (resp) {
-                    alert('Phê duyệt thành công');
-                    }
-                    });
-                    });
+                @*
+                    <script type="text/javascript">
+                        $('#btn-quick-review').on('click', function (e) {
+                        $.post('/coursemgt/course-manager/push-courseware-to-live', { id: "2276" }, function (resp) {
+                        if (resp) {
+                        alert('Phê duyệt thành công');
+                        }
+                        });
+                        });
                     </script>*@
             </div>
 
@@ -166,21 +168,9 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputPassword3" class="col-sm-2 control-label">Thời Gian Từ <font class="required" color="red">*</font></label>
-                                            <div class="col-md-3">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Ngày Tạo<font class="required" color="red">*</font></label>
+                                            <div class="col-md-5">
                                                 <input type="text" class="form-control datepicker">
-                                            </div>
-                                            <label class="col-md-1 control-label">đến</label>
-                                            <div class="col-md-3">
-                                                <input type="text" class="form-control datepicker">
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="checkbox">
-                                                    <label class="control-label">
-                                                        <input type="checkbox" value="true" checked="">
-                                                        Vô thời hạn
-                                                    </label>
-                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -207,30 +197,6 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2">Hình Nền</label>
-                                            <div class="col-md-10">
-                                                <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                    <input type="hidden">
-                                                    <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
-                                                    </div>
-                                                    <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>
-                                                    <div>
-                                                        <span class="btn btn-success btn-file">
-                                                            <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
-                                                            <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
-                                                            <input type="file" class="default">
-                                                        </span>
-                                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
-                                                    </div>
-                                                </div>
-                                                <span class="label label-danger">NOTE!</span>
-                                                <span>
-                                                    Hình nền có dung lượng không quá 1024M.
-                                                </span>
-                                            </div>
-                                        </div>
                                     </form>
                                 </div>
                                 <div class="course-form-create">
@@ -250,17 +216,6 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Môn Học<font class="required" color="red">*</font></label>
-                                            <div class="col-sm-5">
-                                                <select class="form-control">
-                                                    <option>1</option>
-                                                    <option>1</option>
-                                                    <option>1</option>
-                                                    <option>1</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                     </form>
                                 </div>
                                 <div class="course-form-create">
@@ -270,27 +225,9 @@
                                     </div>
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Mục Tiêu</label>
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Mô Tả Nội Dung Khóa Học</label>
                                             <div class="col-md-12">
                                                 <div class="summernote"></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Mục Tiêu</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" placeholder="Mục Tiêu Khóa Học">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Đối Tượng</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" placeholder="Đối tượng học viên">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Điều Kiện</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" placeholder="Điều Kiện">
                                             </div>
                                         </div>
                                     </form>
@@ -302,29 +239,15 @@
                                     </div>
                                     <form class="form-horizontal">
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-md-2 control-label">Riêng Tư[?]</label>
-                                            <div class="col-md-10">
-                                                <input type="checkbox" class="switch-square" checked>
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Giá Gốc <font class="required" color="red">*</font></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Giá Gốc" value="">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Học Phí</label>
-                                            <div class="col-md-5">
-                                                <div class="input-group m-bot15">
-                                                    <span class="input-group-addon">VNĐ</span>
-                                                    <input type="text" class="form-control" placeholder="học phí thực tế học sinh phải trả">
-                                                    <span class="input-group-addon">.000</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label"></label>
-                                            <div class="col-md-5">
-                                                <div class="input-group m-bot15">
-                                                    <span class="input-group-addon">VNĐ</span>
-                                                    <input type="text" class="form-control" placeholder="học phí gốc">
-                                                    <span class="input-group-addon">.000</span>
-                                                </div>
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Gía Khuyến Mãi <font class="required" color="red">*</font></label>
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Gía Khuyến Mãi" value="">
                                             </div>
                                         </div>
                                     </form>
@@ -345,42 +268,7 @@
                                                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    @*<div class="upload-right">
-                                                        <div class="upload-file">
-                                                            <div class="services-icon">
-                                                                <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
-                                                            </div>
-                                                            <input type="file" id="ful" value="Choose file..">
-                                                        </div>
-                                                        <div class="upload-info">
-                                                            <h5>Chọn File Upload</h5>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            @*<div class="progress progress-striped active progress-sm">
-                                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-                                                                        <span class="sr-only">45% Complete</span>
-                                                                    </div>
-                                                                </div>*@
-                                                            @*<div id="progress_bar" class="progress progress-striped active progress-sm">
-                                                                <div class="ui-progress progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-                                                                    <span class="ui-label" style="display:none;">Processing <b class="value">79%</b></span>
-                                                                </div>
-                                                            </div>
-                                                            <h3 id="status"></h3>
-                                                            <p id="load-total"></p>
-                                                        </div>
-                                                        <div class="col-md-1"><input class="btn btn-success" type="button" id="btn-upload" value="Upload File" onclick="uploadFile()"></div>*@
 
-                                                        @*<div class="progress">
-                                                                <div class="progress-bar">
-                                                                    0%
-                                                                </div>
-                                                            </div>
-                                                            <div id="status">
-
-                                                            </div>*@
-                                                    @*</div>*@
-                                                    
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -401,28 +289,7 @@
                                                     <h4 class="modal-title" id="myModalLabel">Video Học Thử</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    @*<div class="upload-right">
-                                                        <div class="upload-file">
-                                                            <div class="services-icon">
-                                                                <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
-                                                            </div>
-                                                            <input type="file" id="ful" value="Choose file..">
-                                                        </div>
-                                                        <div class="upload-info">
-                                                            <h5>Chọn File Upload</h5>
-                                                        </div>
-                                                        <div class="col-md-10">
-                                                            <div class="progress progress-striped active progress-sm">
-                                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-                                                                    <span class="sr-only">45% Complete</span>
-                                                                </div>
-                                                            </div>
-                                                            <h3 id="status"></h3>
-                                                            <p id="load-total"></p>
-                                                        </div>
-                                                        <div class="col-md-1"><input class="btn btn-success" type="button" id="btn-upload" value="Upload File" onclick="uploadFile()"></div>
-                                                    </div>*@
-                                                    
+
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -441,36 +308,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    //var bar = $(".progress-bar");
-    //var percent = $(".progress-bar");
-    //var status = $("#status");
-    //$('form').ajaxForm({
-    //    beforeSend: function () {
-    //        status.empty();
-    //        percentValue='0%';
-    //        bar.width(percentValue);
-    //        percent.html(percentValue);
-    //    },
-    //    upLoadProgress: function (event,position,total,percentComplete) {
-    //        var percentValue=percentComplete+'%';
-    //        bar.width(percentValue);
-    //        percent.html(percentValue);
-    //    },
-    //    success: function (d) {
-    //        percentValue='100%';
-    //        bar.width(percentValue);
-    //        percent.html(percentValue);
-    //        $('#ful').val('');
-    //    },
-    //    complete: function (xhr) {
-    //        status.html(xhr.responseText);
-    //    },
-    //});
-    //function uploadFile() {
-    //    var file = $('#ful');
-    //var percent = $(".progress-bar");
-    //var status = $("#status");
-    //}
-</script>
