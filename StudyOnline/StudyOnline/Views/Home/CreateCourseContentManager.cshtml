@@ -1,15 +1,57 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "CreateCourseContentManager";
-    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
-<link href="~/Contents/css/jstree.css" rel="stylesheet" />
-<link href="~/Contents/css/course-manager.css" rel="stylesheet" />
-<link href="~/Contents/Plugins/dist/summernote.css" rel="stylesheet" />
-<script src="~/Contents/Plugins/dist/summernote.min.js"></script>
-<script src="~/Contents/js/jstree.min.js"></script>
-<script src="~/Contents/js/ui-tree.js"></script>
+@section masterjs
+{
+
+    <link href="~/Contents/css/course-manager.css" rel="stylesheet" />
+    <link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+    <link href="~/Contents/Plugins/dist/summernote.css" rel="stylesheet" />
+    <script src="~/Contents/js/bootstrap.min.js"></script>
+    <script src="~/Contents/Plugins/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.summernote').summernote({
+                height: 300,
+                minHeight: null,
+                maxHeight: null,
+                focus: false,
+            });
+            $('#allSesstion').click(function () {
+                $('#form-secction').toggleClass('hidden');
+            });
+            $('#cancel-link-secction').click(function () {
+                $('#form-secction').addClass('hidden');
+            });
+            $('#allLesstion').click(function () {
+                $('#form-lesstion').toggleClass('hidden');
+            });
+            $('#cancel-link-lesstion').click(function () {
+                $('#form-lesstion').addClass('hidden');
+            });
+            $('#allTest').click(function () {
+                $('#form-Test').toggleClass('hidden');
+            });
+            $('#cancel-link-lesstion').click(function () {
+                $('#form-lesstion').addClass('hidden');
+            });
+            $('#Delete-Lesstion').click(function () {
+                $('#Form-Delete-lesstion').toggleClass('hidden');
+            });
+            $('#cancle-delete-lesstion').click(function () {
+                $('#Form-Delete-lesstion').addClass('hidden');
+            });
+        });
+    </script>
+}
+
 <div id="" class="main-container no-paddingxs">
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -63,7 +105,6 @@
                     </div>
                     <div class="col-md-7">
                         <div class="pull-right">
-                            <span>Quay về &nbsp;</span>
                             <ul class="back-buttons">
                                 <li class="">
                                     <a class="zn-btn btn-medium btn-" href="/quan-ly-khoa-hoc/2276/tong-quan"><span class="fa fa-dashboard"></span> Tổng quan</a>
@@ -90,44 +131,13 @@
             </div>
         </div>
         <div class="row nomargin">
-            <div class="col-md-4">
-
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="sectionAnchor collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSampleTest" aria-expanded="false">
-                            <span class="fa down fa-caret-down" title="Mở rộng"></span>
-                            <span class="fa up fa-caret-up" title="Thu gọn"></span>
-                        </a>
-                        <span class="sectionTitle">
-                            Đề thi thử / Đề luyện tập
-                        </span>
-                    </h4>
+            <div class="col-md-4 no-padding">
+                <div id="allSesstion" class="allSectionActions">
+                    <a href="javascript:void(0);" type="button" class="add-section-btn">
+                        <span class="fa fa-plus"></span> Thêm chương
+                    </a>
                 </div>
-                <div id="collapseSampleTest" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
-                    <div class="panel-body">
-                        <div class="lessonList ng-pristine ng-valid ui-sortable" ui-sortable="sampleTestSortableOptions">
-                            <!-- ngRepeat: testId in outline.sample_test.order --><!-- lessonWrapper -->
-                            <p class="ng-hide">Bạn chưa tạo đề nào.</p>
-                        </div>
-
-                        <a href="#addSampleTest" data-toggle="tab" type="button" class="add-section-test-btn" ng-click="showAddSampleTestForm = !showAddSampleTestForm" ng-show="!showAddSampleTestForm">
-                            <span class="fa fa-plus"></span> Thêm đề
-                            <!-- Thêm đề thi -->
-                        </a>
-
-                        <form class="addSampleTestForm ng-pristine ng-valid ng-hide" ng-show="showAddSampleTestForm" ng-submit="addSampleTest(testName)" ng-init="testName = ''">
-                            <div class="addItemInput">
-                                <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên đề..." ng-model="testName" ng-focus="showAddSampleTestForm">
-                            </div>
-                            <div class="addItemActions">
-                                <button type="submit" class="zn-btn btn-success btn-medium" ng-disabled="testName == ''" disabled="disabled">Lưu</button>
-                                <button type="button" class="zn-btn btn-medium" ng-click="showAddSampleTestForm = false">Hủy</button>
-                            </div>
-                            <input type="submit" class="hiddenSubmit">
-                        </form><!-- addSampleTestForm -->
-                    </div>
-                </div>
-                <form id="addSectionForm" ng-show="showAddSectionForm" ng-submit="addSection(sectionName)" class="ng-pristine ng-valid">
+                <form id="form-secction" class="hidden">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -136,8 +146,8 @@
                                         <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên chương.." ng-model="sectionName" ng-focus="showAddSectionForm">
                                     </div>
                                     <div class="addItemActions">
-                                        <button type="submit" class="zn-btn btn-success btn-medium" ng-disabled="sectionName == ''" disabled="disabled">Lưu</button>
-                                        <button type="button" class="zn-btn btn-medium" ng-click="showAddSectionForm = false">Hủy</button>
+                                        <button type="submit" class="zn-btn btn-success btn-medium">Lưu</button>
+                                        <button type="button" id="cancel-link-secction" class="zn-btn btn-medium">Hủy</button>
                                     </div>
                                 </h4>
                             </div>
@@ -145,36 +155,8 @@
                     </div>
                     <input type="submit" class="hiddenSubmit">
                 </form>
-                <div class="allSectionActions">
-                    <a href="javascript:void(0);" type="button" class="add-section-btn" ng-click="showAddSectionForm = !showAddSectionForm; sectionName = '';" ng-show="!showAddSectionForm">
-                        <span class="fa fa-plus"></span> Thêm chương
-                    </a>
-                </div>
-                <form id="addCourseTestForm" ng-show="showAddCourseTestForm" ng-submit="addCourseTest(courseTestName)" class="ng-pristine ng-valid ng-hide">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <div class="addItemInput">
-                                        <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên bài kiểm tra cuối khóa.." ng-model="courseTestName" ng-focus="showAddCourseTestForm">
-                                    </div>
-                                    <div class="addItemActions">
-                                        <button type="submit" class="zn-btn btn-success btn-medium" ng-disabled="courseTestName == ''">Lưu</button>
-                                        <button type="button" class="zn-btn btn-medium" ng-click="showAddCourseTestForm = false">Hủy</button>
-                                    </div>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" class="hiddenSubmit">
-                </form>
-                <div class="allSectionActions">
-                    <a href="#addTest" data-toggle="tab" type="button" class="add-course-test-btn" ng-click="showAddCourseTestForm = !showAddCourseTestForm" ng-show="!showAddCourseTestForm &amp;&amp; !outline.final_test">
-                        <span class="fa fa-plus"></span> Thêm bài kiểm tra cuối khóa
-                    </a>
-                </div>
-                <div id="listSection" class="sectionList ng-pristine ng-valid ui-sortable" ui-sortable="sectionSortableOptions">
-                    <!-- ngRepeat: sectionId in outline.order --><div class="panel-group ng-scope">
+                <div id="listSection" class="sectionList">
+                    <div class="panel-group ng-scope">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -186,9 +168,9 @@
                                         &nbsp;ÀAFF
                                     </span>
 
-                                    <form class="inlineEdit ng-pristine ng-valid ng-hide">
+                                    <form class="inlineEdit hidden">
                                         <div class="addItemInput">
-                                            <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên chương.." ng-model="section.title" ng-focus="section.showUpdateSectionForm">
+                                            <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên chương..">
                                         </div>
                                         <div class="addItemActions">
                                             <button type="submit" class="zn-btn btn-success btn-medium">Lưu</button>
@@ -197,7 +179,7 @@
                                         <input type="submit" class="hiddenSubmit">
                                     </form><!-- inlineEdit -->
 
-                                    <form class="confirmDelete ng-pristine ng-valid ng-hide">
+                                    <form class="confirmDelete hidden">
                                         <p class="removeText"><i class="fa fa-trash-o"></i> Xác nhận xóa chương<br> <b class="ng-binding">ÀAFF</b></p>
                                         <div class="deleteItemActions">
                                             <button type="submit" class="zn-btn btn-medium btn-danger red">Có</button>
@@ -218,210 +200,109 @@
                                     </a>
                                 </div>
                             </div>
+                            @*End list Secction*@
                             <div id="collapseSection2040" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <div class="panel-group ng-scope">
+                                    <div class="panel-group">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a class="sectionAnchor collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSection2041" aria-expanded="false">
                                                         <span class="fa fa-circle-o lessonIcon" title="Mở rộng nội dung Chương"></span>
                                                     </a>
-                                                    <span class="sectionTitle ng-binding" ng-click="section.showUpdateSectionForm = true; section.oldTitle = section.title" data-toggle="tooltip" title="" data-original-title="Click để đổi tên">
+                                                    <span class="sectionTitle ng-binding" data-toggle="tooltip" title="" data-original-title="Click để đổi tên">
                                                         &nbsp;FSDFSDFSDF
                                                     </span>
-
-                                                    <form class="inlineEdit ng-pristine ng-valid ng-hide" ng-show="section.showUpdateSectionForm" ng-submit="updateSection(section)">
-                                                        <div class="addItemInput">
-                                                            <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên chương.." ng-model="section.title" ng-focus="section.showUpdateSectionForm">
-                                                        </div>
-                                                        <div class="addItemActions">
-                                                            <button type="submit" class="zn-btn btn-success btn-medium" ng-disabled="section.title == ''">Lưu</button>
-                                                            <button type="button" class="zn-btn btn-medium" ng-click="section.showUpdateSectionForm = false; section.title = section.oldTitle">Hủy</button>
-                                                        </div>
-                                                        <input type="submit" class="hiddenSubmit">
-                                                    </form><!-- inlineEdit -->
-
-                                                    <form class="confirmDelete ng-pristine ng-valid ng-hide" ng-show="section.showDeleteSectionForm">
+                                                    <form class="confirmDelete hidden" id="Form-Delete-lesstion">
                                                         <p class="removeText"><i class="fa fa-trash-o"></i> Xác nhận xóa chương<br> <b class="ng-binding">FSDFSDFSDF</b></p>
                                                         <div class="deleteItemActions">
-                                                            <button type="submit" class="zn-btn btn-medium btn-danger red" ng-click="removeSection(section)">Có</button>
-                                                            <button type="button" class="zn-btn btn-medium " ng-click="section.showDeleteSectionForm = false">Không</button>
+                                                            <button type="submit" class="zn-btn btn-medium btn-danger red">Có</button>
+                                                            <button type="button" id="cancle-delete-lesstion" class="zn-btn btn-medium ">Không</button>
                                                         </div>
                                                     </form><!-- confirmDelete -->
-
+                                                    <div class="itemActions pull-right">
+                                                        <a href="javascript:void(0);" class="addSub">
+                                                            <span class="fa fa-pencil" data-toggle="tooltip" title="" data-original-title="Quản lý nội dung"></span>
+                                                        </a>
+                                                        <a href="javascript:void(0);" id="Delete-Lesstion" class="remove">
+                                                            <span class="fa fa-trash-o" title="Xóa"></span>
+                                                        </a>
+                                                    </div>
                                                 </h4>
-                                                <div class="itemActions sectionTopActions">
-                                                    <a href="javascript:void(0);" class="addContent" ng-click="lesson.showAddSubLessonForm = !lesson.showAddSubLessonForm;subLessonName=''" ng-disabled="lesson.showAddSubLessonForm" ng-show="!lesson.has_content &amp;&amp; !lesson.showAddSubLessonForm">
-                                                        <span class="fa fa-plus-square-o" data-toggle="tooltip" title="" data-original-title="Thêm Bài học con"></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" class="edit">
-                                                        <span class="fa fa-pencil" data-cls="sectionManager" data-toggle="tooltip" title="" data-section-id="2041" ng-click="showEditSectionData(section);" data-original-title="Chỉnh sửa"></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" class="remove" ng-click="section.showDeleteSectionForm = true">
-                                                        <span class="fa fa-trash-o" title="Xóa"></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" class="move">
-                                                        <span class="fa fa-reorder" title="Thay đổi vị trí"></span>
-                                                    </a>
-                                                </div>
                                             </div>
-
+                                            @*End List Lesstion*@
                                         </div>
                                     </div>
-                                    <!-- <div class="sectionActions"></div> -->
-                                    <div class="lessonList ng-pristine ng-valid ui-sortable" ui-sortable="lessonSortableOptions">
-                                        <!-- ngRepeat: lessonId in section.lessons.order --><!-- lessonWrapper -->
-                                        <p ng-show="section.lessons.order.length == 0" class="ng-hide">Bạn chưa tạo Bài học nào cả.</p>
+                                    <div id="allLesstion" class="allSectionActions">
+                                        <a href="#addTest" data-toggle="tab" type="button" class="add-course-test-btn">
+                                            <span class="fa fa-plus"></span> Thêm Bài Học
+                                        </a>
                                     </div>
-
-                                    <a href="javascipt:void(0);" type="button" class="add-lesson-btn" ng-click="section.showAddLessonForm = !section.showAddLessonForm; lessonName = ''" ng-disabled="section.showAddLessonForm" ng-show="!section.showAddLessonForm">
-                                        <span class="fa fa-plus"></span> Thêm bài học
-                                        <!-- Thêm bài học -->
-                                    </a>
-
-                                    <form class="addLessonForm ng-pristine ng-valid ng-hide" ng-show="section.showAddLessonForm" ng-submit="addLesson(lessonName, section, false)" ng-init="lessonName = ''">
-                                        <div class="addItemInput">
-                                            <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên bài học.." ng-model="lessonName" ng-focus="section.showAddLessonForm">
-                                        </div>
-                                        <div class="addItemActions">
-                                            <button type="submit" class="zn-btn btn-success btn-medium" ng-disabled="lessonName == ''" disabled="disabled">Lưu</button>
-                                            <button type="button" class="zn-btn btn-medium" ng-click="section.showAddLessonForm = false">Hủy</button>
-                                        </div>
-                                        <input type="submit" class="hiddenSubmit">
-                                    </form><!-- addLessonForm -->
-
-                                    <a href="#addTest2040" data-toggle="tab" type="button" class="add-section-test-btn" ng-click="section.showAddSectionTestForm = !section.showAddSectionTestForm" ng-show="!section.showAddSectionTestForm &amp;&amp; !section.final_test" ng-disabled="section.showAddSectionTestForm || section.final_test">
-                                        <span class="fa fa-plus"></span> Thêm bài kiểm tra cuối chương
-                                        <!-- Thêm bài kiểm tra cuối chương -->
-                                    </a>
-
-                                    <!-- ngRepeat: finalTest in [section.final_test] --><div class="sectionTest ng-scope ng-hide" ng-show="section.final_test" ng-repeat="finalTest in [section.final_test]">
-
-                                        <div class="lesson finalTest section-test">
-                                            <div class="pull-left">
-                                                <span class="fa fa-pencil finalTestIcon" data-toggle="tooltip" title="Bài kiểm tra cuối chương"></span>
-                                                <span ng-click="finalTest.showUpdateFinalTestForm = true; finalTest.oldTitle = finalTest.title" data-toggle="tooltip" title="Click để đổi tên" class="ng-binding"></span>
-
-                                                <div class="lessonActions">
-
+                                    <form id="form-lesstion" class="hidden">
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">
+                                                        <div class="addItemInput">
+                                                            <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên bài kiểm tra cuối khóa.." ng-model="courseTestName" ng-focus="showAddCourseTestForm">
+                                                        </div>
+                                                        <div class="addItemActions">
+                                                            <button type="submit" class="zn-btn btn-success btn-medium">Lưu</button>
+                                                            <button type="button" id="cancel-link-lesstion" class="zn-btn btn-medium">Hủy</button>
+                                                        </div>
+                                                    </h4>
                                                 </div>
                                             </div>
-
-                                            <div class="itemActions pull-right sectionTopActions">
-                                                <a href="javascript:void(0);" class="addSub">
-                                                    <span class="fa fa-pencil cLessonFinalTest" data-cls="testManager" data-toggle="tooltip" title="Chỉnh sửa nội dung" data-content-id="" data-lesson-id="0" ng-click="showEditFinalTestContent(finalTest);"></span>
-                                                </a>
-                                                <a href="javascript:void(0);" class="remove" ng-click="finalTest.showDeletefinalTestForm = true">
-                                                    <span class="fa fa-trash-o" data-toggle="tooltip" title="Xóa"></span>
-                                                </a>
-                                                <a href="javascript:void(0);" class="move">
-                                                    <span class="fa fa-reorder"></span>
-                                                </a>
-                                            </div><!-- itemActions -->
-
-
-                                            <form class="inlineEdit ng-pristine ng-valid ng-hide" ng-show="finalTest.showUpdateFinalTestForm" ng-submit="updateFinalTest(7, finalTest, section)">
-                                                <div class="addItemInput">
-                                                    <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên bài học.." ng-model="finalTest.title" ng-focus="finalTest.showUpdateFinalTestForm">
-                                                </div>
-                                                <div class="addItemActions">
-                                                    <button type="button" class="zn-btn btn-success btn-medium" ng-click="updateFinalTest(7,finalTest, section)" ng-disabled="finalTest.title == ''">Lưu</button>
-                                                    <button type="button" class="zn-btn btn-medium" ng-click="finalTest.showUpdateFinalTestForm = false; finalTest.title = finalTest.oldTitle">Hủy</button>
-                                                </div>
-                                                <input type="submit" class="hiddenSubmit">
-                                            </form><!-- inlineEdit -->
-
-                                            <form class="confirmDelete ng-pristine ng-valid ng-hide" ng-show="finalTest.showDeletefinalTestForm">
-                                                <p class="removeText"><i class="fa fa-trash-o"></i> Xác nhận xóa Bài kiểm tra cuối chương<br> <b class="ng-binding"></b></p>
-                                                <div class="deleteItemActions">
-                                                    <button type="button" class="zn-btn btn-medium btn-danger" ng-click="removeFinalTest(7, finalTest, section)">Có</button>
-                                                    <button type="button" class="zn-btn btn-medium" ng-click="finalTest.showDeletefinalTestForm = false">Không</button>
-                                                </div>
-                                            </form><!-- confirmDelete -->
-                                        </div>
-                                    </div><!-- end ngRepeat: finalTest in [section.final_test] -->
-
-                                    <form class="addSectionTestForm ng-pristine ng-valid ng-hide" ng-show="section.showAddSectionTestForm" ng-submit="addSectionTest(testName, section)" ng-init="testName = ''">
-                                        <div class="addItemInput">
-                                            <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên bài kiểm tra cuối chương.." ng-model="testName" ng-focus="section.showAddSectionTestForm">
-                                        </div>
-                                        <div class="addItemActions">
-                                            <button type="submit" class="zn-btn btn-success btn-medium" ng-disabled="testName == ''" disabled="disabled">Lưu</button>
-                                            <button type="button" class="zn-btn btn-medium" ng-click="section.showAddSectionTestForm = false">Hủy</button>
                                         </div>
                                         <input type="submit" class="hiddenSubmit">
-                                    </form><!-- addSectionTestForm -->
+                                    </form>
                                 </div>
                             </div>
-                        </div>
-                    </div><!-- end ngRepeat: sectionId in outline.order -->
-                </div>
-
-
-                <div class="portlet yellow-lemon box">
-                    <div class="portlet-body">
-                        <div id="tree_3" class="tree-demo">
+                            @*End Box -Lesstion*@
                         </div>
                     </div>
                 </div>
+                <div id="allTest" class="allSectionActions">
+                    <a href="#addTest" data-toggle="tab" type="button" class="add-course-test-btn">
+                        <span class="fa fa-plus"></span> Thêm bài kiểm tra cuối khóa
+                    </a>
+                </div>
+                <form id="form-Test" class="hidden">
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div class="addItemInput">
+                                        <input type="text" class="input-sm form-control ng-pristine ng-valid" placeholder="Nhập tên bài kiểm tra cuối khóa.." ng-model="courseTestName" ng-focus="showAddCourseTestForm">
+                                    </div>
+                                    <div class="addItemActions">
+                                        <button type="submit" class="zn-btn btn-success btn-medium">Lưu</button>
+                                        <button type="button" id="cancel-link-lesstion" class="zn-btn btn-medium">Hủy</button>
+                                    </div>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="hiddenSubmit">
+                </form>
             </div>
-            <div class="col-md-8">
-                <div class="header">
-                    <b>Cài đặt chương (chuyên đề)</b>
-                    <h3 class="ng-binding">ÀAFF</h3>
-                    <hr>
-                    <div class="section-settings">
-                        <form class="form-horizontal">
-                            @*<div class="form-group row">
-                                    <label for="coursePrice" class="control-label col-sm-3">Học phí riêng cho chương này</label>
-                                    <div class="col-sm-9">
-                                        <div class="row">
-                                            <div class="switch col-md-4">
-                                                <input id="coursePrice" class="cmn-toggle cmn-toggle-round big ng-pristine ng-valid" type="checkbox" name="sectionPrice" ng-model="editingSection.data.hasPrice">
-                                                <label for="coursePrice">
-                                                    <b>Có</b>
-                                                    <span>Không</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-md-8 ng-hide" ng-show="editingSection.data.hasPrice">
-                                                <input id="sectionPriceDetail" type="text" class="coursePriceDetail form-control ng-pristine ng-valid" placeholder=".000" name="priceDetail" value="" ng-change="test()" ng-model="editingSection.data.priceDetail">
-                                                <label for="sectionPriceDetail" class="coursePriceDetailLabel">VND</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>*@
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-2 control-label">Mô tả chuyên đề</label>
-                                    <div class="col-md-12">
-                                        <div class="summernote"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group clearfix text-right">
-                                <input type="button" value="Lưu" class="btn btn-success">
-                            </div>
-                        </form>
+            <div class="col-md-8 cm-header">
+                <div class="course-form-create">
+                    <div class="title-h2">
+                        <i class="fa fa-info-circle"></i> Chi Tiết
+                        <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
                     </div>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-5 control-label">Mô Tả Nội Dung Chương Học</label>
+                            <div class="col-md-12">
+                                <div class="summernote" tabindex="-1"></div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script>
-    $(document).ready(function () {
-        $('.summernote').summernote({
-            height: 300,
-            minHeight: null,
-            maxHeight: null,
-            focus: true,
-        });
-    });
-</script>
-<script>
-    jQuery(document).ready(function () {
-        UITree.init();
-    });
 
-</script>
