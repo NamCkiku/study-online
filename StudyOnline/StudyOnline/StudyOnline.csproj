@@ -145,12 +145,10 @@
     <Content Include="Contents\css\coursedetail.css" />
     <Content Include="Contents\css\dashboard.css" />
     <Content Include="Contents\css\fixboostrap.css" />
-    <Content Include="Contents\css\jstree.css" />
     <Content Include="Contents\css\ListCourse.css" />
     <Content Include="Contents\css\slidebars.css" />
     <Content Include="Contents\css\style-responsive.css" />
     <Content Include="Contents\css\style.css" />
-    <Content Include="Contents\css\style1.css" />
     <Content Include="Contents\fonts\font-awesome\css\font-awesome.css" />
     <Content Include="Contents\fonts\font-awesome\fonts\fontawesome-webfontba72.html" />
     <Content Include="Contents\fonts\font-awesome\fonts\fontawesome-webfontba72.svg" />
@@ -170,6 +168,7 @@
     <Content Include="Contents\img\nav-expand.png" />
     <Content Include="Contents\img\search-icon.png" />
     <Content Include="Contents\img\themes.png" />
+    <Content Include="Contents\js\bootstrap-switch.min.js" />
     <Content Include="Contents\js\bootstrap.min.js" />
     <Content Include="Contents\js\common-scripts.js" />
     <Content Include="Contents\js\jquery-1.11.1.min.js" />
@@ -179,11 +178,13 @@
     <Content Include="Contents\js\jquery.nicescroll.js" />
     <Content Include="Contents\js\jquery.polyglot.language.switcher.js" />
     <Content Include="Contents\js\jquery.scrollTo.min.js" />
+    <Content Include="Contents\js\jstree.min.js" />
     <Content Include="Contents\js\modernizr.custom.min.js" />
+    <Content Include="Contents\js\progress.js" />
     <Content Include="Contents\js\respond.min.js" />
     <Content Include="Contents\js\responsiveslides.min.js" />
     <Content Include="Contents\js\slidebars.min.js" />
-    <Content Include="Contents\js\video.js" />
+    <Content Include="Contents\js\ui-tree.js" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
     <Content Include="Contents\Plugins\bootstrap-fileupload\bootstrap-fileupload.css" />
