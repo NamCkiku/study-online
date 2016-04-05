@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModelsView\LoginModelsView.cs" />
+    <Compile Include="ModelsView\UserCourseModels.cs" />
     <Compile Include="Models\AttachMent.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Course.cs" />

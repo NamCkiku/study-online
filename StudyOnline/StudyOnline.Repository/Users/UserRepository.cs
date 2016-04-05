@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using StudyOnline.Entities.Models;
+using StudyOnline.Entities.ModelsView;
 
 namespace StudyOnline.Repository.Users
 {
@@ -251,6 +253,26 @@ namespace StudyOnline.Repository.Users
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
                 return _db.User.Where(x => x.ID == id).ToList();
+            }
+        }
+
+
+        public List<StudyOnline.Entities.ModelsView.UserCourseModels> GetListByTearcherId(long id)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new Entities.Models.StudyOnline())
+            {
+                List<UserCourseModels> list = new List<UserCourseModels>();
+
+                object[] obt =
+                {
+                    new SqlParameter("@UserID",id),
+                             };
+                var result = _db.Database.SqlQuery<UserCourseModels>("EXEC GetListCourseUer @UserID", obt).ToList();
+                foreach(var item in result)
+                {
+                    list.Add(new UserCourseModels(item.CourseID,item.CourseName,item.Avatar,item.Description,item.PriceSale,item.Price,item.ViewCount,item.CreateDate,item.UserID,item.UserName));
+                }
+                return list;
             }
         }
     }

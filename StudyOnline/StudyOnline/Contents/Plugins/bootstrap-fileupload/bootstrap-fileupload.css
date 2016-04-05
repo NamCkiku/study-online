@@ -48,7 +48,7 @@
 
 .fileupload-exists .fileupload-new,
 .fileupload-new .fileupload-exists {
-  display: none;
+  display: block;
 }
 
 .fileupload-inline .fileupload-controls {
