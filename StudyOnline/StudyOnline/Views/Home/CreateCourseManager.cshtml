@@ -26,12 +26,31 @@
             });
         });
         $(".switch-square").bootstrapSwitch();
+    $(document).ready(function () {
+
+        //$('#btnSelectImage').click(function (e) {
+        //    e.preventDefault();
+        //    var finder = new CKFinder();
+        //    finder.selectActionFunction = function (url) {
+        //        $('#txtImg').val(url);
+        //    }
+        //    finder.popup();
+        //});
+        //var editor = CKEDITOR.replace('txtArea', {
+        //    customConfig: '/Assets/Admin/ckeditor/config.js'
+        //});
+
+        $('#fm').click(function () {
+            $('.fileupload-new.thumbnail').css("display", "none");
+            
+        });
+    });
     </script>
 }
 
 @*
     <script src="~/Contents/js/progress.js"></script>*@
-<div id="" class="main-container no-paddingxs">
+<div id="" class="main-container no-paddingxs" ng-controller="CreateCourse">
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
         <li><a href="#">UI Elements</a></li>
@@ -69,7 +88,7 @@
                                     Chưa yêu cầu phát hành
                                 </div>
 
-                                <a href="#" class="cm-request-publish-course-btn btn btn-success" data-type="3">Yêu cầu phát hành</a>
+                                <a href="#" class="cm-request-publish-course-btn btn btn-success" id="create" data-type="3" ng-click="CreateCourse()">Yêu cầu phát hành</a>
                             </div>
                         </div>
                     </div>
@@ -77,231 +96,277 @@
             </div>
         </div>
         <div class="row nomargin">
-            <div class="col-md-2 nopading">
-                <div id="cm-sidebar" class="">
-                    <ul class="cm-menu">
-                        <li class="active">
-                            <a class=""><span class="fa fa-dashboard"></span> Tổng quan</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin"><span class="fa fa-gear"></span> Cài đặt</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="/quan-ly-khoa-hoc/2276/noi-dung"><span class="fa fa-tasks"></span> Nội dung</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="/quan-ly-khoa-hoc/2276/danh-sach-hoc-vien"><span class="fa fa-bar-chart-o"></span> Thống kê</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="/quan-ly-khoa-hoc/2276/thong-tin-phe-duyet"><span class="fa fa-location-arrow"></span> Thông tin phê duyệt</a>
-                        </li>
-                        <li class="">
-                            <a class="" href="/quan-ly-khoa-hoc/2276/ho-tro-truc-tuyen"><span class="fa fa-life-ring"></span> Hỗ trợ trực tuyến</a>
-                        </li>
-                    </ul>
-                </div>
-
-                @*<div id="cm-toolbox" class="box">
-                        <div class="content">
-                            <p class="head">Công cụ</p>
-                            <a class="btn-link" target="_blank" href="/quan-ly-khoa-hoc/2276/gui-thong-bao"> <i class="fa fa-bullhorn"></i> Gửi tin nhắn đến học viên</a>
-                            <a class="btn-link" target="_blank" href="/coursemgt/coupon/manage/course_id/2276"><i class="fa fa-shopping-cart"></i> Quản lý coupon</a>
-                        </div>
-                    </div>
-
-                    <div class="zn-left-support">
-                        <div id="zn-course-support" class="contained">
-                            <p class="head">Bạn cần hỗ trợ?</p>
-                            <div class="hotline">
-                                <div class="number"><i class="fa fa-phone"></i> 0968.63.03.03</div>
-                            </div>
-                            <div class="socials">
-                                <a href="javascript:void(0)" class="zn-send-message" data-id="2" data-username="[BQT] Hỗ trợ giáo viên">
-                                    <span class="support-avatar">
-                                        <img src="http://img1.res.zuni.vn/avatar/2014/12/22/20141222171036-nen trag gv.jpg" onerror="Zuni.Layout.fixErrorImgs(this);" class="upAvatar" alt="">
-                                    </span>
-                                    Gửi tin nhắn cho Ban quản trị
-                                </a>
-                                <a class="email" href="mailto:teacher@zuni.vn"><i class="fa fa-envelope"></i> Liên hệ qua email</a>
-                                <a class="facebook" target="__blank" href="https://www.facebook.com/groups/zuniteacher/"><i class="fa fa-facebook-square"></i> Cộng đồng Giáo viên giảng dạy trực tuyến</a>
-                                <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                                <a href="skype:zuni.vng?chat" class="skype">
-                                    <i class="fa fa-skype"></i> Hỗ trợ trực tuyến
-                                </a>
-                            </div>
-                        </div>
-                    </div>*@
-
-                @*
-                    <script type="text/javascript">
-                        $('#btn-quick-review').on('click', function (e) {
-                        $.post('/coursemgt/course-manager/push-courseware-to-live', { id: "2276" }, function (resp) {
-                        if (resp) {
-                        alert('Phê duyệt thành công');
-                        }
-                        });
-                        });
-                    </script>*@
-            </div>
-
-            <div class="col-md-10 no-paddingxs">
-                <div class="body bordered-box box">
-                    <div class="col-md-12 nopading">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#infomation" aria-controls="home" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-info-circle"></i> Thông tin</span></a></li>
-                            <li role="presentation"><a href="#teacher" aria-controls="profile" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-users"></i> Giảng viên/ Trợ giảng</span></a></li>
+            <div class="row">
+                <div class="col-md-3 nopading">
+                    <div id="cm-sidebar" class="">
+                        <ul class="cm-menu">
+                            <li class="active">
+                                <a class=""><span class="fa fa-dashboard"></span> Tổng quan</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="/quan-ly-khoa-hoc/2276/cai-dat-thong-tin"><span class="fa fa-gear"></span> Cài đặt</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="/quan-ly-khoa-hoc/2276/noi-dung"><span class="fa fa-tasks"></span> Nội dung</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="/quan-ly-khoa-hoc/2276/danh-sach-hoc-vien"><span class="fa fa-bar-chart-o"></span> Thống kê</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="/quan-ly-khoa-hoc/2276/thong-tin-phe-duyet"><span class="fa fa-location-arrow"></span> Thông tin phê duyệt</a>
+                            </li>
+                            <li class="">
+                                <a class="" href="/quan-ly-khoa-hoc/2276/ho-tro-truc-tuyen"><span class="fa fa-life-ring"></span> Hỗ trợ trực tuyến</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="content nopading-left">
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="infomation">
-                                <div class="course-form-create">
-                                    <div class="title-h2">
-                                        <i class="fa fa-info-circle"></i> Thông tin cơ bản
-                                        <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
-                                    </div>
-                                    <form class="form-horizontal">
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Tên Khóa Học <font class="required" color="red">*</font></label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Tên khóa học" value="Học Lập Trình Asp.Net MVC5">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputPassword3" class="col-sm-2 control-label">Ngày Tạo<font class="required" color="red">*</font></label>
-                                            <div class="col-md-5">
-                                                <input type="text" class="form-control datepicker">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-2">Anhr Đại Diện</label>
-                                            <div class="col-md-10">
-                                                <div class="fileupload fileupload-new" data-provides="fileupload">
-                                                    <input type="hidden">
-                                                    <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
-                                                    </div>
-                                                    <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>
-                                                    <div>
-                                                        <span class="btn btn-success btn-file">
-                                                            <span class="fileupload-new"><i class="fa fa-paper-clip"></i> Select image</span>
-                                                            <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
-                                                            <input type="file" class="default">
-                                                        </span>
-                                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
-                                                    </div>
-                                                </div>
-                                                <span class="label label-danger">NOTE!</span>
-                                                <span>
-                                                    Kích thước hình đại diện là 480 x 270 px.
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="course-form-create">
-                                    <div class="title-h2">
-                                        <i class="fa fa-info-circle"></i> Lĩnh Vực
-                                        <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
-                                    </div>
-                                    <form class="form-horizontal">
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Loại Khóa Học <font class="required" color="red">*</font></label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control">
-                                                    <option>1</option>
-                                                    <option>1</option>
-                                                    <option>1</option>
-                                                    <option>1</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="course-form-create">
-                                    <div class="title-h2">
-                                        <i class="fa fa-info-circle"></i> Chi Tiết
-                                        <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
-                                    </div>
-                                    <form class="form-horizontal">
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Mô Tả Nội Dung Khóa Học</label>
-                                            <div class="col-md-12">
-                                                <div class="summernote"></div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="course-form-create">
-                                    <div class="title-h2">
-                                        <i class="fa fa-info-circle"></i> Cài Đặt
-                                        <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
-                                    </div>
-                                    <form class="form-horizontal">
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Giá Gốc <font class="required" color="red">*</font></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Giá Gốc" value="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-2 control-label">Gía Khuyến Mãi <font class="required" color="red">*</font></label>
-                                            <div class="col-sm-5">
-                                                <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Gía Khuyến Mãi" value="">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="course-form-create">
-                                    <div class="title-h2">
-                                        <i class="fa fa-info-circle"></i> Video
-                                    </div>
-                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videointro">
-                                        Video Giới Thiệu
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade bs-example-modal-lg" id="videointro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                                </div>
-                                                <div class="modal-body">
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Lưu File</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videodemo">
-                                        Video Học Thử
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade bs-example-modal-lg" id="videodemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Video Học Thử</h4>
-                                                </div>
-                                                <div class="modal-body">
+                    @*<div id="cm-toolbox" class="box">
+                    <div class="content">
+                        <p class="head">Công cụ</p>
+                        <a class="btn-link" target="_blank" href="/quan-ly-khoa-hoc/2276/gui-thong-bao"> <i class="fa fa-bullhorn"></i> Gửi tin nhắn đến học viên</a>
+                        <a class="btn-link" target="_blank" href="/coursemgt/coupon/manage/course_id/2276"><i class="fa fa-shopping-cart"></i> Quản lý coupon</a>
+                    </div>
+                </div>
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Lưu File</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="teacher"></div>
+                <div class="zn-left-support">
+                    <div id="zn-course-support" class="contained">
+                        <p class="head">Bạn cần hỗ trợ?</p>
+                        <div class="hotline">
+                            <div class="number"><i class="fa fa-phone"></i> 0968.63.03.03</div>
                         </div>
+                        <div class="socials">
+                            <a href="javascript:void(0)" class="zn-send-message" data-id="2" data-username="[BQT] Hỗ trợ giáo viên">
+                                <span class="support-avatar">
+                                    <img src="http://img1.res.zuni.vn/avatar/2014/12/22/20141222171036-nen trag gv.jpg" onerror="Zuni.Layout.fixErrorImgs(this);" class="upAvatar" alt="">
+                                </span>
+                                Gửi tin nhắn cho Ban quản trị
+                            </a>
+                            <a class="email" href="mailto:teacher@zuni.vn"><i class="fa fa-envelope"></i> Liên hệ qua email</a>
+                            <a class="facebook" target="__blank" href="https://www.facebook.com/groups/zuniteacher/"><i class="fa fa-facebook-square"></i> Cộng đồng Giáo viên giảng dạy trực tuyến</a>
+                            <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                            <a href="skype:zuni.vng?chat" class="skype">
+                                <i class="fa fa-skype"></i> Hỗ trợ trực tuyến
+                            </a>
+                        </div>
+                    </div>
+                </div>*@
+
+                    @*
+                <script type="text/javascript">
+                    $('#btn-quick-review').on('click', function (e) {
+                    $.post('/coursemgt/course-manager/push-courseware-to-live', { id: "2276" }, function (resp) {
+                    if (resp) {
+                    alert('Phê duyệt thành công');
+                    }
+                    });
+                    });
+                </script>*@
+                </div>
+
+                <div class="col-md-9 no-paddingxs">
+                    <div class="body bordered-box box">
+                        <div class="col-md-12 nopading">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#infomation" aria-controls="home" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-info-circle"></i> Thông tin</span></a></li>
+                                <li role="presentation"><a href="#teacher" aria-controls="profile" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-users"></i> Giảng viên/ Trợ giảng</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="content nopading-left">
+                            @*<form action="/Home/CreateCourseManager" method="post" class="ng-pristine ng-valid" enctype='multipart/form-data'>
+                                <input name="__RequestVerificationToken" type="hidden" value="PBJHSrqLdB09Hj-SLAzuBJ2CihfiwB1aB7yTyS7cfIlFBl0LTYaGd7bnTHChLOjJwV9e-PsWcNF6052Vq8kX_vuYoKRZicXbpiSWKozvYSE1">*@
+@using (Html.BeginForm("CreateCourseManager", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="infomation">
+                                            <div class="course-form-create">
+                                                <div class="title-h2">
+
+                                                    <i class="fa fa-info-circle"></i> Thông tin cơ bản
+                                                    <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                                                </div>
+                                                <div class="form-horizontal" name="myForm" ng-submit="">
+                                                    <div class="form-group">
+                                                        <label for="inputEmail3" class="col-sm-2 control-label">Tên Khóa Học <font class="required" color="red">*</font></label>
+                                                        <div class="col-sm-10">
+                                                            <input ng-model="CourseName" type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Tên khóa học" value="Học Lập Trình Asp.Net MVC5">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="inputPassword3" class="col-sm-2 control-label">Ngày Tạo<font class="required" color="red">*</font></label>
+                                                        <div class="col-md-5">
+                                                            <input type="text" ng-model="CreateDate" class="form-control datepicker">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="control-label col-md-2">Anhr Đại Diện</label>
+                                                        <div class="col-md-10">
+
+                                                            <div class="fileupload fileupload-new" data-provides="fileupload">
+
+                                                                <span class="btn btn-success fileinput-button">
+                                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                                    <span>Chọn ảnh</span>
+                                                                    <!-- The file input field used as target for the file upload widget -->
+                                                                    <input id="fm" type="file" name="file" multiple="" accept="image/*">
+                                                                </span>
+                                                                <input type="hidden">
+                                                                <br />
+                                                                <br />
+                                                                <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                                                    <img ng-class="avatar" src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
+
+                                                                </div>
+                                                                <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>
+                                                                @*<div>
+                                                <span class="btn btn-success btn-file">
+                                                    <span class="fileupload-new"><i class="fa fa-paper-clip"></i> <input type="file" name="file" /></span>
+                                                    <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
+                                                    <input type="file" class="default">
+                                                </span>
+                                                <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash"></i> Remove</a>
+                                            </div>*@
+                                                        </div>
+                                                        <span class="label label-danger">NOTE!</span>
+                                                        <span>
+                                                            Kích thước hình đại diện là 480 x 270 px.
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="course-form-create">
+                                            <div class="title-h2">
+                                                <i class="fa fa-info-circle"></i> Lĩnh Vực
+                                                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                                            </div>
+                                            <div class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-2 control-label">Loại Khóa Học <font class="required" color="red">*</font></label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control">
+                                                            <option>1</option>
+                                                            <option>1</option>
+                                                            <option>1</option>
+                                                            <option>1</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="course-form-create">
+                                            <div class="title-h2">
+                                                <i class="fa fa-info-circle"></i> Chi Tiết
+                                                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                                            </div>
+                                            <div class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-3 control-label">Mô Tả Nội Dung Khóa Học</label>
+                                                    <div class="col-md-12">
+                                                        <div class="summernote"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @*<textarea class="form-control" ng-model="Content" cols="20" id="txtArea" name="Detail" rows="2" style=""></textarea>
+                        <rte ng-model="Content"></rte>*@
+                                        </div>
+
+                                        <div class="course-form-create">
+                                            <div class="title-h2">
+                                                <i class="fa fa-info-circle"></i> Cài Đặt
+                                                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                                            </div>
+                                            <div class="form-horizontal">
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-2 control-label">Giá Gốc <font class="required" color="red">*</font></label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" ng-model="Price" class="form-control" id="courseTitle" name="courseTitle" placeholder="Giá Gốc" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputEmail3" class="col-sm-2 control-label">Gía Khuyến Mãi <font class="required" color="red">*</font></label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" ng-model="PriceSale" class="form-control" id="courseTitle" name="courseTitle" placeholder="Gía Khuyến Mãi" value="">
+                                                    </div>
+                                                </div>
+                                                <h1>{{Avatar}}</h1>
+                                            </div>
+                                        </div>
+                                        <div class="course-form-create">
+                                            <div class="title-h2">
+                                                <i class="fa fa-info-circle"></i> Video
+                                            </div>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videointro">
+                                                Video Giới Thiệu
+                                            </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade bs-example-modal-lg" id="videointro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <input type="file" name="filevideo" id="file" accept="video/*">
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            @*<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>*@
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Hoàn thành</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videodemo">
+                                                Video Học Thử
+                                            </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade bs-example-modal-lg" id="videodemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel">Video Học Thử</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Lưu File</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row course-form-create">
+                                            <div class="col-md-12">
+                                                <div class="cm-button-footer zn3-button-group">
+                                                    <button type="submit" class="zn-btn btn-success btn-save zn3-submit zn-save-settings" id="newCourseSubmit" ng-click="CreateCourse()" style="background: #1BB35B;color: #FFFFFF;">
+                                                        Lưu
+                                                    </button>
+                                                    <button type="button" class="zn-btn">Hủy</button>
+                                                    <div class="spinner" style="display: none;">
+                                                        <div class="rect1"></div>
+                                                        <div class="rect2"></div>
+                                                        <div class="rect3"></div>
+                                                        <div class="rect4"></div>
+                                                        <div class="rect5"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="teacher"></div>
+                                </div>
+}
+                            @*</form>*@
+                        </div>
+
                     </div>
                 </div>
             </div>

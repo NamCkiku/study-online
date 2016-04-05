@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StudyOnline.Entities.Models;
+using StudyOnline.Entities.ModelsView;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,7 @@ namespace StudyOnline.Repository.Users
     {
         List<StudyOnline.Entities.Models.User> ListAllUser();
         List<StudyOnline.Entities.Models.User> GetUserById(long id);
+        List<UserCourseModels> GetListByTearcherId(long id);
         StudyOnline.Entities.Models.User ViewDetail(long id);
         long CreateUser(StudyOnline.Entities.Models.User tq);
         bool UpdateUser(StudyOnline.Entities.Models.User us);

@@ -31,6 +31,8 @@ namespace StudyOnline
                         "~/App_Scripts/Controller.js"
                         ));
             bundles.Add(new StyleBundle("~/Contents/css").Include(
+                   "~/Contents/css/rte.css",
+                     "~/Contents/css/font-awesome.min.css",
                           "~/Contents/css/bootstrap.min.css",
                           "~/Contents/css/bootstrap-reset.css",
                           "~/Contents/fonts/font-awesome/css/font-awesome.css",

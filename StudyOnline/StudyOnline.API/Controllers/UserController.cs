@@ -7,6 +7,7 @@ using System.Web.Http;
 using StudyOnline.Entities.Models;
 using StudyOnline.Service.Users;
 using StudyOnline.Service;
+using StudyOnline.Entities.ModelsView;
 
 namespace StudyOnline.API.Controllers
 {
@@ -17,6 +18,7 @@ namespace StudyOnline.API.Controllers
 
 
         TeacherService teacherService = new TeacherService();
+        CourseService courseService = new CourseService();
 
         [HttpGet, ActionName("list")]
         public IEnumerable<string> Get()
@@ -29,6 +31,12 @@ namespace StudyOnline.API.Controllers
          {
              return cal.GetUserById(id);
          }
+
+        [HttpGet, ActionName("getlistcoursebyuser")]
+        public IEnumerable<UserCourseModels> GetListCourseById(long id)
+        {
+            return cal.GetListByTearcherId(id);
+        }
 
         [HttpGet, ActionName("getcourseviewcount")]
         public IEnumerable<Tuple<User, Course>> GetCourse()
@@ -43,8 +51,10 @@ namespace StudyOnline.API.Controllers
         }
 
         // POST api/user
-        public void Post([FromBody]string value)
+         [HttpPost, ActionName("addcourse")]
+        public void Post(Course course)
         {
+            courseService.addCourse(course);
         }
 
         // PUT api/user/5

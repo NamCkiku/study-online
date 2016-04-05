@@ -5,6 +5,7 @@ using System.Web;
 using StudyOnline.Entities;
 using StudyOnline.Service;
 using System.Web.Mvc;
+using System.IO;
 
 namespace StudyOnline.Controllers
 {
@@ -46,6 +47,27 @@ namespace StudyOnline.Controllers
 
         public ActionResult CreateCourseManager()
         {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateCourseManager(HttpPostedFileBase file, HttpPostedFileBase filevideo)
+        {
+            if (file != null && file.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/Data/Images/"), fileName);
+                file.SaveAs(path);
+            }
+
+            if (filevideo != null && filevideo.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(filevideo.FileName);
+                var path = Path.Combine(Server.MapPath("~/Data/Videos/"), fileName);
+                filevideo.SaveAs(path);
+            }
+
             return View();
         }
         public ActionResult CreateCourseContentManager()

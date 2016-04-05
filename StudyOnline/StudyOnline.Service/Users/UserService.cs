@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StudyOnline.Entities.Models;
 using StudyOnline.Repository.Users;
+using StudyOnline.Entities.ModelsView;
 
 namespace StudyOnline.Service.Users
 {
@@ -70,6 +71,12 @@ namespace StudyOnline.Service.Users
         public List<User> GetUserById(long id)
         {
             return userRepository.GetUserById(id);
+        }
+
+
+        public List<UserCourseModels> GetListByTearcherId(long id)
+        {
+            return userRepository.GetListByTearcherId(id);
         }
     }
 }
