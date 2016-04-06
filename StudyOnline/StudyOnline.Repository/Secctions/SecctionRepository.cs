@@ -94,17 +94,17 @@ namespace StudyOnline.Repository
         {
             using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
             {
-                try
-                {
+                //try
+                //{
                     var result = _db.Section.Find(id);
                     _db.Section.Remove(result);
                     _db.SaveChanges();
                     return true;
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                //}
+                //catch (Exception)
+                //{
+                //    return false;
+                //}
             }
         }
     }

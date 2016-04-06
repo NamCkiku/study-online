@@ -63,6 +63,13 @@ namespace StudyOnline.API.Controllers
             return cal.ListAllCourseCategory();
         }
 
+             [HttpGet, ActionName("getsecctionbyid")]
+        public IEnumerable<Section> GetSecctionById(long id)
+        {
+            SecctionService secctionService = new SecctionService();
+            return secctionService.ListAllSection().Where(x=>x.CourseID==id).ToList();
+        }
+
         // GET api/teachercourse/5
         public string Get(int id)
         {

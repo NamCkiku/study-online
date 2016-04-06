@@ -33,6 +33,7 @@ namespace StudyOnline.API.Controllers
         }
 
         // PUT api/values/5
+         [HttpPut, ActionName("get")]
         public void Put(int id, [FromBody]string value)
         {
         }

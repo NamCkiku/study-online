@@ -6,11 +6,14 @@ using StudyOnline.Entities;
 using StudyOnline.Service;
 using System.Web.Mvc;
 using System.IO;
+using StudyOnline.Entities.Models;
 
 namespace StudyOnline.Controllers
 {
     public class HomeController : Controller
     {
+
+        StudyOnline.Entities.Models.StudyOnline db = new Entities.Models.StudyOnline();
         public ActionResult Index()
         {
             return View();
@@ -69,6 +72,66 @@ namespace StudyOnline.Controllers
             }
 
             return View();
+        }
+
+        public ActionResult AddCourse(Course course, long id)
+        {
+            CourseService courseService = new CourseService();
+            courseService.addCourse(course);
+            StudyOnline.Entities.Models.User_Teacher_Course teaCourse = new User_Teacher_Course();
+            teaCourse.CourseID = course.ID;
+            teaCourse.UserID = id;
+            teaCourse.CreateDate = DateTime.Now;
+            db.User_Teacher_Course.Add(teaCourse);
+            db.SaveChanges();
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+       
+
+
+        public ActionResult AddSecction(StudyOnline.Entities.Models.Section secction)
+        {
+            SecctionService secctionService = new SecctionService();
+            secctionService.CreateSection(secction);
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult AddLesson(StudyOnline.Entities.Models.Lesson lesson)
+        {
+            LessonService lessonService = new LessonService();
+            lessonService.CreateLesson(lesson);
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult DeletSection(long id)
+        {
+            SecctionService secctionService = new SecctionService();
+            secctionService.DeleteSection(id);
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult DeleteLesson(long id)
+        {
+            LessonService lessonService = new LessonService();
+            lessonService.DeleteLesson(id);
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult UpdateLesson(string name, long id)
+        {
+             LessonService lessonService = new LessonService();
+             Lesson lesson = lessonService.ViewDetail(id);
+             lesson.LessonName = name;
+             lessonService.UpdateLesson(lesson);
+             return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult UpdateSection(Section secction)
+        {
+            SecctionService secctionService = new SecctionService();
+            secctionService.UpdateSection(secction);
+            return Json(null, JsonRequestBehavior.AllowGet);
         }
         public ActionResult CreateCourseContentManager()
         {
