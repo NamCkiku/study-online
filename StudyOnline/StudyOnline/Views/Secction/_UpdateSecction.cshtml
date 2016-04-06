@@ -1,0 +1,54 @@
+﻿@model StudyOnline.Entities.Models.Section
+<link href="~/Contents/css/course-manager.css" rel="stylesheet" />
+<link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+<script src="~/Assets/ckeditor/ckeditor.js"></script>
+<script src="~/Contents/js/bootstrap.min.js"></script>
+<script src="~/Assets/ckeditor/ckeditor.js"></script>
+<script>
+    $(document).ready(function () {
+        var ckeditor;
+        function createEditor(languageCode, id) {
+            var editor = CKEDITOR.replace(id, { language: languageCode });
+        }
+        $(function () {
+            createEditor("vi", "txtDetail")
+        });
+        CKEDITOR.config.htmlEncodeOutput = true;
+    });
+</script>
+@using (Html.BeginForm("UpdateSecction", "Secction", FormMethod.Post))
+{
+    <div class="cm-header">
+        @Html.TextBoxFor(model => model.ID, new { @class = "form-control hidden" })
+        <div class="course-form-create">
+            <div class="title-h2">
+                <i class="fa fa-info-circle"></i> Chi Tiết
+                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="control-label">Tên Chương Học</label>
+                    <div class="">
+                        @Html.TextBoxFor(model => model.SectionName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="control-label">Tiêu Đề</label>
+                    <div class="">
+                        @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="control-label">Mô Tả Nội Dung Chương Học</label>
+                    <div class="">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control ckeditor", id = "txtDetail" })
+                    </div>
+                </div>
+                <div class="form-group clearfix text-right">
+                    <button type="submit" class="btn btn-primary" id="btndelete">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,69 @@
+﻿@model StudyOnline.Entities.Models.Lesson
+<link href="~/Contents/css/course-manager.css" rel="stylesheet" />
+<link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+<link href="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.css" rel="stylesheet" />
+<script src="~/Contents/js/bootstrap.min.js"></script>
+<script src="~/Assets/ckeditor/ckeditor.js"></script>
+<script src="~/Contents/Plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var ckeditor;
+        function createEditor(languageCode, id) {
+            var editor = CKEDITOR.replace(id, { language: languageCode });
+        }
+        $(function () {
+            createEditor("vi", "txtDetail")
+        });
+        CKEDITOR.config.htmlEncodeOutput = true;
+    });
+</script>
+@using (Html.BeginForm("UpdateSecction", "Secction", FormMethod.Post))
+{
+    <div class="cm-header">
+        @Html.TextBoxFor(model => model.ID, new { @class = "form-control hidden" })
+        <div class="course-form-create">
+            <div class="title-h2">
+                <i class="fa fa-info-circle"></i> Chi Tiết
+                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+            </div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="control-label">Tên Bài Học</label>
+                    <div class="">
+                        @Html.TextBoxFor(model => model.LessonName, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="control-label">Mô Tả Bài Học</label>
+                    <div class="">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control ckeditor", id = "txtDetail" })
+                    </div>
+                </div>
+                <div class="form-group clearfix text-right">
+                    <button type="submit" class="btn btn-primary" id="btndelete">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="cm-header">
+        @Html.TextBoxFor(model => model.ID, new { @class = "form-control hidden" })
+        <div class="course-form-create">
+            <div class="title-h2">
+                <i class="fa fa-info-circle"></i> Video
+            </div>
+        </div>
+        <div class="fileupload fileupload-new" data-provides="fileupload">
+            <span class="btn btn-success btn-file">
+                <span class="fileupload-new"><i class="fa fa-paper-clip"></i>Chọn Video</span>
+                @*<span class="fileupload-exists"><i class="fa fa-undo"></i> Thay Đổi</span>*@
+                <input type="file" class="default">
+            </span>
+            <span class="fileupload-preview" style="margin-left:5px;"></span>
+            <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+        </div>
+        <div class="form-group clearfix text-right">
+            <button type="submit" class="btn btn-primary" id="btndelete">Lưu</button>
+        </div>
+    </div>
+}
