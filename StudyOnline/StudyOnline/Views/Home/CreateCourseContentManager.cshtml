@@ -7,23 +7,24 @@
 
     <link href="~/Contents/css/course-manager.css" rel="stylesheet" />
     <link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
-    <link href="~/Contents/Plugins/dist/summernote.css" rel="stylesheet" />
     <script src="~/Contents/js/bootstrap.min.js"></script>
-    <script src="~/Contents/Plugins/dist/summernote.min.js"></script>
     <script>
         $(document).ready(function () {
 
         });
     </script>
     <script>
+        function EditSection() {
+            @*$("#update-sesstion").load("@Url.Action("_UpdateSecction", "Secction")/" + $(this).data("section-id"));*@
+            $("#update-sesstion").load("@Url.Action("_UpdateSecction", "Secction")");
+        }
+        function EditLesstion() {
+            @*$("#update-sesstion").load("@Url.Action("_UpdateSecction", "Secction")/" + $(this).data("section-id"));*@
+            $("#update-sesstion").load("@Url.Action("_UpdateLesstion", "Lesstion")");
+        }
+    </script>
+    <script>
         $(document).ready(function () {
-
-            $('.summernote').summernote({
-                height: 300,
-                minHeight: null,
-                maxHeight: null,
-                focus: false,
-            });
             $('#allSesstion').click(function () {
                 $('#form-secction').toggleClass('hidden');
             });
@@ -31,7 +32,7 @@
                 $('#form-secction').addClass('hidden');
             });
             $('#allLesstion').click(function () {
-                $('#form-lesstion2').toggleClass('hidden'); 
+                $('#form-lesstion2').toggleClass('hidden');
             });
             $('#cancel-link-lesstion').click(function () {
                 $('#form-lesstion2').addClass('hidden');
@@ -131,7 +132,7 @@
             </div>
         </div>
         <div class="row nomargin">
-           
+
 
             <div class="col-md-4 no-padding">
                 <div id="sectionManager" ng-show="showOutline" ng-init="showOutline = true">
@@ -242,7 +243,7 @@
                     <!-- sample test END -->
 
                     <div id="listSection" class="sectionList" ui-sortable="sectionSortableOptions" ng-model="outline.order" ng-cloak>
-                        <div class="panel-group" ng-repeat="section in Secctions" >
+                        <div class="panel-group" ng-repeat="section in Secctions">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -277,9 +278,8 @@
 
                                     </h4>
                                     <div class="itemActions sectionTopActions">
-                                        <a href="javascript:void(0);" class="edit">
+                                        <a href="javascript:void(0);" data-section-id="{{section.id}}" onclick="EditSection();" class="edit-secction">
                                             <span class="fa fa-pencil" data-cls="sectionManager" data-toggle="tooltip" title="Chỉnh sửa"
-                                                  data-section-id="{{section.id}}"
                                                   ng-click="showEditSectionData(section);"></span>
                                         </a>
                                         <a href="javascript:void(0);" class="remove" ng-click="section.showDeleteSectionForm = true">
@@ -315,7 +315,7 @@
                                                            ng-show="!lesson.has_content && !lesson.showAddSubLessonForm">
                                                             <span class="fa fa-plus-square-o" data-toggle="tooltip" title="Thêm Bài học con"></span>
                                                         </a>
-                                                        <a href="javascript:void(0);" ng-click="editLessonContent(lesson);" class="addSub" ng-show="(!lesson.sub_lessons || lesson.sub_lessons.order.length == 0) && !lesson.showAddSubLessonForm">
+                                                        <a href="javascript:void(0);" ng-click="editLessonContent(lesson);" onclick="EditLesstion();" class="addSub" ng-show="(!lesson.sub_lessons || lesson.sub_lessons.order.length == 0) && !lesson.showAddSubLessonForm">
                                                             <span class="fa fa-pencil" data-toggle="tooltip" title="Quản lý nội dung"></span>
                                                         </a>
                                                         <a href="javascript:void(0);" class="remove" ng-click="lesson.showDeleteLessonForm = true">
@@ -655,21 +655,8 @@
                     <div class="rect5"></div>
                 </div>
             </div>
-            <div class="col-md-8 cm-header">
-                <div class="course-form-create">
-                    <div class="title-h2">
-                        <i class="fa fa-info-circle"></i> Chi Tiết
-                        <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
-                    </div>
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-5 control-label">Mô Tả Nội Dung Chương Học</label>
-                            <div class="col-md-12">
-                                <div class="summernote" tabindex="-1"></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="col-md-8" id="update-sesstion">
+
             </div>
         </div>
     </div>
