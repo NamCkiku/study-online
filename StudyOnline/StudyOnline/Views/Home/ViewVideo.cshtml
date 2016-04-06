@@ -11,6 +11,10 @@
 <link href="~/Contents/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-1.10.2.js"></script>
 <script src="~/Contents/js/slidebars.min.js"></script>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/App_Scripts/Module.js"></script>
+<script src="~/App_Scripts/Service.js"></script>
+<script src="~/App_Scripts/Controller.js"></script>
 <script>
     (function ($) {
         $(document).ready(function () {
@@ -18,283 +22,101 @@
         });
     })(jQuery);
 </script>
-<div id="list-video" class="container-fluid">
-    <div class="row">
-        <div class="navbar navbar-default">
-            <ul>
-                <li class="sb-toggle-left">
-                    <i class="fa  fa-align-right"></i>
-                </li>
-            </ul>
-        </div>
-        <div class="sb-slidebar sb-left sb-style-overlay">
-            <div class="">
-                <div class="list-lesstion">
-                    <div class="row nomargin list-lesstion-container">
-                        <div class="row nomargin chap-title">Chương 1: Tổng quan </div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
+<div ng-app="myApp" ng-controller="myViewCourse">
+    <div id="list-video" class="container-fluid">
+        <div class="row">
+            <div class="navbar navbar-default">
+                <ul>
+                    <li class="sb-toggle-left">
+                        <i class="fa  fa-align-right"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="sb-slidebar sb-left sb-style-overlay">
+                <div class="">
+                    <div class="list-lesstion">
+                        <div class="row nomargin list-lesstion-container">
+                            <div ng-repeat="item in slns">
+                                <div class="row nomargin chap-title">{{item.SectionName}}  </div>
+                                <div class="row nomargin chap-item" ng-repeat="ln in less" ng-if="ln.SectionID==item.ID">
+                                    <a href="#" ng-click="ViewVideo(ln.ID)">
+                                        <div class="row nomargin item-container">
+                                            <div class="chap-item-status">
+                                                <div class="status-container none">
+                                                    <i class="fa fa-check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="chap-item-content">
+                                                <div class="row  nomargin">
+                                                    <div class="chap-item-title">{{ln.LessonName}}</div>
+                                                </div>
+                                                <div class="row  nomargin">
+                                                    <div class="row type-document">
+                                                        <ul class="">
+                                                            <li>
+                                                                <i class="fa fa-play-circle"></i>
+                                                            </li>
+                                                            <li>
+                                                                <span>00:02:22</span>
+                                                            </li>
+                                                            <li>
+                                                                <i class="fa fa-comments"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
+                                <div class="row nomargin chap-item">
+                                    <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
+                                        <div class="row nomargin item-container">
+                                            <div class="chap-item-status">
+                                                <div class="status-container none">
+                                                    <i class="fa fa-check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="chap-item-content">
+                                                <div class="row  nomargin">
+                                                    <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
+                                                </div>
+                                                <div class="row  nomargin">
+                                                    <div class="row type-document">
+                                                        <ul class="">
+                                                            <li>
+                                                                <i class="fa fa-play-circle"></i>
+                                                            </li>
+                                                            <li>
+                                                                <span>00:02:22</span>
+                                                            </li>
+                                                            <li>
+                                                                <i class="fa fa-comments"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="row chap-title">Chương 2: Một số công cụ  </div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row chap-title">Chương 3: Sử dụng các hiệu ứng trong PowerPoint</div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row chap-title">Chương 3: Sử dụng các hiệu ứng trong PowerPoint</div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row chap-title">Chương 3: Sử dụng các hiệu ứng trong PowerPoint</div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row chap-title">Chương 3: Sử dụng các hiệu ứng trong PowerPoint</div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="row chap-title">Chương 3: Sử dụng các hiệu ứng trong PowerPoint</div>
-                        <div class="row nomargin chap-item">
-                            <a href="/courses/huong-dan-su-dung-powerpoint-2007/lecture/0">
-                                <div class="row nomargin item-container">
-                                    <div class="chap-item-status">
-                                        <div class="status-container none">
-                                            <i class="fa fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div class="chap-item-content">
-                                        <div class="row  nomargin">
-                                            <div class="chap-item-title">Bài giảng 1: Bài 1: Tổng quan giao diện PowerPoint 2007</div>
-                                        </div>
-                                        <div class="row  nomargin">
-                                            <div class="row type-document">
-                                                <ul class="">
-                                                    <li>
-                                                        <i class="fa fa-play-circle"></i>
-                                                    </li>
-                                                    <li>
-                                                        <span>00:02:22</span>
-                                                    </li>
-                                                    <li>
-                                                        <i class="fa fa-comments"></i>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div> <!--end menu small-->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 video-player">
+
+        <video style="max-height:550px; width:100%" controls autoplay id="myVideo"
+               preload="auto" data-setup='{"techOrder":["flash", "html5"]}'>
+            <source src="{{pathvideo}}" type="video/mp4" />
+        </video>
     </div>
-</div> <!--end menu small-->
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 video-player">
-    <video style="max-height:550px; width:100%" controls
-           preload="auto" data-setup='{"techOrder":["flash", "html5"]}'>
-        <source src="https%3A//www.youtube.com/5b1b4c5f-1059-42c6-aa6c-e4ef9cc73cab" type='video/mp4' />
-    </video>
 </div>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/App_Scripts/Module.js"></script>
+<script src="~/App_Scripts/Service.js"></script>
+<script src="~/App_Scripts/Controller.js"></script>

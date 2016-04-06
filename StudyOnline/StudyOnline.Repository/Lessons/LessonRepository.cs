@@ -73,6 +73,7 @@ namespace StudyOnline.Repository
                     c.CreateDate = less.CreateDate;
                     c.Status = less.Status;
                     c.SectionID = less.SectionID;
+                    c.LinkVideo = less.LinkVideo;
                     _db.SaveChanges();
                     return true;
                 }
