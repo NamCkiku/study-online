@@ -9,7 +9,7 @@
 }
 
 <div class="show-top-grids" ng-controller="myCourseDetail">
- 
+
 
     <div class="row nomargin">
         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -33,7 +33,11 @@
                 </div>
                 <div class="course-player">
                     <div class="video-container no-controls">
-                        <img class="img-responsive" src="{{Image}}" style="width:721px; height:489px" alt="Thumbnail ci   21 ky nang song">
+                        <video controls="controls" style="width:721px; height:489px">
+                            <source src="{{Video}}" type="video/mp4" />
+                        </video>
+
+                       
 
                     </div>
                 </div>

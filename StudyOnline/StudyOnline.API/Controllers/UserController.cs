@@ -58,8 +58,16 @@ namespace StudyOnline.API.Controllers
         }
 
         // PUT api/user/5
+        [ ActionName("demo2")]
         public void Put(int id, [FromBody]string value)
         {
+            int a = id;
+        }
+
+         [HttpPut, ActionName("demo")]
+        public void TestMultipleSimpleValues(Course course,string id)
+        {
+            courseService.addCourse(course);
         }
 
         // DELETE api/user/5

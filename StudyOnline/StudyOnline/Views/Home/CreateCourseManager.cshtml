@@ -202,7 +202,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label col-md-2">Anhr Đại Diện</label>
+                                                        <label class="control-label col-md-2">Ảnh Đại Diện</label>
                                                         <div class="col-md-10">
 
                                                             <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -247,12 +247,8 @@
                                                 <div class="form-group">
                                                     <label for="inputEmail3" class="col-sm-2 control-label">Loại Khóa Học <font class="required" color="red">*</font></label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control">
-                                                            <option>1</option>
-                                                            <option>1</option>
-                                                            <option>1</option>
-                                                            <option>1</option>
-                                                        </select>
+                                                        <select ng-model="selectedName" ng-options="room.Name for room in Rooms track by room.ID" class="form-control"></select>
+                                                       
                                                     </div>
                                                 </div>
                                             </div>
