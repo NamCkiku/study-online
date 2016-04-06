@@ -70,6 +70,13 @@ namespace StudyOnline.API.Controllers
             return secctionService.ListAllSection().Where(x=>x.CourseID==id).ToList();
         }
 
+             [HttpGet, ActionName("getlessonbyid")]
+             public IEnumerable<Lesson> GetListLessonById(long id)
+             {
+                 return teacherService.GetLessonBySection().Where(x=>x.ID==id);
+
+             }
+
         // GET api/teachercourse/5
         public string Get(int id)
         {

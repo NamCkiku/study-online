@@ -27,6 +27,9 @@ namespace StudyOnline.Entities.Models
 
         public DateTime? CreateDate { get; set; }
 
+        [StringLength(500)]
+        public string LinkVideo { get; set; }
+
         public bool? Status { get; set; }
 
         public long? SectionID { get; set; }
