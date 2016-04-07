@@ -461,6 +461,7 @@
     <Content Include="Contents\HomeIndex\css\flexslider.css" />
     <Content Include="Contents\HomeIndex\js\bootstrap.min.js" />
     <Content Include="Contents\HomeIndex\js\flexslider.js" />
+    <Content Include="Contents\img\course_no_image.jpg" />
     <Content Include="Contents\img\g.jpg" />
     <Content Include="Contents\img\nav-expand.png" />
     <Content Include="Contents\img\search-icon.png" />
@@ -1388,6 +1389,7 @@
     <Content Include="Views\Home\CreateCourseContentManager.cshtml" />
     <Content Include="Views\Secction\_UpdateSecction.cshtml" />
     <Content Include="Views\Lesstion\_UpdateLesstion.cshtml" />
+    <Content Include="Views\Secction\UpdateSection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">

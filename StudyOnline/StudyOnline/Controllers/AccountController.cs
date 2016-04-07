@@ -16,6 +16,7 @@ namespace StudyOnline.Controllers
         // GET: /Account/
         StudyOnline.Entities.Models.StudyOnline db = new Entities.Models.StudyOnline();
         UserService userService = new UserService();
+        private string sessionId = "";
         public ActionResult Index()
         {
             return View();
@@ -37,6 +38,7 @@ namespace StudyOnline.Controllers
                 userSession.UserName = user.UserName;
                 userSession.UserID = user.ID;
                 Session["UserID"] = user.ID;
+                sessionId = Session["UserID"].ToString();
                 Session.Add(Common.CommonConstants.USER_SESSION, userSession); //Thêm vào Session
                 return RedirectToAction("Index", "Home");
             }
@@ -57,6 +59,11 @@ namespace StudyOnline.Controllers
                 ModelState.AddModelError("", "Đăng Nhập Không Thành Công");
             }
             return View("Login");
+        }
+
+        public ActionResult GetSessionId()
+        {
+            return Json( Session["UserID"].ToString(), JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]

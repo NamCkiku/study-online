@@ -65,20 +65,21 @@
                 <div id="cm-header" class="box">
                     <div class="course-metas col-md-7">
                         <div class="course-img">
-                            <img class="ccAvatar" src="http://stc.zuni.vn/resource/module/default/layout/image/course_no_image.jpg" alt="" onerror="Zuni.Layout.fixErrorImgs(this);">
+                            <img class="ccAvatar" src="{{avatar}}" alt="" />
+                        
                         </div>
                         <div class="course-info">
                             <div class="name">
-                                Học Lập Trình Asp.Net MVC5
+                                {{CourseName}}
                                 <div class="live-status">
                                     <div class="status" data-toggle="tooltip" title="" data-original-title="Chưa phát hành"><i class="fa fa-circle"></i></div>
                                 </div>
                             </div>
-                            <div class="teacher">
+                            @*<div class="teacher">
                                 <a class="teacher" href="/thong-tin-tai-khoan/namckiku/271225" data-toggle="profile" data-id="271225" data-original-title="" title="">
                                     <span>Nam Ckiku</span>
                                 </a>
-                            </div>
+                            </div>*@
                         </div>
                     </div>
                     <div class="course-actions col-md-5">
@@ -168,8 +169,8 @@
                     <div class="body bordered-box box">
                         <div class="col-md-12 nopading">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#infomation" aria-controls="home" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-info-circle"></i> Thông tin</span></a></li>
-                                <li role="presentation"><a href="#teacher" aria-controls="profile" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-users"></i> Giảng viên/ Trợ giảng</span></a></li>
+                                <li role="presentation" class="active"><a href="/#infomation" aria-controls="home" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-info-circle"></i> Thông tin</span></a></li>
+                                <li role="presentation"><a href="/#teacher" aria-controls="profile" role="tab" data-toggle="tab"><span class="name"><i class="fa fa-users"></i> Giảng viên/ Trợ giảng</span></a></li>
                             </ul>
                         </div>
 
@@ -196,9 +197,9 @@
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label for="inputPassword3" class="col-sm-2 control-label">Ngày Tạo<font class="required" color="red">*</font></label>
-                                                        <div class="col-md-5">
-                                                            <input type="text" ng-model="CreateDate" class="form-control datepicker">
+                                                        <label for="inputPassword3" class="col-sm-2 control-label">Mô tả<font class="required" color="red">*</font></label>
+                                                        <div class="col-md-10">
+                                                            <textarea class="form-control " ng-model="Description" cols="1"  name="Description" rows="1" style="min-height:50px"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
@@ -216,9 +217,8 @@
                                                                 <input type="hidden">
                                                                 <br />
                                                                 <br />
-                                                                <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                                                    <img ng-class="avatar" src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
-
+                                                                <div class="fileupload-new thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;">
+                                                                    <img ng-class="avatar" src="{{avatar}}" alt="" style="max-height: 150px;" />
                                                                 </div>
                                                                 <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>
                                                                 @*<div>
@@ -298,6 +298,7 @@
                                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#videointro">
                                                 Video Giới Thiệu
                                             </button>
+                                          
                                             <!-- Modal -->
                                             <div class="modal fade bs-example-modal-lg" id="videointro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div class="modal-dialog modal-lg" role="document">
@@ -338,7 +339,11 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                            <br/>
+                                            <br />
+                                            <video controls="controls" width="300" height="200" id="myVideo">
+                                                <source src="{{LinkVideo}}" type="video/mp4" />
+                                            </video>
                                         <div class="row course-form-create">
                                             <div class="col-md-12">
                                                 <div class="cm-button-footer zn3-button-group">

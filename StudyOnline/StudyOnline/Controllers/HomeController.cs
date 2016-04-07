@@ -84,11 +84,25 @@ namespace StudyOnline.Controllers
             teaCourse.CreateDate = DateTime.Now;
             db.User_Teacher_Course.Add(teaCourse);
             db.SaveChanges();
-            return Json(null, JsonRequestBehavior.AllowGet);
+            return Json(course.ID, JsonRequestBehavior.AllowGet);
         }
 
        
-
+         public ActionResult UpdateCouseCourse(Course course, long id)
+        {
+            CourseService courseService = new CourseService();
+            StudyOnline.Entities.Models.Course teaCourse = courseService.ViewDetail(id);
+            teaCourse.CourseName = course.CourseName;
+            teaCourse.Description = course.Description;
+            teaCourse.Avatar = course.Avatar;
+            teaCourse.CourseCategoryID = course.CourseCategoryID;
+            teaCourse.Content = course.Content;
+            teaCourse.Price = course.Price;
+            teaCourse.PriceSale = course.PriceSale;
+            teaCourse.VideoIntroduce = course.VideoIntroduce;
+            courseService.editCourse(teaCourse);
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
 
         public ActionResult AddSecction(StudyOnline.Entities.Models.Section secction)
         {
@@ -118,11 +132,9 @@ namespace StudyOnline.Controllers
             return Json(null, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult UpdateLesson(string name, long id)
+        public ActionResult UpdateLesson(Lesson lesson)
         {
              LessonService lessonService = new LessonService();
-             Lesson lesson = lessonService.ViewDetail(id);
-             lesson.LessonName = name;
              lessonService.UpdateLesson(lesson);
              return Json(null, JsonRequestBehavior.AllowGet);
         }

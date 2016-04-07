@@ -5,13 +5,12 @@
 }
 <link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
 
-<div class="" id="main-container no-paddingxs">
+<div class="" id="main-container no-paddingxs" ng-controller="myCreateCourse">
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
         <li><a href="#">UI Elements</a></li>
         <li class="active">Modal</li>
     </ul>
-
     <div id="courseManager" class="zn-v3">
         <div class="row nomargin">
             <div class="col-md-6 no-paddingxs">
@@ -19,7 +18,7 @@
                     <div class="content">
                         <div class="zn-tab-content">
                             <div id="myTabContent" class="tab-content">
-                                <form id="addNewCourse" class="form-horizontal zn-form ng-pristine ng-valid" method="POST" action="/tao-khoa-hoc" novalidate="novalidate">
+                                <form id="addNewCourse" class="form-horizontal zn-form ng-pristine ng-valid" ng-submit="CreateCourse(NameCourse)" novalidate=" novalidate">
                                     <div class="cm-h2">
                                         <i class="fa fa-plus-square"></i> Tạo khóa học mới
                                     </div>
@@ -28,16 +27,16 @@
                                     <div class="form-group">
                                         <label for="courseTitle" class="col-sm-3 control-label">Tên khóa học <font class="required" color="red">*</font></label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="courseTitle" name="courseTitle" placeholder="Tên khóa học" value="" style="width: 100%;">
+                                            <input type="text" class="form-control" ng-model="NameCourse" id="courseTitle" name="courseTitle" placeholder="Tên khóa học" value="" style="width: 100%;">
                                         </div>
                                     </div>
-                                   @*<div class="form-group">
-                                        <label for="" class="col-sm-3 control-label">Mã xác nhận</label>
-                                        <div class="col-sm-9">
-                                            <div class="g-recaptcha" data-sitekey="6Lfq5vwSAAAAAG74F_jSVewvIVsPaThhukFtDAL0"><div><div style="width: 304px; height: 78px;"><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Lfq5vwSAAAAAG74F_jSVewvIVsPaThhukFtDAL0&amp;co=aHR0cDovL3p1bmkudm46ODA.&amp;hl=en&amp;v=r20160307141848&amp;size=normal&amp;cb=yuyrymr6rh7b" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
-                                            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
-                                        </div>
-                                    </div>*@
+                                    @*<div class="form-group">
+                <label for="" class="col-sm-3 control-label">Mã xác nhận</label>
+                <div class="col-sm-9">
+                    <div class="g-recaptcha" data-sitekey="6Lfq5vwSAAAAAG74F_jSVewvIVsPaThhukFtDAL0"><div><div style="width: 304px; height: 78px;"><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6Lfq5vwSAAAAAG74F_jSVewvIVsPaThhukFtDAL0&amp;co=aHR0cDovL3p1bmkudm46ODA.&amp;hl=en&amp;v=r20160307141848&amp;size=normal&amp;cb=yuyrymr6rh7b" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+                    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                </div>
+            </div>*@
                                     <div class="cm-button-footer zn3-button-group">
                                         <button type="submit" class="btn btn-success" id="newCourseSubmit">
                                             Tạo khóa học
