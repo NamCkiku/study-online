@@ -54,6 +54,7 @@
 }
 
 <div id="" class="main-container no-paddingxs" ng-controller="myCreateContentCourse">
+
     <ul class="breadcrumb">
         <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
         <li><a href="#">UI Elements</a></li>
@@ -247,7 +248,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a class="sectionAnchor" data-toggle="collapse" data-parent="#accordion" href="#collapseSection{{section.ID}}">
+                                        <a class="sectionAnchor" data-toggle="collapse" data-parent="#accordion" href="/#collapseSection{{section.ID}}">
                                             <span class="fa down fa-caret-down" title="Mở rộng nội dung Chương"></span>
                                             <span class="fa up fa-caret-up" title="Thu gọn nội dung Chương"></span>
                                         </a>
@@ -278,9 +279,9 @@
 
                                     </h4>
                                     <div class="itemActions sectionTopActions">
-                                        <a href="javascript:void(0);" data-section-id="{{section.id}}" onclick="EditSection();" class="edit-secction">
+                                        <a href="javascript:void(0);" data-section-id="{{section.id}}" class="edit-secction">
                                             <span class="fa fa-pencil" data-cls="sectionManager" data-toggle="tooltip" title="Chỉnh sửa"
-                                                  ng-click="showEditSectionData(section);"></span>
+                                                  ng-click="showEditLessonContent=true; showEditSectionData(section)"></span>
                                         </a>
                                         <a href="javascript:void(0);" class="remove" ng-click="section.showDeleteSectionForm = true">
                                             <span class="fa fa-trash-o" title="Xóa"></span>
@@ -315,7 +316,7 @@
                                                            ng-show="!lesson.has_content && !lesson.showAddSubLessonForm">
                                                             <span class="fa fa-plus-square-o" data-toggle="tooltip" title="Thêm Bài học con"></span>
                                                         </a>
-                                                        <a href="javascript:void(0);" ng-click="editLessonContent(lesson);" onclick="EditLesstion();" class="addSub" ng-show="(!lesson.sub_lessons || lesson.sub_lessons.order.length == 0) && !lesson.showAddSubLessonForm">
+                                                        <a href="javascript:void(0);" ng-click="editLessonContent(lesson);"  class="addSub" ng-show="(!lesson.sub_lessons || lesson.sub_lessons.order.length == 0) && !lesson.showAddSubLessonForm">
                                                             <span class="fa fa-pencil" data-toggle="tooltip" title="Quản lý nội dung"></span>
                                                         </a>
                                                         <a href="javascript:void(0);" class="remove" ng-click="lesson.showDeleteLessonForm = true">
@@ -656,9 +657,101 @@
                 </div>
             </div>
             <div class="col-md-8" id="update-sesstion">
+                <form ng-show="showSection" ng-submit="updateFormSection(ID,SectionName,Title, Description,CourseID)">
+                    <div class="cm-header">
+                        <b>Cài đặt chương (chuyên đề)</b>
+                        <h3 class="ng-binding">{{SectionName}}</h3>
+                        <input class="form-control hidden" data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="ID" name="ID" type="text" value="">
+                        <div class="course-form-create">
+                            <div class="title-h2">
+                                <i class="fa fa-info-circle"></i> Chi Tiết
+                                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                            </div>
+                            <div class="form-group" style="display:none">
+                                <label for="inputEmail3" class="control-label">Tên Chương Học</label>
+                                <div class="">
+                                    <input class="form-control" ng-model="ID" data-val="true" data-val-length="The field SectionName must be a string with a maximum length of 250." data-val-length-max="250" id="SectionName" name="SectionName" type="text" value="">
+                                    <input type="text" ng-model="CourseID" />
+                                </div>
+                            </div>
+                            <div class="form-group" style="display:none">
+                                <label for="inputEmail3" class="control-label">Tên Chương Học</label>
+                                <div class="">
+                                    <input class="form-control" ng-model="SectionName" data-val="true" data-val-length="The field SectionName must be a string with a maximum length of 250." data-val-length-max="250" id="SectionName" name="SectionName" type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Tiêu Đề</label>
+                                <div class="">
+                                    <input class="form-control" data-val="true" ng-model="Title" data-val-length="The field Title must be a string with a maximum length of 250." data-val-length-max="250" id="Title" name="Title" type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Mô Tả Nội Dung Chương Học</label>
+                                <div class="">
+                                    <textarea class="form-control ckeditor" ng-model="Description" cols="20" data-val="true" data-val-length="The field Description must be a string with a maximum length of 500." data-val-length-max="500" id="txtDetail" name="Description" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix text-right">
+                                <button type="submit" class="btn btn-primary" id="btndelete">Lưu</button>
+                            </div>
 
+                        </div>
+                    </div>
+                </form>
+
+                <form action="/Secction/UpdateSection" method="post" enctype="multipart/form-data" ng-show="showLesson" ng-submit="updateFormLesson(ID,LessonName,DescriptionLesson,LinkVideo, SectionID)">
+                    <input name="__RequestVerificationToken" type="hidden" value="38Kl1fCIFKWVvpUeP2XW8lX52_dzWz1ngi6H2PfDtTk50l6uVJzVX-UGG2O6B_OEdk9CNwVorEKwEDRggab1QM88p3vSWDZLfLXErsqP6WQ1">
+                    <div class="cm-header">
+                        <b>Nội dung bài học</b>
+                        <h3 class="ng-binding">{{LessonName}}</h3>
+                        <input class="form-control hidden" data-val="true" data-val-number="The field ID must be a number." data-val-required="The ID field is required." id="ID" name="ID" type="text" value="">
+                        <div class="course-form-create">
+                            <div class="title-h2">
+                                <i class="fa fa-info-circle"></i> Chi Tiết
+                                <i class="zn-form-info"><font class="required" color="red">*</font> là bắt buộc điền</i>
+                            </div>
+
+                            <div class="form-group" style="display:none">
+                                <label for="inputEmail3" class="control-label">Tên Bài Học</label>
+                                <div class="">
+                                    <input class="form-control" ng-model="LessonName" data-val="true" data-val-length="The field LessonName must be a string with a maximum length of 250." data-val-length-max="250" id="LessonName" name="LessonName" type="text" value="">
+                                    <input ng-model="ID" type="text" />
+                                    <input ng-model="SectionID" type="text" />
+                                    <input ng-model="LinkVideo" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Mô Tả Bài Học</label>
+                                <div class="">
+                                    <textarea class="form-control ckeditor" ng-model="DescriptionLesson" cols="20" data-val="true" data-val-length="The field Description must be a string with a maximum length of 500." data-val-length-max="500" id="txtDetail" name="Description" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="course-form-create">
+                                <div class="title-h2">
+                                    <i class="fa fa-info-circle"></i> Video
+                                </div>
+                            </div>
+                            <div class="fileupload fileupload-new" data-provides="fileupload">
+                                <span class="btn btn-success btn-file">
+                                    <span class="fileupload-new"><i class="fa fa-paper-clip"></i>Chọn Video</span>
+
+                                    <input type="file" name="file" id="fm" class="default">
+                                </span>
+                                <span class="fileupload-preview" style="margin-left:5px;"></span>
+                                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+                            </div>
+                            <video controls="controls" width="300" height="200" id="myVideo">
+                                <source src="{{LinkVideo}}" type="video/mp4" />
+                            </video>
+                            <div class="form-group clearfix text-right">
+                                <button type="submit" class="btn btn-primary" id="btndelete">Lưu</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
 
