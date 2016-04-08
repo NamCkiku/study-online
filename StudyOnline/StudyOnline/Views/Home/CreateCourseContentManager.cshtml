@@ -7,7 +7,9 @@
 
     <link href="~/Contents/css/course-manager.css" rel="stylesheet" />
     <link href="~/Contents/css/coursedetail.css" rel="stylesheet" />
+    <link href="~/Contents/Plugins/pines-notify/pnotify.css" rel="stylesheet" />
     <script src="~/Contents/js/bootstrap.min.js"></script>
+    <script src="~/Contents/Plugins/pines-notify/pnotify.min.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -316,7 +318,7 @@
                                                            ng-show="!lesson.has_content && !lesson.showAddSubLessonForm">
                                                             <span class="fa fa-plus-square-o" data-toggle="tooltip" title="Thêm Bài học con"></span>
                                                         </a>
-                                                        <a href="javascript:void(0);" ng-click="editLessonContent(lesson);"  class="addSub" ng-show="(!lesson.sub_lessons || lesson.sub_lessons.order.length == 0) && !lesson.showAddSubLessonForm">
+                                                        <a href="javascript:void(0);" ng-click="editLessonContent(lesson);" class="addSub" ng-show="(!lesson.sub_lessons || lesson.sub_lessons.order.length == 0) && !lesson.showAddSubLessonForm">
                                                             <span class="fa fa-pencil" data-toggle="tooltip" title="Quản lý nội dung"></span>
                                                         </a>
                                                         <a href="javascript:void(0);" class="remove" ng-click="lesson.showDeleteLessonForm = true">
@@ -754,4 +756,13 @@
             </div>
         </div>
     </div>
-
+    <div class="col-xs-3">
+        <button class="btn btn-success btn-block" onclick="new PNotify({
+							title: 'Cập Nhập Thành Công',
+							text: 'Chúc mừng bạn đã cập nhập thành công',
+							type: 'success',
+							styling: 'fontawesome'
+						});">
+            Test Thông Báo
+        </button>
+    </div>

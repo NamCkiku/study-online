@@ -529,12 +529,9 @@
     <Content Include="Contents\Plugins\dist\summernote.css" />
     <Content Include="Contents\Plugins\dist\summernote.js" />
     <Content Include="Contents\Plugins\dist\summernote.min.js" />
-    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.jpg" />
-    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.seeking.gif" />
-    <Content Include="Contents\Plugins\JPlayer\image\jplayer.blue.monday.video.play.png" />
-    <Content Include="Contents\Plugins\JPlayer\jplayer.blue.monday.min.css" />
-    <Content Include="Contents\Plugins\JPlayer\jplayer.playlist.min.js" />
-    <Content Include="Contents\Plugins\JPlayer\jquery.jplayer.min.js" />
+    <Content Include="Contents\Plugins\pines-notify\pnotify.css" />
+    <Content Include="Contents\Plugins\pines-notify\pnotify.js" />
+    <Content Include="Contents\Plugins\pines-notify\pnotify.min.js" />
     <Content Include="Contents\Plugins\slidebar\slidebars.css" />
     <Content Include="Data\Images\galaxy.jpg" />
     <Content Include="Data\Videos\vd.mp4" />
@@ -607,6 +604,7 @@
     <Content Include="Assets\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Assets\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Assets\ckeditor\skins\moono\readme.md" />
+    <Content Include="Contents\Plugins\pines-notify\PNotify.url" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1390,6 +1388,7 @@
     <Content Include="Views\Secction\_UpdateSecction.cshtml" />
     <Content Include="Views\Lesstion\_UpdateLesstion.cshtml" />
     <Content Include="Views\Secction\UpdateSection.cshtml" />
+    <Content Include="Views\Home\CourseCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">
