@@ -149,5 +149,9 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
+        public ActionResult CourseCategory()
+        {
+            return View();
+        }
     }
 }
