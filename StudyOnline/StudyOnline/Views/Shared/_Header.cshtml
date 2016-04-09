@@ -199,13 +199,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/User/UpdateUser">
                                     <span class="label label-warning"><i class="fa fa-bell"></i></span>
                                     Cập Nhập Tài Khoản
                                 </a>
                             </li>
                             <li>
-                                <a href="/Course/MyCourse">
+                                <a href="/Home/CourseManager">
                                     <span class="label label-danger"><i class="fa fa-bolt"></i></span>
                                     Khóa Học đang học.
                                 </a>
@@ -239,12 +239,17 @@
                     return 0;
                 }
             </script>
-            <li>
-                <a href="/Account/Login" style="border:none !important">Đăng Nhập</a>
-            </li>
-            <li>
-                <a href="/Account/Register" style="border:none !important">Đăng Kí</a>
-            </li>
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder="Search">
+                </li>
+                <li>
+                    <a href="/Account/Login" style="border:none !important">Đăng Nhập</a>
+                </li>
+                <li>
+                    <a href="/Account/Register" style="border:none !important">Đăng Kí</a>
+                </li>
+            </ul>
         }
 
         <!--search & user info end-->

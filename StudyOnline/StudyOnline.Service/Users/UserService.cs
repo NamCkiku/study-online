@@ -66,7 +66,10 @@ namespace StudyOnline.Service.Users
         {
             return userRepository.CheckUserName(userName);
         }
-
+        public long InsertForFacebook(User entity)
+        {
+            return userRepository.InsertForFacebook(entity);
+        }
 
         public List<User> GetUserById(long id)
         {
