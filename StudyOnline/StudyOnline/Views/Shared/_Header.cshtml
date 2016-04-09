@@ -183,7 +183,7 @@
                         </li>*@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <img alt="" ng-src="{{Image}}" class="user-avatar">
+                            <img alt="" ng-src="{{Image}}" class="user-avatar" style="width:20px;height:25px">
                             @*<span class="username">@userSesion.UserName</span>*@
                             @*<b class="caret"></b>*@
                         </a>
@@ -205,7 +205,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/Course/MyCourse">
+                                <a href="/Home/CourseManager/@HttpContext.Current.Session["UserID"]">
                                     <span class="label label-danger"><i class="fa fa-bolt"></i></span>
                                     Khóa Học đang học.
                                 </a>
@@ -213,7 +213,7 @@
                             <li>
                                 <a href="#">
                                     <span class="label label-success"><i class="fa fa-plus"></i></span>
-                                    Thông Báo.
+                                    Khóa học đang dạy
                                 </a>
                             </li>
                             <li>

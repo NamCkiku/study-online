@@ -44,6 +44,8 @@ namespace StudyOnline.API.Controllers
             return teacherService.GetListByTearcherId(1).OrderByDescending(x => x.Item2.ViewCount).Skip(1).Take(4);
         }
 
+        
+
         // GET api/user/5
         public string Get(int id)
         {

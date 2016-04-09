@@ -4,223 +4,34 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="list-course">
+<div class="list-course" ng-controller="listCourseCategory">
     <div class="category-title">
-        <h3>Loại Khóa Học</h3>
+        <h3>Loại Khóa Học -{{CourseName}}</h3>
     </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
+    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item" ng-repeat="item in Courses">
         <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
+            <a href="/Home/Detail/{{item.m_Item2.ID}}"><img src="{{item.m_Item2.Avatar}}" /></a>
+
         </div>
         <div class="course-item-info">
             <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
+                <a href="/Home/Detail" class="title title-info">{{item.m_Item2.CourseName}}</a>
             </h3>
             <div class="rating">
                 <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+                    <span class="s-rating smaller static">
+
+                        <span ng-style="{width: ((item.m_Item2.ViewCount / 5000000)*100) + '%'}"></span>
+                    </span>
                     <span>(564)</span>
                 </div>
             </div>
             <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
+                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">{{item.m_Item1.Name}}</a></p></li>
+                <li class="right-list"><p class="views views-info">{{item.m_Item2.ViewCount | number}}<i class="fa fa-eye"></i></p></li>
             </ul>
             <div class="course-price saleoff">
-                <strike>200.000 ₫</strike>     <span class="price">100.000 ₫</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <strike>200.000 ₫</strike>     <span class="price">100.000 ₫</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <strike>200.000 ₫</strike>     <span class="price">100.000 ₫</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <span class="free">Miễn phí</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <strike>200.000 ₫</strike>     <span class="price">100.000 ₫</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <strike>200.000 ₫</strike>     <span class="price">100.000 ₫</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <strike>200.000 ₫</strike>     <span class="price">100.000 ₫</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-6 slider-top-grids course-item">
-        <div class="course-item-img">
-            <a href="single.html"><img src="~/Contents/img/g.jpg" /></a>
-        </div>
-        <div class="course-item-info">
-            <h3>
-                <a href="single.html" class="title title-info">Hoc laap trinh asp.net mvc 5</a>
-            </h3>
-            <div class="rating">
-                <div class="rate-box">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                    <span>(564)</span>
-                </div>
-            </div>
-            <ul>
-                <li><p class="author author-info"> <i class="fa fa-male"></i><a href="#" class="author">John Maniya</a></p></li>
-                <li class="right-list"><p class="views views-info">2,114,200 <i class="fa fa-eye"></i></p></li>
-            </ul>
-            <div class="course-price saleoff">
-                <span class="free">Miễn phí</span>
+                <strike>{{item.m_Item2.PriceSale | number}} đ</strike>     <span class="price">{{item.m_Item2.Price | number}} ₫</span>
             </div>
         </div>
     </div>

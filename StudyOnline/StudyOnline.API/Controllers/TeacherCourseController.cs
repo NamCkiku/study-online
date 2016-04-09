@@ -37,9 +37,16 @@ namespace StudyOnline.API.Controllers
         }
 
         [HttpGet, ActionName("getcoursebyid")]
-        public IEnumerable<Tuple<User, Course>> GetListByTearcherPrice(long id)
+        public IEnumerable<Tuple<User, Course>> GetListByCourseById(long id)
         {
             return teacherService.GetListByTearcherId(1).Where(x => x.Item2.ID == id);
+
+        }
+
+        [HttpGet, ActionName("getcoursebycategoryid")]
+        public IEnumerable<Tuple<User, Course>> GetListByCourseByCategoryId(long id)
+        {
+            return teacherService.GetListByTearcherId(1).Where(x => x.Item2.CourseCategoryID == id);
 
         }
 

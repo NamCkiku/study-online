@@ -145,6 +145,35 @@ namespace StudyOnline.Controllers
             secctionService.UpdateSection(secction);
             return Json(null, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpPost]
+        public ActionResult UserStudyCourse(long userId, long courseId)
+        {
+            User_Study_Course us = db.User_Study_Course.FirstOrDefault(x => x.UserID == userId && x.CourseID == courseId);
+            if (us != null)
+            {
+                return Json(null, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                User_Study_Course userCourse = new User_Study_Course();
+                userCourse.UserID = userId;
+                userCourse.CourseID = courseId;
+                userCourse.Status = true;
+                userCourse.CreateDate = DateTime.Now;
+                db.User_Study_Course.Add(userCourse);
+                db.SaveChanges();
+                return Json(null, JsonRequestBehavior.AllowGet);
+            }
+            return Json(null, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult GetCount(long id)
+        {
+            var count = db.User_Study_Course.Where(x => x.CourseID == id).Count();
+            return Json(count, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult CreateCourseContentManager()
         {
             return View();

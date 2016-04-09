@@ -16,7 +16,7 @@
                 <span class="dcjq-icon fa fa-plus"></span>
             </a>
             <ul class="sub" style="display: block;" >
-                <li ng-repeat="item1 in Menus" ng-if="item1.ParentID==item.ID"><a href="general.html">{{item1.Name}}</a></li>
+                <li ng-repeat="item1 in Menus" ng-if="item1.ParentID==item.ID"><a href="/Home/CourseCategory/{{item1.ID}}">{{item1.Name}}</a></li>
               
             </ul>
         </li>
