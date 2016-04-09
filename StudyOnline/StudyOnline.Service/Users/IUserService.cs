@@ -21,6 +21,7 @@ namespace StudyOnline.Service.Users
         bool Signup(User user);
         void Active(int id, bool status);
         bool CheckEmail(string email);
+        long InsertForFacebook(User entity);
         bool CheckUserName(string userName);
     }
 }

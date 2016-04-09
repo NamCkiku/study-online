@@ -50,10 +50,14 @@
                         <div class="invite">Học cả năm chỉ với</div>
                         <div class="price">Miễn phí</div>
                         <div class="actions">
-                            <button class="start-course btn-lg btn-success" ng-click="RegisterCourse()">
-                                <a href="/Home/ContentCourse"></a>
+                            @*<button class="start-course btn-lg btn-success" >
+                                <a href="/Home/ContentCourse" class="start-course btn-lg btn-success" ng-click="RegisterCourse()"></a>
                                 Vào học
-                            </button>
+                            </button>*@
+                            <a href="/Home/ContentCourse" class="start-course btn-lg btn-success" ng-click="RegisterCourse()">
+                                @*<a ></a>*@
+                                Vào học
+                            </a>
                         </div>
                     </div>
                     <div class="clearfix course-spec-list">
@@ -94,8 +98,8 @@
                     <div role="tabpanel" class="tab-pane active" id="introduction">
                         <div class="introduction">
                             <div ng-bind-html="thisCanBeusedInsideNgBindHtml"></div>
-                            <div class=" row">
-                                <div class="col-md-4">
+                            <div class="" row">
+                                @*<div class="col-md-4">
                                     <div class="info-group">
                                         <div class="info-heading" role="tab" id="headingTwo">
                                             <h4 class="info-title">
@@ -168,7 +172,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>*@
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,8 @@ using StudyOnline.Common;
 using StudyOnline.Entities.Models;
 using StudyOnline.Service.Users;
 using System.IO;
+using Facebook;
+using System.Configuration;
 
 namespace StudyOnline.Controllers
 {
@@ -187,5 +189,78 @@ namespace StudyOnline.Controllers
         {
             return DateTime.Now.ToString("yyyyMMddhhmmssms");
         }
-	}
+
+        private Uri RedirectUri
+        {
+            get
+            {
+                var uriBuilder = new UriBuilder(Request.Url);
+                uriBuilder.Query = null;
+                uriBuilder.Fragment = null;
+                uriBuilder.Path = Url.Action("FacebookCallBack");
+                return uriBuilder.Uri;
+            }
+        }
+        public ActionResult LoginFacebook()
+        {
+            var fb = new FacebookClient();
+            var loginUrl = fb.GetLoginUrl(
+                new
+                {
+                    client_id = ConfigurationManager.AppSettings["FBAppID"],
+                    client_secret = ConfigurationManager.AppSettings["FBAppSecret"],
+                    redirect_uri = RedirectUri.AbsoluteUri,
+                    response_type = "code",
+                    scope = "email",
+                });
+            return Redirect(loginUrl.AbsoluteUri);
+        }
+        public ActionResult FacebookCallBack(string code)
+        {
+            var fb = new FacebookClient();
+            dynamic result = fb.Post("oauth/access_token", new
+            {
+                client_id = ConfigurationManager.AppSettings["FBAppID"],
+                client_secret = ConfigurationManager.AppSettings["FBAppSecret"],
+                redirect_uri = RedirectUri.AbsoluteUri,
+                code = code
+            });
+            var accsessToken = result.access_token;
+            if (!string.IsNullOrEmpty(accsessToken))
+            {
+                fb.AccessToken = accsessToken;
+                dynamic me = fb.Get("me?fields=first_name,middle_name,last_name,id,email");
+                var uid = "http://graph.facebook.com/" + me.id + "/picture?type=square";
+                string email = me.email;
+                string userName = me.email;
+                string firstname = me.first_name;
+                string middlename = me.middle_name;
+                string lastname = me.last_name;
+                //string phone = me.mobile_phone;
+
+                var user = new User();
+                user.Email = email;
+                user.UserName = email;
+                user.Status = true;
+                user.Avatar = uid;
+                //user.Phone = phone;
+                user.Name = firstname + " " + middlename + " " + lastname;
+                user.CreatedDate = DateTime.Now;
+                var resultInsert = userService.InsertForFacebook(user);
+                if (resultInsert > 0)
+                {
+                    var userSession = new UserLogin();
+                    userSession.UserName = user.UserName;
+                    userSession.UserID = user.ID;
+                    userSession.Avatar = user.Avatar;
+                    Session.Add(Common.CommonConstants.USER_SESSION, userSession); //Thêm vào Session
+                }
+            }
+            else
+            {
+
+            }
+            return Redirect("/");
+        }
+    }
 }

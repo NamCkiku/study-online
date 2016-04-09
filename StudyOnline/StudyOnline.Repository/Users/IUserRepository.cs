@@ -23,5 +23,6 @@ namespace StudyOnline.Repository.Users
         bool CheckUserName(string userName);
         bool CheckEmail(string email);
         StudyOnline.Entities.Models.User GetById(string userName);
+        long InsertForFacebook(StudyOnline.Entities.Models.User entity);
     }
 }

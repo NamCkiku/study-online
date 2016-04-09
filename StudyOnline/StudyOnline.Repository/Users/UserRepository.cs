@@ -187,66 +187,23 @@ namespace StudyOnline.Repository.Users
                 return _db.User.Count(x => x.Email == email) > 0;
             }
         }
-        //public void Register(User models, HttpPostedFileBase file)
-        //{
-        //    var fileName = GetDateName() + "_" + Path.GetFileName(file.FileName);
-        //    var path = Path.Combine(Server.MapPath("~/Uploads/files/imageuser/"), fileName);
-        //    var a = file.ContentType;
-        //    var b = file.ContentLength;
-        //    if ((a.Equals("image/jpeg") || a.Equals("image/jpg") || a.Equals("image/png")) && b < 4194304)
-        //    {
-        //        file.SaveAs(path);
-        //    }
-        //    else
-        //    {
-        //        ViewBag.Message = "Kieu file(.png, .jpg,jpeg) va nho hon 4MB";
-        //        return View("ViewRegister", models);
-        //    }
-        //    var filepathToSave = "/Uploads/files/imageuser/" + fileName;
-        //    if (ModelState.IsValid)
-        //    {
-        //        var kt = db.Users.Where(x => x.UserName.Equals(models.UserName)).ToList();
-        //        var mail = db.Users.Where(x => x.Email.Equals(models.Email)).ToList();
-        //        if (kt.Count == 0 && mail.Count == 0)
-        //        {
-        //            if (models.Captcha.Equals(Session["captcha"].ToString()))
-        //            {
-        //                User data = new User()
-        //                {
-        //                    Code = models.Code,
-        //                    Money = 0,
-        //                    Password = models.Password,
-        //                    Phone = models.Phone,
-        //                    Email = models.Email,
-        //                    Role = "member",
-        //                    UserName = models.UserName,
-        //                    Active = false,
-        //                    ImageUrl = filepathToSave,
-        //                    History = false
-        //                };
-        //                db.Users.Add(data);
-        //                db.SaveChanges();
-        //                //
-        //                var maxid = db.Users.Max(x => x.UserId);
-        //                //tao link de gui
-        //                var u = Request.Url.Authority;
-        //                var link = "http://" + u + "/User/ActiveAcc?id=" + maxid + "&active=true";
-        //                PageHelp.SendMail("Kích hoạt tài khoản xổ số", "Ban click vào link de kich hoat tai khoan: " + link, "bondt90@gmail.com", "niutonoo12", models.Email, "bondt90");
-        //                //
-        //                ViewBag.Message = "Ban da dang ky thanh cong, xin moi vao hom thu de kich hoat";
-        //                return View("ViewRegister");
-        //            }
-        //            ViewBag.Message = "Ma bao ve chua dung";
-        //        }
-        //        else
-        //        {
-        //            ViewBag.Message = "Tai khoan da ton tai hoac emali da ton tai";
-        //        }
-
-        //    }
-        //    return View("ViewRegister", models);
-        //}
-
+        public long InsertForFacebook(User entity)
+        {
+            using (StudyOnline.Entities.Models.StudyOnline _db = new StudyOnline.Entities.Models.StudyOnline())
+            {
+                var user = _db.User.SingleOrDefault(x => x.UserName == entity.UserName);
+                if (user == null)
+                {
+                    _db.User.Add(entity);
+                    _db.SaveChanges();
+                    return entity.ID;
+                }
+                else
+                {
+                    return user.ID;
+                }
+            }
+        }
 
         public List<User> GetUserById(long id)
         {
