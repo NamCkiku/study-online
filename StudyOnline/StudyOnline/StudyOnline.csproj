@@ -499,7 +499,6 @@
     <Content Include="Contents\js\progress.js" />
     <Content Include="Contents\js\respond.min.js" />
     <Content Include="Contents\js\responsiveslides.min.js" />
-    <Content Include="Contents\js\rte.js" />
     <Content Include="Contents\js\slidebars.min.js" />
     <Content Include="Contents\js\ui-tree.js" />
     <Content Include="Contents\Plugins\bootstrap-datepicker\css\datepicker.css" />
@@ -622,7 +621,6 @@
     <Content Include="Assets\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Assets\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Assets\ckeditor\skins\moono\readme.md" />
-    <Content Include="Contents\Plugins\pines-notify\PNotify.url" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1410,6 +1408,7 @@
     <Content Include="Views\User\UpdateUser.cshtml" />
     <Content Include="Views\Course\CourseLearning.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\ListCourseOfUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudyOnline.Common\StudyOnline.Common.csproj">

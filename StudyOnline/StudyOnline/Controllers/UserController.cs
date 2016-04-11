@@ -19,6 +19,10 @@ namespace StudyOnline.Controllers
         {
             return View();
         }
+        public ActionResult ListCourseOfUser()
+        {
+            return View();
+        }
         public ActionResult UpdateUser()
         {
             return View();
