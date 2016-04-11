@@ -2622,3 +2622,50 @@ p.course-image-desc {
 .required-text {
     color: #ff0000;
 }
+
+
+.profile-info{
+    padding-bottom: 18px !important;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-top: 18px !important;
+    text-align: center;
+}
+
+.profile-info .zn-avatar {
+    margin: 0 auto;
+    display: block;
+    margin-top: 5px;
+    text-align: initial;
+    float: initial;
+    text-align: center;
+    
+}
+
+.zn-avatar.s100 img {
+    height: 100px;
+    width: 100px;
+    margin: 4px;
+    background-color: #fffde8;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.bordered-box .b-block h4 {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+.profile-info .base-info .info > span{
+    width: 120px;
+    display: inline-block;
+    float: left;
+    color: #999;
+    font-size:15px;
+}
+.profile-info .base-info .info > div{
+    display: block;
+    margin-left: 130px;
+}
